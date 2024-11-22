@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class WhatNestedIf {
+
+    public static void main(String[] args) {
+
+        try (Scanner sc = new Scanner(System.in)) {
+
+            System.out.print("Insert a number: ");
+            int number = sc.nextInt();
+
+            if (number < 0) {
+                System.out.println("Negative number!!!");
+            }
+
+            if (number == 7) {
+                System.out.println("This is Christiano Ronaldo!");
+            } else {
+                System.out.println("This is another player.");
+            }
+        }
+        
+    }
+}
