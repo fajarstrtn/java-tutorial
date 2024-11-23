@@ -19,6 +19,7 @@ public class ExceptionFlowPt2 {
 
         } finally {
 
+/*          This 'finally' will be executed regardless of exception happens in try block or not. */
             System.out.println("Finally block is executed");
 
         }
