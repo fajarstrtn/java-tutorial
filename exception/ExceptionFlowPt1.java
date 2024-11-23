@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class ExceptionFlowPt1 {
 
     public static void main(String[] args) {
-        
+
         int[] arr = new int[4];
 
         try {
@@ -16,11 +16,11 @@ public class ExceptionFlowPt1 {
             and line of code below will not be executed. */
             System.out.println(value);
 
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
 
 /*          The exception object get handled by catch block. */
             System.err.println(e.getMessage());
-        
+
         }
 
 /*      After handling an exception in catch block, the program continues to the rest of the program. */
