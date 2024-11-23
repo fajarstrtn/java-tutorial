@@ -26,7 +26,10 @@ public class ExceptionFlowPt3 {
     
     But as user can see, there is no catch block which handles ArithmeticException.
     Instead, there is only NullPointerException which exactly does not match with the appropriate exception.
-    Then, Java will throw the exception object to the default exception handler. */
+    Then, Java will throw the exception object to the default exception handler.
+    
+    User's better off not declaring method signature for unchecked exception
+    as it is no use at all. */
     private static int calculateNumber(int firstNumber, int secondNumber) throws ArithmeticException {
 
         return firstNumber / secondNumber;
