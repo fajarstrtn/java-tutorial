@@ -5,9 +5,9 @@ public class Drink {
 
         Drink[] drinks = new Drink[3];
 
-        drinks[0] = new Drink("mojito", 10.5);
-        drinks[1] = new Drink("gin", 5.4);
-        drinks[2] = new Drink("soda", 1.1);
+        drinks[0] = new Drink("Mojito", 10.5);
+        drinks[1] = new Drink("Gin", 5.4);
+        drinks[2] = new Drink("Soda", 1.1);
 
         int size = drinks.length;
 

@@ -6,10 +6,10 @@ public class InstanceofOperator {
         Human timotee = new Man();
         Human kylie = new Woman();
 
-        System.out.println("is timotee instance of man? " + (timotee instanceof Man));
-        System.out.println("is kylie instance of man? " + (kylie instanceof Man));
-        System.out.println("is kylie instance of woman? " + (kylie instanceof Woman));
-        System.out.println("is kylie instance of period? " + (kylie instanceof Period));
+        System.out.println("Is timotee instance of man? " + (timotee instanceof Man));
+        System.out.println("Is kylie instance of man? " + (kylie instanceof Man));
+        System.out.println("Is kylie instance of woman? " + (kylie instanceof Woman));
+        System.out.println("Is kylie instance of period? " + (kylie instanceof Period));
         
     }
 }

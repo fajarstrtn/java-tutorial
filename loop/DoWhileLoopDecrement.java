@@ -7,7 +7,7 @@ public class DoWhileLoopDecrement {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("put a number on it: ");
+            System.out.print("Put a number on it: ");
             int loop = sc.nextInt();
             int iteration = loop;
 

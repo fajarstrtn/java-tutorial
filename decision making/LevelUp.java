@@ -12,15 +12,15 @@ public class LevelUp {
 
         try (var br = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.print("what is your favourite fruit: ");
+            System.out.print("What is your favourite fruit: ");
             fruit = br.readLine();
 
-            if (fruit.equals("mango")) {
-                System.out.println("we give you " + fruit);
-                System.out.println("you got " + ++num + " fruit");
+            if (fruit.equals("Mango")) {
+                System.out.println("We give you " + fruit);
+                System.out.println("You got " + ++num + " fruit");
             } else {
-                System.out.println("sorry, we don\'t have it");
-                System.out.println("you got " + num + " fruit");
+                System.out.println("Sorry, we don\'t have it");
+                System.out.println("You got " + num + " fruit");
             }
 
         } catch (IOException ioe) {

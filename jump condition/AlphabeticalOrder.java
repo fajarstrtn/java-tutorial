@@ -7,16 +7,16 @@ public class AlphabeticalOrder {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("insert an alphabet: ");
+            System.out.print("Insert an alphabet: ");
             char alphabet = sc.next().charAt(0);
 
             switch (alphabet) {
                 case 'A', 'a' ->
-                    System.out.println("this is " + alphabet);
+                    System.out.println("This is " + alphabet);
                 case 'B', 'b' ->
-                    System.out.println("this is " + alphabet);
+                    System.out.println("This is " + alphabet);
                 default ->
-                    System.out.println("out of choice");
+                    System.out.println("Out of choice");
             }
         }
         

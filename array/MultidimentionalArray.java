@@ -5,13 +5,13 @@ public class MultidimentionalArray {
 
         int[][] mdIntArray = new int[3][3];
 
-        System.out.println("row of mdArray: " + mdIntArray.length);
-        System.out.println("column of mdArray: " + mdIntArray[0].length);
+        System.out.println("Row of mdArray: " + mdIntArray.length);
+        System.out.println("Column of mdArray: " + mdIntArray[0].length);
 
         String[][] mdStringArray = {
-            {"japan", "korea", "china"},
-            {"singapore", "indonesia", "malaysia"},
-            {"england", "nederland", "france"}
+            {"Japan", "Korea", "China"},
+            {"Singapore", "Indonesia", "Malaysia"},
+            {"England", "Nederland", "France"}
         };
 
         for (int row = 0; row < mdStringArray.length; ++row) {

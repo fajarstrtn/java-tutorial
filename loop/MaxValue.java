@@ -13,7 +13,7 @@ public class MaxValue {
             }
         }
 
-        System.out.println("max value is " + maxValue);
+        System.out.println("Max value is " + maxValue);
     
     }
 }

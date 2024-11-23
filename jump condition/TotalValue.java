@@ -4,7 +4,7 @@ public class TotalValue {
     public static void main(String[] args) {
 
         int[] array = {1, 2, 3, 4, 5};
-        System.out.println("total value of an array is " + getTotalValue(array));
+        System.out.println("Total value of an array is " + getTotalValue(array));
 
     }
 

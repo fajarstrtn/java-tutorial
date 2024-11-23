@@ -12,20 +12,20 @@ public class BloodDonation {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.print("insert age : ");
+            System.out.print("Insert age : ");
             age = Byte.parseByte(br.readLine());
-            System.out.print("insert weight : ");
+            System.out.print("Insert weight : ");
             weight = Float.parseFloat(br.readLine());
 
             if (age < 17) {
-                System.out.println("you are not allowed to donate blood");
+                System.out.println("You are not allowed to donate blood");
             }
 
             if (Math.round(weight) <= 50) {
-                System.out.println("sorry, you are at least more or less 50kg to donate blood");
+                System.out.println("Sorry, you are at least more or less 50kg to donate blood");
             }
 
-            System.out.println("you are allowed to donate blood");
+            System.out.println("You are allowed to donate blood");
 
         } catch (IOException ioe) {
 

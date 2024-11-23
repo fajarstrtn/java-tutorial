@@ -7,26 +7,26 @@ public class WhatSwitch {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("insert a number: ");
+            System.out.print("Insert a number: ");
             int number = sc.nextInt();
 
             String day;
 
             day = switch (number) {
                 case 1 ->
-                    "monday";
+                    "Monday";
                 case 2 ->
-                    "tuesday";
+                    "Tuesday";
                 case 3 ->
-                    "wednesday";
+                    "Wednesday";
                 case 4 ->
                     "Ttursday";
                 case 5 ->
-                    "friday";
+                    "Friday";
                 case 6 ->
-                    "saturday";
+                    "Saturday";
                 case 7 ->
-                    "sunday";
+                    "Sunday";
                 default ->
                     "Out of day";
             };

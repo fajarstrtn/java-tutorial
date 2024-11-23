@@ -30,7 +30,7 @@ public class UnaryOperators {
         representation of the input value or operand. */
         int e = 5;
         e = ~e;
-        System.out.println("bitwise complement of 5 is " + e);
+        System.out.println("Bitwise complement of 5 is " + e);
 
 /*      Logical not (!) operator is used to convert true to false or vice versa. */
         System.out.println("!true is " + !true);

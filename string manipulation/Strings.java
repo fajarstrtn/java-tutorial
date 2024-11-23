@@ -8,14 +8,14 @@ public class Strings {
 
         String nameInIdCard = "Fajar Satriatna";
         System.out.println(nameInIdCard);
-        System.out.println("identical? " + (name == nameInIdCard));
+        System.out.println("Identical? " + (name == nameInIdCard));
 
         String aliasName = new String("Black Canary");
         System.out.println(aliasName);
 
         String anotherAliasName = new String("Black Canary");
         System.out.println(anotherAliasName);
-        System.out.println("identical? " + (aliasName == anotherAliasName));
+        System.out.println("Identical? " + (aliasName == anotherAliasName));
 
         String dogName = "Molly";
         dogName.concat(" Parker");

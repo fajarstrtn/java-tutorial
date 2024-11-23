@@ -8,7 +8,7 @@ public class Car {
         cars[0] = "Mazda";
         cars[1] = "Honda";
         cars[2] = "Toyota";
-        cars[3] = "VW";
+        cars[3] = "Volkswagen";
         cars[4] = "Subaru";
 
         for (String car : cars) {

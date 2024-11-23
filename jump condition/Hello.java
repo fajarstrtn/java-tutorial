@@ -11,7 +11,7 @@ public class Hello {
 
     private static void sayHello() {
 
-        System.out.println("hello world");
+        System.out.println("Hello world");
 
     }
 }

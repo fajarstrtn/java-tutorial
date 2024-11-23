@@ -4,9 +4,9 @@ public class Superstar {
     public static void main(String[] args) {
 
         Superstar[] superstars = {
-            new Superstar("sabrina carpenter", "espresso"),
-            new Superstar("justin bieber", "baby"),
-            new Superstar("charlie puth", "see you again")};
+            new Superstar("Sabrina Carpenter", "Espresso"),
+            new Superstar("Justin Bieber", "Baby"),
+            new Superstar("Charlie Puth", "See You Again")};
 
         int size = superstars.length;
 

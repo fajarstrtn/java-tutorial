@@ -5,9 +5,9 @@ public class DogShelter {
 
         Dog[] dogs = new Dog[3];
 
-        dogs[0] = new Dog("bailey", "pitbull", 2);
-        dogs[1] = new Dog("jamie", "dalmatian", 3);
-        dogs[2] = new Dog("berkshire", "chihuahua", 1);
+        dogs[0] = new Dog("Bailey", "Pitbull", 2);
+        dogs[1] = new Dog("Jamie", "Dalmatian", 3);
+        dogs[2] = new Dog("Berkshire", "Chihuahua", 1);
 
         for (Dog dog : dogs) {
             System.out.println(dog.getName());

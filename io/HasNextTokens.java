@@ -6,10 +6,10 @@ public class HasNextTokens {
     public static void main(String[] args) {
 
         String str = new StringBuilder()
-                .append("arsenal:\tchelsea:\nliverpool:")
-                .append("\nbayern:\n\n\n\ninter:\t         ")
-                .append("         benfica:milan:leverkusen\t\tbarca:")
-                .append("madrid\t\t\t\tmu\n\t\t")
+                .append("Arsenal:\tChelsea:\nLiverpool:")
+                .append("\nBayern:\n\n\n\nInter:\t         ")
+                .append("         Benfica:AC\nMilan:Leverkusen\t\tAjax:")
+                .append("Real\tMadrid\t\t\t\tmu\n\t\t")
                 .toString();
 
         try (Scanner sc = new Scanner(str)) {

@@ -7,7 +7,7 @@ public class WhileLoopIncrement {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("insert number of loops: ");
+            System.out.print("Insert number of loops: ");
             int loop = sc.nextInt();
 
             int iteration = 0;

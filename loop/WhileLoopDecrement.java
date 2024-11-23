@@ -9,7 +9,7 @@ public class WhileLoopDecrement {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 
-            System.out.print("insert number of loops: ");
+            System.out.print("Insert number of loops: ");
             int loop = Integer.parseInt(br.readLine());
 
             int iteration = loop;
@@ -20,7 +20,7 @@ public class WhileLoopDecrement {
                 --iteration;
             }
 
-            System.out.println("total iteration: " + loop);
+            System.out.println("Total iteration: " + loop);
 
         } catch (IOException ioe) {
             System.err.println(ioe.getMessage());

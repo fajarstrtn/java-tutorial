@@ -7,18 +7,18 @@ public class WhatSwitchAgain {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("insert a number: ");
+        System.out.print("Insert a number: ");
         int num = sc.nextInt();
 
         switch (num) {
             case 1 ->
-                System.out.println("i am the one");
+                System.out.println("I am the one");
             case 2 ->
-                System.out.println("i am the second");
+                System.out.println("I am the second");
             case 3 ->
-                System.out.println("i am the third");
+                System.out.println("I am the third");
             default ->
-                System.out.println("i am other");
+                System.out.println("I am other");
         }
         
     }

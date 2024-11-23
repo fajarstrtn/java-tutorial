@@ -13,25 +13,25 @@ public class ParentClass {
         boolean[] booleanArray = new boolean[5];
         String[] stringArray = new String[5];
 
-        System.out.println("byte class: " + byteArray.getClass());
-        System.out.println("short class: " + shortArray.getClass());
-        System.out.println("int class: " + intArray.getClass());
-        System.out.println("long class: " + longArray.getClass());
-        System.out.println("double class: " + doubleArray.getClass());
-        System.out.println("float class: " + floatArray.getClass());
-        System.out.println("char class: " + charArray.getClass());
-        System.out.println("boolean class: " + booleanArray.getClass());
-        System.out.println("String class: " + stringArray.getClass());
+        System.out.println("Data type for byte class: " + byteArray.getClass());
+        System.out.println("Data type for short class: " + shortArray.getClass());
+        System.out.println("Data type for int class: " + intArray.getClass());
+        System.out.println("Data type for long class: " + longArray.getClass());
+        System.out.println("Data type for double class: " + doubleArray.getClass());
+        System.out.println("Data type for float class: " + floatArray.getClass());
+        System.out.println("Data type for char class: " + charArray.getClass());
+        System.out.println("Data type for boolean class: " + booleanArray.getClass());
+        System.out.println("Data type for String class: " + stringArray.getClass());
 
-        System.out.println("byte parent class: " + byteArray.getClass().getSuperclass());
-        System.out.println("short parent class: " + shortArray.getClass().getSuperclass());
-        System.out.println("int parent class: " + intArray.getClass().getSuperclass());
-        System.out.println("long parent class: " + longArray.getClass().getSuperclass());
-        System.out.println("double parent class: " + doubleArray.getClass().getSuperclass());
-        System.out.println("float parent class: " + floatArray.getClass().getSuperclass());
-        System.out.println("char parent class: " + charArray.getClass().getSuperclass());
-        System.out.println("boolean parent class: " + booleanArray.getClass().getSuperclass());
-        System.out.println("String parent class: " + stringArray.getClass().getSuperclass());
+        System.out.println("Data type for byte parent class: " + byteArray.getClass().getSuperclass());
+        System.out.println("Data type for short parent class: " + shortArray.getClass().getSuperclass());
+        System.out.println("Data type for int parent class: " + intArray.getClass().getSuperclass());
+        System.out.println("Data type for long parent class: " + longArray.getClass().getSuperclass());
+        System.out.println("Data type for double parent class: " + doubleArray.getClass().getSuperclass());
+        System.out.println("Data type for float parent class: " + floatArray.getClass().getSuperclass());
+        System.out.println("Data type for char parent class: " + charArray.getClass().getSuperclass());
+        System.out.println("Data type for boolean parent class: " + booleanArray.getClass().getSuperclass());
+        System.out.println("Data type for String parent class: " + stringArray.getClass().getSuperclass());
         
     }
 }

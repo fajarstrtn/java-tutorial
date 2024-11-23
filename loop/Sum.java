@@ -7,7 +7,7 @@ public class Sum {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("insert a number of loop: ");
+            System.out.print("Insert a number of loop: ");
             int loop = sc.nextInt();
 
             int i = 1;
@@ -18,7 +18,7 @@ public class Sum {
                 ++i;
             }
 
-            System.out.println("sum of iteration: " + sum);
+            System.out.println("Sum of iteration: " + sum);
         }
         
     }

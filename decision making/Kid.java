@@ -7,14 +7,14 @@ public class Kid {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("insert a number: ");
+        System.out.print("Insert a number: ");
         int number = sc.nextInt();
 
         if (number <= 17) {
-            System.out.println("you are a kid");
+            System.out.println("You are a kid");
         }
 
-        System.out.println("outside of if block");
+        System.out.println("Outside of if block");
 
     }
 }

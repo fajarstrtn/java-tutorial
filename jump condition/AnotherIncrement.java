@@ -4,7 +4,7 @@ public class AnotherIncrement {
     public static void main(String[] args) {
 
         doIncrement(11);
-        System.out.println("program successfully executed");
+        System.out.println("Program successfully executed");
 
     }
 

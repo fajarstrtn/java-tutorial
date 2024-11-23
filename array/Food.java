@@ -1,7 +1,7 @@
 
 public class Food {
 
-    private static final String[] foods = {"pie", "ramen", "pizza", "hamburger"};
+    private static final String[] foods = {"Pie", "Ramen", "Pizza", "Hamburger"};
 
     public static void main(String[] args) {
 

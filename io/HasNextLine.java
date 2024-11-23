@@ -8,10 +8,10 @@ public class HasNextLine {
 /*      Use string builder to create a mutable, or in other words, a modifiable succession of characters.
         this '\n' character will separate tokens, else it will generate a whole string. */
         String str = new StringBuilder()
-                .append("\tarsenal\n")
-                .append("     barcelona         \n")
-                .append("\t\t\tchelsea ")
-                .append("leverkusen       ")
+                .append("\tArsenal\n")
+                .append("     Barcelona         \n")
+                .append("\t\t\tChelsea ")
+                .append("Leverkusen       Manchester\n\n\tUnited")
                 .toString();
 
         try (Scanner sc = new Scanner(str)) {
