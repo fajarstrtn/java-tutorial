@@ -5,11 +5,7 @@ public class TernaryOperator {
 
         boolean isLamborghiniGood = true;
 
-        if (isLamborghiniGood) {
-            System.out.println("This car is good!");
-    
-    
-        }        
+        System.out.println(isLamborghiniGood? "This is a good car" : "No, this is bad");
  
    }
 }
