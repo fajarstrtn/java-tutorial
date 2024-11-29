@@ -10,6 +10,10 @@ public class Greetings {
             int number = divideTwoNumbers(1, 2);
 
             System.out.println("Result: " + number);
+
+            long superNumber = calculateMultiplication (100, 400);
+
+            System.out.println("Result: " + superNumber);
             
         } catch (ArithmeticException e) {
 
@@ -27,6 +31,12 @@ public class Greetings {
     private static int divideTwoNumbers(int firstNumber, int secondNumber) {
 
         return firstNumber / secondNumber;
+
+    }
+
+    private static long calculateMultiplication(long firstNumber, long secondNumber) {
+
+        return firstNumber * secondNumber;
 
     }
 }
