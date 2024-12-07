@@ -19,7 +19,16 @@ public class MetricConversion {
 
     private static double convertToCentiMeters(int feet, int inches) {
 
+/*      this code below is simpler but has low-readability
+
         return ((feet * 12) + inches) * 2.54;
+        
+        try change this with: */
+
+        int feetToInches = feet * 12;
+        int totalInches = feetToInches + inches;
+        double result = convertToCentiMeters(totalInches);
+        return result;
 
     }
 }
