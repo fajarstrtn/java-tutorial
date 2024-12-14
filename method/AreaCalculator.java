@@ -1,5 +1,5 @@
 
-public class Area {
+public class AreaCalculator {
 
     public static void main(String[] args) {
 
