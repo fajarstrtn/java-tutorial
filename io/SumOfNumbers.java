@@ -1,4 +1,5 @@
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SumOfNumbers {
@@ -11,14 +12,15 @@ public class SumOfNumbers {
 
             System.out.println(sum);
 
-        } catch (RuntimeException e) {
+        } catch (InputMismatchException e) {
 
+            System.err.println("invalid value");
             System.err.println(e.toString());
 
         }
     }
 
-    private static double sum () throws RuntimeException {
+    private static double sum () throws InputMismatchException {
 
         Scanner input;
 
