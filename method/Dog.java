@@ -12,6 +12,12 @@ public class Dog {
 
     }
 
+    public static void printInformation(String name) {
+
+        System.out.println(name + " has been left");
+
+    }
+
     public static void main(String[] args) {
 
         Dog krypto = new Dog();
@@ -21,12 +27,6 @@ public class Dog {
 
         krypto.printInformation();
         printInformation(krypto.name);
-
-    }
-
-    public static void printInformation(String name) {
-
-        System.out.println (name + " has been left");
 
     }
 
