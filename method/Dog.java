@@ -5,7 +5,7 @@ public class Dog {
 
     public byte age;
 
-    public void callInformation() {
+    public void printInformation() {
 
         System.out.println("hi, its name is " + this.name);
         System.out.println("it is " + this.age + " years-old");
@@ -19,7 +19,14 @@ public class Dog {
         krypto.name = "krypto";
         krypto.age = 15;
 
-        krypto.callInformation();
+        krypto.printInformation();
+        printInformation(krypto.name);
+
+    }
+
+    public static void printInformation(String name) {
+
+        System.out.println (name + " has been left");
 
     }
 
