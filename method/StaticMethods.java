@@ -1,8 +1,9 @@
+
 public class StaticMethods {
 
     public static void print(String name) {
 
-        System.out.println ("hello, " + name + "!");
+        System.out.println("hello, " + name + "!");
 
     }
 
@@ -10,6 +11,6 @@ public class StaticMethods {
 
         print("john doe");
         StaticMethods.print("blake");
-        
+
     }
 }
