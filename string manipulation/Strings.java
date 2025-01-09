@@ -3,22 +3,26 @@ public class Strings {
 
     public static void main(String[] args) {
 
-        String name = "Fajar Satriatna";
-        System.out.println(name);
+        String name = "luke hemmings";
+        String idCardName = "luke hemmings";
 
-        String nameInIdCard = "Fajar Satriatna";
-        System.out.println(nameInIdCard);
-        System.out.println("Identical? " + (name == nameInIdCard));
+        System.out.println("are " + name + " and " + idCardName + " equal? " + (name == idCardName));
+
+        String username = "john doe";
+        String alterEgoName = new String("john doe");
+
+        System.out.println("are " + username + " and " + alterEgoName + " equal? " + (username == alterEgoName));
+        System.out.println("are " + username + " and " + alterEgoName + " equal? " + (username.equals(alterEgoName)));
 
         String aliasName = new String("Black Canary");
-        System.out.println(aliasName);
-
         String anotherAliasName = new String("Black Canary");
-        System.out.println(anotherAliasName);
-        System.out.println("Identical? " + (aliasName == anotherAliasName));
+
+        System.out.println("are " + aliasName + " and " + anotherAliasName + " equal? " + (aliasName == anotherAliasName));
 
         String dogName = "Molly";
+        
         dogName.concat(" Parker");
+
         System.out.println(dogName);
 
     }
