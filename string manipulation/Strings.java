@@ -20,10 +20,28 @@ public class Strings {
         System.out.println("are " + aliasName + " and " + anotherAliasName + " equal? " + (aliasName == anotherAliasName));
 
         String dogName = "Molly";
-        
+
         dogName.concat(" Parker");
 
         System.out.println(dogName);
+
+        try {
+
+            String city = "jakarta";
+
+            for (int i = 0; i < city.length(); ++i) {
+
+                System.out.println(city.charAt(i) + " at " + i + " index position");
+
+            }
+
+            System.out.println("value at 100 index position is " + city.charAt(100));
+
+        } catch (StringIndexOutOfBoundsException e) {
+
+            System.err.println(e.toString());
+
+        }
 
     }
 }
