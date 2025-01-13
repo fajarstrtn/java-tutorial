@@ -47,5 +47,17 @@ public class StringManipulation {
 
         System.out.println("Does Amsterdam ends with \'dam\'? " + cityName.endsWith("dam"));
 
+        String emptyString = "";
+
+        String whiteSpacesString = "       ";
+
+        System.out.println("Is the 1st string empty? " + emptyString.isEmpty());
+
+        System.out.println("Is the 1st string blank? " + emptyString.isBlank());
+
+        System.out.println("Is the 2nd string empty? " + whiteSpacesString.isEmpty());
+
+        System.out.println("Is the 2nd string blank? " + whiteSpacesString.isBlank());
+
     }
 }
