@@ -47,10 +47,6 @@ public class StringManipulation {
 
         System.out.println("does Amsterdam ends with \'dam\'? " + cityName.endsWith("dam"));
 
-        System.out.println("uppercase of Amsterdam is " + cityName.toUpperCase());
-
-        System.out.println("lowercase of Amsterdam is " + cityName.toLowerCase());
-
         String emptyString = "";
 
         String whiteSpacesString = "       ";
