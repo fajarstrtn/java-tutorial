@@ -1,5 +1,9 @@
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
 public class Human {
+
+    private static final Logger logger = System.getLogger(Human.class.getName());
 
     public String name;
 
@@ -16,9 +20,9 @@ public class Human {
 
     }
 
-    public void print() {
+    public String toString() {
 
-        System.out.println("hi, my name is " + this.name + " and i am " + this.age + " years-old");
+        return "hi, my name is " + this.name + " and i am " + this.age + " years-old";
 
     }
 
@@ -29,11 +33,11 @@ public class Human {
         jack.name = "jack hummings";
         jack.age = 28;
 
-        jack.print();
+        logger.log(Level.INFO, jack.toString());
 
         Human gerard = new Human("gerard way", 25);
 
-        gerard.print();
+        logger.log(Level.INFO, gerard.toString());
 
     }
 
