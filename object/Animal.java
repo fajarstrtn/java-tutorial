@@ -72,7 +72,6 @@ public class Animal {
         Animal cat = new Animal("mio", "felis_catus", true);
 
         logger.log(Level.INFO, cat);
-        
 
         Animal dog = new Animal();
 
@@ -89,6 +88,20 @@ public class Animal {
         frog.setIsMammals(false);
 
         logger.log(Level.INFO, frog);
+
+        Animal butterfly = new Animal();
+
+        butterfly.setName("nora");
+        butterfly.setSpecies("lepidoptera");
+        butterfly.setIsMammals(false);
+
+        logger.log(Level.INFO, String.format("""
+        name: %s, species: %s, isMammals: %b
+        """
+        ,
+        butterfly.getName(),
+        butterfly.getSpecies(),
+        butterfly.getIsMammals()));
 
     }
 
