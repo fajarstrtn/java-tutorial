@@ -60,11 +60,19 @@ public class Animal {
 
     }
 
+    @Override
+    public String toString() {
+        return "Animal{"
+                + "name='" + this.name + "', species='" + this.species + "', isMammals=" + this.isMammals
+                + "}";
+    }
+
     public static void main(String[] args) {
 
         Animal cat = new Animal("mio", "felis_catus", true);
 
-        logger.log(Level.INFO, cat.getName() + "-" + cat.getSpecies() + "-" + cat.getIsMammals());
+        logger.log(Level.INFO, cat);
+        
 
         Animal dog = new Animal();
 
@@ -72,7 +80,7 @@ public class Animal {
         dog.setSpecies("family_canidae");
         dog.setIsMammals(true);
 
-        logger.log(Level.INFO, dog.getName() + "-" + dog.getSpecies() + "-" + dog.getIsMammals());
+        logger.log(Level.INFO, dog);
 
         Animal frog = new Animal();
 
@@ -80,7 +88,7 @@ public class Animal {
         frog.setSpecies("anora");
         frog.setIsMammals(false);
 
-        logger.log(Level.INFO, frog.getName() + "-" + frog.getSpecies() + "-" + frog.getIsMammals());
+        logger.log(Level.INFO, frog);
 
     }
 
