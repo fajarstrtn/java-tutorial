@@ -43,17 +43,17 @@ public class FootBallClub {
 
     }
 
+    @Override
     public String toString() {
 
         return String.format("""
-                             {
-                                 "name": "%s",
-                                 "age": "%d",
-                                 "isOnLoad": "%b",
-                                 "price": "%.2f"
-                             }""",
-                this.name, this.age, this.isOnLoad, this.price
-        );
+        {
+            "name": "%s",
+            "age": "%d",
+            "isOnLoad": "%b",
+            "price": "%.2f"
+        }
+        """, this.name, this.age, this.isOnLoad, this.price);
 
     }
 
@@ -66,19 +66,19 @@ public class FootBallClub {
         striker.isOnLoad = false;
         striker.price = 220_000_000D;
 
-        logger.log(Level.INFO, striker.toString());
+        logger.log(Level.INFO, striker);
 
         FootBallClub winger = new FootBallClub("bukayo saka");
 
-        logger.log(Level.INFO, winger.toString());
+        logger.log(Level.INFO, winger);
 
         FootBallClub midfielder = new FootBallClub("leroy sane", 29);
 
-        logger.log(Level.INFO, midfielder.toString());
+        logger.log(Level.INFO, midfielder);
 
         FootBallClub defender = new FootBallClub("ruben diaz", 27, 71D);
 
-        logger.log(Level.INFO, defender.toString());
+        logger.log(Level.INFO, defender);
 
     }
 }
