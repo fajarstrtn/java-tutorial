@@ -62,9 +62,15 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{"
-                + "name='" + this.name + "', species='" + this.species + "', isMammals=" + this.isMammals
-                + "}";
+
+        return String.format("""
+        {
+            "name" : "%s",
+            "species" : "%s",
+            "isMammals" : "%b"
+        }
+        """, this.name, this.species, this.isMammals);
+
     }
 
     public static void main(String[] args) {
@@ -96,12 +102,10 @@ public class Animal {
         butterfly.setIsMammals(false);
 
         logger.log(Level.INFO, String.format("""
-        name: %s, species: %s, isMammals: %b
-        """
-        ,
-        butterfly.getName(),
-        butterfly.getSpecies(),
-        butterfly.getIsMammals()));
+        "name": "%s",
+        "species": "%s",
+        "isMammals": "%b"
+        """, butterfly.getName(), butterfly.getSpecies(), butterfly.getIsMammals()));
 
     }
 
