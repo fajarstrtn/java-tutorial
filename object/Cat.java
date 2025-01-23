@@ -14,6 +14,8 @@ public class Cat {
 
     String color;
 
+/*  set attribute to final.
+    final String adoptedIn = "indonesia"; */
     public Cat() {
 
     }
@@ -49,6 +51,9 @@ public class Cat {
         mio.age = 12;
         mio.color = "white";
 
+/*      user cannot reassign value to the final attribute.
+        mio.adoptedIn = "malaysia"; */
+
         logger.log(Level.INFO, mio);
         logger.log(Level.INFO, "mio is persian cat, isn't it? " + mio.isPersian());
 
@@ -59,7 +64,7 @@ public class Cat {
 
         Cat jack = new Cat();
 
-        /*      if attributes are not initialized, java will set the default values to themselves. */
+/*      if attributes are not initialized, java will set the default values to themselves. */
         logger.log(Level.INFO, jack);
 
         Cat lily = new Cat();
