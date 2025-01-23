@@ -27,6 +27,12 @@ public class Cat {
 
     }
 
+    public boolean isPersian() {
+
+        return this.breed.equalsIgnoreCase("persian");
+
+    }
+
     @Override
     public String toString() {
 
@@ -44,10 +50,12 @@ public class Cat {
         mio.color = "white";
 
         logger.log(Level.INFO, mio);
+        logger.log(Level.INFO, "mio is persian cat, isn't it? " + mio.isPersian());
 
         Cat jolly = new Cat("jolly", "siamese", 9, "white");
 
         logger.log(Level.INFO, jolly);
+        logger.log(Level.INFO, "jolly is persian cat, isn't it? " + jolly.isPersian());
 
     }
 
