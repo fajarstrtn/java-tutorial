@@ -57,6 +57,11 @@ public class Cat {
         logger.log(Level.INFO, jolly);
         logger.log(Level.INFO, "jolly is persian cat, isn't it? " + jolly.isPersian());
 
+        Cat jack = new Cat();
+
+/*      if attributes are not initialized, java will set the default values to themselves. */
+        logger.log(Level.INFO, jack);
+
     }
 
 }
