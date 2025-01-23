@@ -59,8 +59,17 @@ public class Cat {
 
         Cat jack = new Cat();
 
-/*      if attributes are not initialized, java will set the default values to themselves. */
+        /*      if attributes are not initialized, java will set the default values to themselves. */
         logger.log(Level.INFO, jack);
+
+        Cat lily = new Cat();
+
+        lily.name = "lily";
+        lily.breed = "ragdoll";
+        lily.age = 7;
+        lily.color = "grey";
+
+        logger.log(Level.INFO, "my cat's name is " + lily.name + " and she is a " + lily.breed);
 
     }
 
