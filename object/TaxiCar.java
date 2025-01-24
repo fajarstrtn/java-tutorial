@@ -1,7 +1,7 @@
 
 public class TaxiCar {
 
-    private static final String DELIMETER = " ::: ";
+    private static final String DELIMETER = " ||| ";
 
     private String name;
 
@@ -59,18 +59,19 @@ public class TaxiCar {
 
     }
 
-    public void print() {
+    public void print(String name) {
 
-        System.out.println(this.name + DELIMETER
+        System.out.println("driver name: " + name + DELIMETER
+                + this.name + DELIMETER
                 + this.type + DELIMETER
                 + this.isOperated + DELIMETER
                 + this.issuedIn);
 
     }
 
-    public Boolean isCarOutdated() {
+    public Boolean isCarOutdated(String driverName) {
 
-        this.print();
+        this.print(driverName);
         return this.issuedIn < 2022;
 
     }
@@ -84,7 +85,7 @@ public class TaxiCar {
         grabcar.setIsOperated(true);
         grabcar.setIssuedIn(2019);
 
-        System.out.println("is " + grabcar.getName() + " is outdated? " + grabcar.isCarOutdated());
+        System.out.println("is " + grabcar.getName() + " is outdated? " + grabcar.isCarOutdated("lucy"));
 
     }
 
