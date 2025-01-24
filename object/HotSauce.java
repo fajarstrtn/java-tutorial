@@ -74,7 +74,15 @@ public class HotSauce {
 
     public String print() {
 
-        return "it is a " + this.name + " hot sauce. it is " + this.size + " ml and it costs $" + this.price + ".";
+        return "it is a " + name + " hot sauce. it is " + size + " ml and it costs $" + price + ".";
+
+    }
+
+    public String print(String customerName) {
+
+        return "hey, " + customerName + "!"
+                + " this is my new product, " + name + ". it's " + size + " ml"
+                + " and it's cheap, only $" + price + ".";
 
     }
 
@@ -90,7 +98,7 @@ public class HotSauce {
 
         var tabasco = new HotSauce("tabasco", 500D, 1.1D);
 
-        logger.log(Level.INFO, tabasco.print());
+        logger.log(Level.INFO, tabasco.print("jamie"));
 
         var redhot = new HotSauce("frank's redhot", 750D);
 
