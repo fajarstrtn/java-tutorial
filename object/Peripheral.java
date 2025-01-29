@@ -29,5 +29,23 @@ public class Peripheral {
         regular.displayInfo(RegularKeyboard.class.getName().toLowerCase());
         regular.typeText("lorem ipsum dolor sit amet");
 
+        var monitor = new Monitor();
+
+        monitor.setBrand("lg");
+        monitor.setModel("24mr400-b");
+        monitor.setInches(23.8);
+        monitor.setPrice(79.52);
+
+        monitor.greetCustomer("hayley williams");
+
+        var ledMonitor = new LEDMonitor();
+
+        ledMonitor.setBrand("samsung");
+        ledMonitor.setModel("t35f");
+        ledMonitor.setInches(24D);
+        ledMonitor.setPrice(99.99);
+
+        ledMonitor.greetCustomer("jack dorsy");
+
     }
 }
