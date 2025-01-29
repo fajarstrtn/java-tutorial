@@ -1,6 +1,8 @@
 
 public class Peripheral {
 
+    private static final String TEXT = "lorem ipsum dolor sit amet";
+
     public static void main(String[] args) {
 
         var keyboard = new Keyboard();
@@ -9,7 +11,7 @@ public class Peripheral {
         keyboard.setModel("wired");
 
         keyboard.displayInfo(Keyboard.class.getName().toLowerCase());
-        keyboard.typeText("lorem ipsum dolor sit amet");
+        keyboard.typeText(TEXT);
 
         var mechanical = new MechanicalKeyboard();
 
@@ -18,7 +20,7 @@ public class Peripheral {
         mechanical.setSwitchType("cherry mx red");
 
         mechanical.displayInfo(MechanicalKeyboard.class.getName().toLowerCase());
-        mechanical.typeText("lorem ipsum dolor sit amet");
+        mechanical.typeText(TEXT);
 
         var regular = new RegularKeyboard();
 
@@ -27,7 +29,7 @@ public class Peripheral {
         regular.setHasNumericPad(true);
 
         regular.displayInfo(RegularKeyboard.class.getName().toLowerCase());
-        regular.typeText("lorem ipsum dolor sit amet");
+        regular.typeText(TEXT);
 
         var monitor = new Monitor();
 
@@ -48,4 +50,5 @@ public class Peripheral {
         ledMonitor.greetCustomer("jack dorsy");
 
     }
+
 }
