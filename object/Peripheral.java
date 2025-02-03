@@ -49,6 +49,14 @@ public class Peripheral {
 
         ledMonitor.greetCustomer("jack dorsy");
 
+        var jbl = new Earphone("jbl tune flex", "blue", "4", false, "tune flex", 3_200_000D);
+
+        System.out.println(jbl.getInformation());
+
+        var samsung = new Earbuds("samsung earbuds pro 4", "black", "4", false, "earbuds pro 4", 5_000_000D, true);
+
+        System.out.println(samsung.getInformation());
+
     }
 
 }
