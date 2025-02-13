@@ -2,11 +2,8 @@
 public class Monitor {
 
     private String brand;
-
     private String model;
-
     private Double inches;
-
     private Double price;
 
     public Monitor() {
@@ -52,12 +49,37 @@ public class Monitor {
     }
 
     public void greetCustomer(String name) {
-        System.out.println("hello, " + name + "! you just bought a " + this.model + " monitor from " + this.brand);
-        System.out.println("it is " + this.inches + " inches and it cost " + this.price + " USD");
+        System.out.println("hello, " + name + "! you just bought a " + model + " monitor from " + brand);
+        System.out.println("it is " + inches + " inches and it cost " + price + " USD");
     }
 
 }
 
 class LEDMonitor extends Monitor {
+
+    private Boolean isLED;
+
+    public LEDMonitor() {
+        super();
+    }
+
+    public LEDMonitor(String brand, Double inches, String model, Double price, Boolean isLED) {
+        super(brand, inches, model, price);
+        this.isLED = isLED;
+    }
+
+    public Boolean isLED() {
+        return isLED;
+    }
+
+    public void isLED(Boolean isLED) {
+        this.isLED = isLED;
+    }
+
+    @Override
+    public void greetCustomer(String name) {
+        System.out.println("hello, " + name + "! you just bought a " + getModel() + " led monitor from " + getBrand());
+        System.out.println("it is " + getInches() + " inches and it cost " + getPrice() + " USD. " + (Boolean.TRUE.equals(isLED) ? "it is an led monitor" : "it is not an led monitor"));
+    }
 
 }

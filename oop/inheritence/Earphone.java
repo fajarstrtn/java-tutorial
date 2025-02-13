@@ -2,15 +2,10 @@
 public class Earphone {
 
     private String brand;
-
     private String model;
-
     private Double price;
-
     private String color;
-
     private Boolean isWired;
-
     private String ipxRating;
 
     public Earphone(String brand, String color, String ipxRating, Boolean isWired, String model, Double price) {
@@ -80,14 +75,7 @@ public class Earphone {
             "isWired" : %b,
             "model" : "%s",
             "price" : %.2f
-        }
-        """,
-        this.brand,
-        this.color,
-        this.ipxRating,
-        this.isWired,
-        this.model,
-        this.price);
+        }""", brand, color, ipxRating, isWired, model, price);
 
     }
 
@@ -97,7 +85,7 @@ class Earbuds extends Earphone {
 
     private Boolean isNoiceCancelling;
 
-    /*  if there's no default constructor in parent class, then child class should declare a constructor. */
+/*  if there's no default constructor in parent class, then child class should declare a constructor. */
     public Earbuds(String brand, String color, String ipxRating, Boolean isWired, String model, Double price, Boolean isNoiceCancelling) {
         super(brand, color, ipxRating, isWired, model, price);
         this.isNoiceCancelling = isNoiceCancelling;
@@ -123,15 +111,7 @@ class Earbuds extends Earphone {
             "model" : "%s",
             "price" : %.2f,
             "isNoiceCancelling" : %b
-        }
-        """,
-        super.getBrand(),
-        super.getColor(),
-        super.getIpxRating(),
-        super.getIsWired(),
-        super.getModel(),
-        super.getPrice(),
-        this.isNoiceCancelling);
+        }""", getBrand(), getColor(), getIpxRating(), getIsWired(), getModel(), getPrice(), isNoiceCancelling);
 
     }
 

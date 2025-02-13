@@ -2,7 +2,6 @@
 public class Keyboard {
 
     private String brand;
-
     private String model;
 
     public Keyboard() {
@@ -31,8 +30,8 @@ public class Keyboard {
 
     public void displayInfo(String classType) {
         System.out.println("this is " + classType + " class");
-        System.out.println("brand: " + this.brand);
-        System.out.println("model: " + this.model);
+        System.out.println("brand: " + brand);
+        System.out.println("model: " + model);
     }
 
     public void typeText(String text) {
@@ -69,7 +68,7 @@ class MechanicalKeyboard extends Keyboard {
     @Override
     public void displayInfo(String classType) {
         super.displayInfo(classType);
-        System.out.println("switch type: " + this.switchType);
+        System.out.println("switch type: " + switchType);
     }
 
     @Override
@@ -107,7 +106,7 @@ class RegularKeyboard extends Keyboard {
     @Override
     public void displayInfo(String classType) {
         super.displayInfo(classType);
-        System.out.println("numeric pad: " + this.hasNumericPad);
+        System.out.println("numeric pad: " + hasNumericPad);
     }
 
     @Override
