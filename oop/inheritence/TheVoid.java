@@ -6,7 +6,6 @@ public class TheVoid {
     public static void main(String[] args) {
 
         var batman = new Superhero();
-
         batman.name = "the dark knight";
         batman.realName = "bruce wayne";
         batman.age = 37;
@@ -32,7 +31,6 @@ public class TheVoid {
         System.out.println("==============================");
 
         var deathstroke = new Villain();
-
         deathstroke.name = "deathstroke";
         deathstroke.realName = "slade wilson";
         deathstroke.age = 40;

@@ -3,17 +3,12 @@ import java.util.List;
 
 public class Superhero {
 
-    public String name;
-
-    public String realName;
-
-    public Integer age;
-
-    public String originStory;
-
-    public String universe;
-
-    public List<String> abilities;
+    protected String name;
+    protected String realName;
+    protected Integer age;
+    protected String originStory;
+    protected String universe;
+    protected List<String> abilities;
 
     public Superhero() {
     }
