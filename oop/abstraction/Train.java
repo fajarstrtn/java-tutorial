@@ -2,15 +2,11 @@
 public abstract class Train {
 
     private String type;
-
     private String color;
-
     private Integer capacity;
-
     private static final Integer WHEEL = 8;
 
     public Train() {
-
     }
 
     public Train(String type, String color, Integer capacity) {
@@ -19,8 +15,6 @@ public abstract class Train {
         this.capacity = capacity;
     }
 
-/*  abstract method is a method which should be overrided in subclasses.
-    abstract class should have at least one abstract method. */
     public abstract void run();
 
     public abstract void stop();
@@ -53,24 +47,23 @@ public abstract class Train {
         return WHEEL;
     }
 
-/*  abstract class can also have concrete method (has body and declared withoud abstract). */
+    /*  An abstract class can also have concrete method. */
     public void dropOff(String stationName) {
-        System.out.println(this.type + " is dropping off passengers at " + stationName + " station");
+        System.out.println(type + " is dropping off passengers at " + stationName + " station");
     }
 
     public void info() {
-        System.out.println(this.type + " has " + this.color + " color and " + this.capacity + " capacity");
+        System.out.println(type + " has " + color + " color and " + capacity + " capacity");
     }
 
-/*  static method can only access static attributes and methods.
-    static attribute or method belongs to the class, not instance. */
+    /* Static method can only access static attributes and methods, because static attributes or methods belong to the class, not instance. */
     public static void wheelTrainTotal(String trainType) {
         System.out.println(trainType + " has " + WHEEL + " wheels");
     }
 
-/*  final method cannot be overrided. */
+    /*  A final method cannot be overrided. */
     public final void maintain() {
-        System.out.println(this.type + " is under maintainance");
+        System.out.println(type + " is under maintainance");
     }
 
 }

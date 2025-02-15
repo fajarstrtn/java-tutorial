@@ -22,23 +22,23 @@ public class Tram extends Train {
 
     @Override
     public void run() {
-        System.out.println(this.getType() + " is running to the town");
+        System.out.println(getType() + " is running to the town");
     }
 
     @Override
     public void stop() {
-        System.out.println(this.getType() + " stops to the next station");
+        System.out.println(getType() + " stops to the next station");
     }
 
     @Override
     public void dropOff(String stationName) {
-        System.out.println(this.getType() + " is dropping off passengers at " + stationName + " station");
+        System.out.println(getType() + " is dropping off passengers at " + stationName + " station");
     }
 
     @Override
     public void info() {
-        System.out.println(this.getType() + " has " + this.getColor() + " color and " + this.getCapacity() + " capacity.");
-        System.out.println(this.getType() + " " + (Boolean.TRUE.equals(this.hasFlexibleTrack())? "has flexible track" : "has no flexible track"));
+        System.out.println(getType() + " has " + getColor() + " color and " + getCapacity() + " capacity.");
+        System.out.println(getType() + " " + (Boolean.TRUE.equals(hasFlexibleTrack()) ? "has flexible track" : "has no flexible track"));
     }
 
 }
