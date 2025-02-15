@@ -6,19 +6,16 @@ public class PhoneStore {
         CellPhone phone;
 
         phone = new Nokia();
-
         phone.ring();
         phone.call();
         isOnTheCall(phone);
 
         phone = new Motorola();
-
         phone.ring();
         phone.call();
         isOnTheCall(phone);
 
         phone = new Samsung();
-
         phone.ring();
         phone.call();
         isOnTheCall(phone);
@@ -41,4 +38,5 @@ public class PhoneStore {
         System.out.println(greetings);
 
     }
+
 }
