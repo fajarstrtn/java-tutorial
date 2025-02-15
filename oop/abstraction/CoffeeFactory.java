@@ -12,7 +12,8 @@ public class CoffeeFactory {
         arabica.flavour = "sweeter, smoother, and more acidic with fruity and floral notes";
         arabica.caffeineContent = "1.2% - 1.5% caffeine";
         arabica.plantGrowth = "grows best at high altitudes (600-2000m), requires cooler temperatures (15-24°C), and is more susceptible to diseases";
-        arabica.info();
+
+        arabica.inform();
         arabica.roast();
 
         Coffee robusta = new Robusta();
@@ -24,8 +25,10 @@ public class CoffeeFactory {
         robusta.flavour = "stronger, bitter, and earthy with nutty and woody flavors";
         robusta.caffeineContent = "2.2% - 2.7% caffeine";
         robusta.plantGrowth = "thrives at lower altitudes (200-800m), withstands higher temperatures (24-30°C), and is more resistant to pests and diseases";
-        robusta.info();
+
+        robusta.inform();
         robusta.roast();
 
     }
+
 }
