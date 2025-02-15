@@ -7,40 +7,29 @@ public class FootBallClub {
     private static final Logger logger = System.getLogger(FootBallClub.class.getName());
 
     public String name;
-
     public Integer age;
-
     public Boolean isOnLoad;
-
     public Double price;
 
     public FootBallClub() {
-
         this.price = 0D;
-
     }
 
     public FootBallClub(String name) {
-
         this.name = name;
         this.price = 0D;
-
     }
 
     public FootBallClub(String name, Integer age) {
-
         this.name = name;
         this.age = age;
         this.price = 0D;
-
     }
 
     public FootBallClub(String name, Integer age, Double price) {
-
         this.name = name;
         this.age = age;
         this.price = price;
-
     }
 
     @Override
@@ -52,15 +41,13 @@ public class FootBallClub {
             "age": "%d",
             "isOnLoad": "%b",
             "price": "%.2f"
-        }
-        """, this.name, this.age, this.isOnLoad, this.price);
+        }""", name, age, isOnLoad, price);
 
     }
 
     public static void main(String[] args) {
 
         FootBallClub striker = new FootBallClub();
-
         striker.name = "lionel messi";
         striker.age = 37;
         striker.isOnLoad = false;

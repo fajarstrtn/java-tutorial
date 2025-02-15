@@ -50,7 +50,7 @@ public class Animal {
             "name" : "%s",
             "species" : "%s",
             "isMammals" : "%b"
-        }""", this.name, this.species, this.isMammals);
+        }""", name, species, isMammals);
     }
 
     public static void main(String[] args) {
