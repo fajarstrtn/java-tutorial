@@ -24,7 +24,7 @@ public class Animal {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setSpecies(String species) {
@@ -32,7 +32,7 @@ public class Animal {
     }
 
     public String getSpecies() {
-        return this.species;
+        return species;
     }
 
     public void isMammals(Boolean isMammals) {
@@ -40,7 +40,7 @@ public class Animal {
     }
 
     public Boolean isMammals() {
-        return this.isMammals;
+        return isMammals;
     }
 
     @Override

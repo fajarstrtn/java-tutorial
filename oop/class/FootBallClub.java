@@ -34,7 +34,6 @@ public class FootBallClub {
 
     @Override
     public String toString() {
-
         return String.format("""
         {
             "name": "%s",
@@ -42,7 +41,6 @@ public class FootBallClub {
             "isOnLoad": "%b",
             "price": "%.2f"
         }""", name, age, isOnLoad, price);
-
     }
 
     public static void main(String[] args) {
