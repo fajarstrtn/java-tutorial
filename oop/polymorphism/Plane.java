@@ -9,4 +9,8 @@ public class Plane {
         System.out.println("the plane is about to land");
     }
 
+    public void land(String airportName) {
+        System.out.println("the plane is about to land on" + airportName);
+    }
+    
 }
