@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Villain extends Superhero {
 
-    public Boolean isMetaHuman;
+    protected Boolean isMetaHuman;
 
     public Villain() {
         super();

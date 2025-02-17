@@ -66,7 +66,6 @@ public class Earphone {
     }
 
     public String getInformation() {
-
         return String.format("""
         {
             "brand" : "%s",
@@ -76,7 +75,6 @@ public class Earphone {
             "model" : "%s",
             "price" : %.2f
         }""", brand, color, ipxRating, isWired, model, price);
-
     }
 
 }
@@ -101,7 +99,6 @@ class Earbuds extends Earphone {
 
     @Override
     public String getInformation() {
-
         return String.format("""
         {
             "brand" : "%s",
@@ -112,7 +109,6 @@ class Earbuds extends Earphone {
             "price" : %.2f,
             "isNoiceCancelling" : %b
         }""", getBrand(), getColor(), getIpxRating(), getIsWired(), getModel(), getPrice(), isNoiceCancelling);
-
     }
 
 }
