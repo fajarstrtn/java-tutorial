@@ -13,4 +13,8 @@ public interface Tree {
 
     void fall();
 
+    default void harvest(String name) {
+        System.out.println(name + " is being harvested");
+    }
+
 }
