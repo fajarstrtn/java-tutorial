@@ -11,10 +11,16 @@ public interface Tree {
 
     void grow();
 
+    void grow(String place);
+
     void fall();
 
     default void harvest(String name) {
         System.out.println(name + " is being harvested");
+    }
+
+    default void harvest(String name, String place) {
+        System.out.println(name + " is being harvested in " + place);
     }
 
 }

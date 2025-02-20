@@ -6,6 +6,11 @@ public class Sequioa implements Tree {
     }
 
     @Override
+    public void grow(String fieldName) {
+        System.out.println("sequioa tree is growing in " + fieldName);
+    }
+
+    @Override
     public void fall() {
         System.out.println("sequioa tree is falling");
     }
