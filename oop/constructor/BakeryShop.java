@@ -4,7 +4,8 @@ public class BakeryShop {
     public static void main(String[] args) {
 
         /* Java will provide default constructor once an object is created.
-        Then, it will be filled with default value. Unlike concrete method, constructor might at least be called once. */
+        Then, it will be filled with default value. Unlike concrete method, constructor might at least be called once.
+        Once user defines any constructor (with or without parameters), the compiler no longer provides the default constructor.*/
         Bakery bread = new Bakery();
 
         bread.setName("bread");
