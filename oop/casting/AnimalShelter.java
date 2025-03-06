@@ -3,6 +3,7 @@ public class AnimalShelter {
 
     public static void main(String[] args) {
 
+        /* Downcasting to Dog class. */
         Animal animal = new Dog();
 
         if (animal instanceof Dog dog)
@@ -21,10 +22,21 @@ public class AnimalShelter {
         if (animal == null)
             System.out.println(animal);
 
+        /* Upcasting to Animal class. */
+        animal = new Animal();
+
+        if (animal instanceof Animal newAnimal)
+            newAnimal.makeSound();
+
     }
 }
 
 class Animal {
+
+    public void makeSound() {
+        System.out.println("an animal is making its sound");
+    }
+
 }
 
 class Dog extends Animal {
