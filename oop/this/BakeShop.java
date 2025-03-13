@@ -13,6 +13,7 @@ public class BakeShop {
         System.out.println(croissant.getDuration());
         System.out.println(croissant.getPrice());
         System.out.println(croissant.inform());
+        System.out.println(croissant.order().checkout());
 
         var choux = new Pastry("choux", List.of("water", "butter", "flour", "eggs", "salt", "vanilla"), 60, 25D);
 
@@ -21,6 +22,7 @@ public class BakeShop {
         System.out.println(choux.getDuration());
         System.out.println(choux.getPrice());
         System.out.println(choux.inform());
+        System.out.println(choux.order().checkout());
 
     }
 
@@ -32,26 +34,27 @@ class Pastry {
     private List<String> ingredients;
     private Integer duration;
     private Double price;
+    private Boolean orderStatus = false;
 
     public Pastry() {
     }
 
     public Pastry(String name) {
-        this.name = name;
+        this(name, null, null, null);
     }
 
     public Pastry(String name, List<String> ingredients) {
-        this(name);
-        this.ingredients = ingredients;
+        this(name, ingredients, null, null);
     }
 
     public Pastry(String name, List<String> ingredients, Integer duration) {
-        this(name, ingredients);
-        this.duration = duration;
+        this(name, ingredients, duration, null);
     }
 
     public Pastry(String name, List<String> ingredients, Integer duration, Double price) {
-        this(name, ingredients, duration);
+        this.name = name;
+        this.ingredients = ingredients;
+        this.duration = duration;
         this.price = price;
     }
 
@@ -59,43 +62,33 @@ class Pastry {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public List<String> getIngredients() {
         return ingredients;
-    }
-
-    public void setIngredients(List<String> ingredients) {
-        this.ingredients = ingredients;
     }
 
     public Integer getDuration() {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
     public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
     public boolean isCheap() {
-        if (Optional.ofNullable(price).isEmpty())
-            price = 0D;
-
-        return price >= 0 && price <= 10;
+        return price != null && price >= 0 && price <= 10;
     }
 
     public String inform() {
-        return this.isCheap() ? name.concat(" is a cheap pastry") : name.concat(" is an expensive pastry");
+        return name + (isCheap() ? " is a cheap pastry" : " is an expensive pastry");
+    }
+
+    public Pastry order() {
+        orderStatus = true;
+        return this;
+    }
+
+    public String checkout() {
+        return name + (Boolean.TRUE.equals(orderStatus) ? " is successfully ordered" : " is not ordered yet");
     }
 
 }
