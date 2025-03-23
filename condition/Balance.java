@@ -6,7 +6,6 @@ public class Balance {
     public static void main(String[] args) {
 
         try (Scanner sc = new Scanner(System.in)) {
-
             System.out.print("Insert price of an item: ");
             int priceOfAnItem = sc.nextInt();
 
@@ -22,7 +21,12 @@ public class Balance {
             } else {
                 System.out.println("Stop right there! your balance is " + result + " and you have nothing in your bank");
             }
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
 
     }
+
 }

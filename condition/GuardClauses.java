@@ -6,7 +6,7 @@ public class GuardClauses {
         String name = "John Doe";
         byte age = 26;
 
-/*      Guard clause help to filter the condition before reaching the happy flow.
+        /* Guard clause help to filter the condition before reaching the happy flow.
         This strategy will put the bad condition on the top of the happy flow. */
         if (!name.equalsIgnoreCase("John Doe")) {
             System.out.println("This is not " + name);
@@ -19,5 +19,7 @@ public class GuardClauses {
         }
 
         System.out.println("This is " + name);
+
     }
+
 }

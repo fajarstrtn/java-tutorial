@@ -11,7 +11,6 @@ public class LevelUp {
         String fruit;
 
         try (var br = new BufferedReader(new InputStreamReader(System.in))) {
-
             System.out.print("What is your favourite fruit: ");
             fruit = br.readLine();
 
@@ -22,12 +21,10 @@ public class LevelUp {
                 System.out.println("Sorry, we don\'t have it");
                 System.out.println("You got " + num + " fruit");
             }
-
         } catch (IOException ioe) {
-
             System.err.println(ioe.getMessage());
-
         }
 
     }
+
 }

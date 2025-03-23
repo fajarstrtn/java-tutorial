@@ -6,7 +6,6 @@ public class FindingMaximumNumber {
     public static void main(String[] args) {
 
         try (Scanner sc = new Scanner(System.in)) {
-
             System.out.print("Insert 1st number: ");
             int firstNumber = sc.nextInt();
 
@@ -20,7 +19,12 @@ public class FindingMaximumNumber {
             } else {
                 System.out.println("Both are equal");
             }
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
 
     }
+
 }

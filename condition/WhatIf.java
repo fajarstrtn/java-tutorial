@@ -12,4 +12,5 @@ public class WhatIf {
         System.out.println("Oops! It is outside of if block.");
 
     }
+
 }

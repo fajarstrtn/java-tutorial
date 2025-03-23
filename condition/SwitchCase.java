@@ -15,29 +15,31 @@ public class SwitchCase {
 
         String word = switch (number) {
             case 0 ->
-                "ZERO";
+                "Zero";
             case 1 ->
-                "ONE";
+                "One";
             case 2 ->
-                "TWO";
+                "Two";
             case 3 ->
-                "THREE";
+                "Three";
             case 4 ->
-                "FOUR";
+                "Four";
             case 5 ->
-                "FIVE";
+                "Five";
             case 6 ->
-                "SIX";
+                "Six";
             case 7 ->
-                "SEVEN";
+                "Seven";
             case 8 ->
-                "EIGHT";
+                "Eight";
             case 9 ->
-                "NINE";
+                "Nine";
             default ->
-                "OTHER";
+                "Other";
         };
 
         System.out.println(word);
+
     }
+
 }

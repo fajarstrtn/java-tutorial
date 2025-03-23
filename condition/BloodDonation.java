@@ -11,9 +11,9 @@ public class BloodDonation {
         float weight;
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-
             System.out.print("Insert age : ");
             age = Byte.parseByte(br.readLine());
+
             System.out.print("Insert weight : ");
             weight = Float.parseFloat(br.readLine());
 
@@ -26,12 +26,12 @@ public class BloodDonation {
             }
 
             System.out.println("You are allowed to donate blood");
-
         } catch (IOException ioe) {
-
             System.err.println(ioe.getMessage());
-
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
 
     }
+
 }

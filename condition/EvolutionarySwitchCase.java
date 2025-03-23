@@ -8,55 +8,55 @@ public class EvolutionarySwitchCase {
 
         switch (selectedDay) {
             case Days.MONDAY ->
-                day = "monday";
+                day = "Monday";
             case Days.TUESDAY ->
-                day = "tuesday";
+                day = "Tuesday";
             case Days.WEDNESDAY ->
-                day = "wednesday";
+                day = "Wednesday";
             case Days.THURSDAY ->
-                day = "thursday";
+                day = "Thursday";
             case Days.FRIDAY ->
-                day = "friday";
+                day = "Friday";
             case Days.SATURDAY ->
-                day = "saturday";
+                day = "Saturday";
             case Days.SUNDAY ->
-                day = "sunday";
+                day = "Sunday";
         }
 
-        String dayStat = switch (selectedDay) {
+        String dayStatus = switch (selectedDay) {
             case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY ->
-                "weekday";
+                "Weekday";
             case SATURDAY, SUNDAY ->
-                "weekend";
+                "Weekend";
         };
 
-        System.out.println("today is " + day + " and this is " + dayStat);
+        System.out.println("Today is " + day + " and " + dayStatus);
 
         Integer number = 5;
 
         String printedValue = switch (number) {
             case 1 ->
-                "one";
+                "One";
             case 2 ->
-                "two";
+                "Two";
             case 3 ->
-                "three";
+                "Three";
             case 4 ->
-                "four";
+                "Four";
             case 5 ->
-                "five";
+                "Five";
             case 6 ->
-                "six";
+                "Six";
             case 7 ->
-                "seven";
+                "Seven";
             case 8 ->
-                "eight";
+                "Eight";
             case 9 ->
-                "nine";
+                "Nine";
             case 10 ->
-                "ten";
+                "Ten";
             default ->
-                "out of range";
+                "Out of range";
         };
 
         System.out.println(printedValue);
@@ -65,26 +65,27 @@ public class EvolutionarySwitchCase {
 
         String typeCheckedString = switch (object) {
             case Integer i ->
-                "integer: " + i;
+                "Integer: " + i;
             case Long l ->
-                "long: " + l;
+                "Long: " + l;
             case Double d ->
-                "double: " + d;
+                "Double: " + d;
             case Boolean b ->
-                "boolean: " + b;
+                "Boolean: " + b;
             case String s when s.length() >= 10 ->
-                "long string: " + s;
+                "Long string: " + s;
             case String s ->
-                "short string: " + s;
+                "Short string: " + s;
             case null ->
                 "null object";
             default ->
-                "uknown object";
+                "Uknown object";
         };
 
         System.out.println(typeCheckedString);
 
     }
+
 }
 
 enum Days {

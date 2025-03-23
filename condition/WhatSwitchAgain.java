@@ -6,9 +6,9 @@ public class WhatSwitchAgain {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Insert a number: ");
         int num = sc.nextInt();
+        sc.close();
 
         switch (num) {
             case 1 ->
@@ -20,6 +20,7 @@ public class WhatSwitchAgain {
             default ->
                 System.out.println("I am other");
         }
-        
+
     }
+
 }
