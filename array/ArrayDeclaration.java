@@ -20,6 +20,7 @@ public class ArrayDeclaration {
         for (String stringArrayValue : stringArray) {
             System.out.println(stringArrayValue);
         }
-        
+
     }
+
 }

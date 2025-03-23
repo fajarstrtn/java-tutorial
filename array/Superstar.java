@@ -17,7 +17,6 @@ public class Superstar {
     }
 
     private String name;
-
     private String song;
 
     public Superstar(String name, String song) {
@@ -40,5 +39,5 @@ public class Superstar {
     public void setSong(String song) {
         this.song = song;
     }
-    
+
 }

@@ -17,13 +17,13 @@ public class AlteredArray {
 
         int[] array = {1, 2, 3, 4, 5};
 
-/*      Use passByReference(int[] array) to reveal that changes in that method
-        will affect to its object. */
+        /* Use passByReference(int[] array) to reveal that changes in that method will affect to its object. */
         array = passByReference(array);
 
         for (int newValue : array) {
             System.out.println(newValue);
         }
-        
+
     }
+
 }

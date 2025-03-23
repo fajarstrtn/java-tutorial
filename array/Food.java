@@ -10,6 +10,7 @@ public class Food {
         for (int member = 0; member < size; ++member) {
             System.out.println(foods[member]);
         }
-        
+
     }
+
 }

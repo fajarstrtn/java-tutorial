@@ -16,7 +16,6 @@ public class MultidimentionalArray {
 
         for (int row = 0; row < mdStringArray.length; ++row) {
             for (int column = 0; column < mdStringArray[row].length; ++column) {
-
                 System.out.print(mdStringArray[row][column]);
 
                 if (column < mdStringArray[row].length - 1) {
@@ -26,6 +25,7 @@ public class MultidimentionalArray {
 
             System.out.println();
         }
-        
+
     }
+
 }

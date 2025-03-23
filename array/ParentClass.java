@@ -32,6 +32,7 @@ public class ParentClass {
         System.out.println("Data type for char parent class: " + charArray.getClass().getSuperclass());
         System.out.println("Data type for boolean parent class: " + booleanArray.getClass().getSuperclass());
         System.out.println("Data type for String parent class: " + stringArray.getClass().getSuperclass());
-        
+
     }
+
 }
