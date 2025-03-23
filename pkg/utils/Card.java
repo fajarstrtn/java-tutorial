@@ -1,9 +1,8 @@
-package pack.utils;
+package pkg.utils;
 
 public class Card {
 
     private Card() {
-
     }
 
     public static void shuffle() {

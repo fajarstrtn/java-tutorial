@@ -1,6 +1,6 @@
-package pack;
+package pkg;
 
-import pack.utils.Card;
+import pkg.utils.Card;
 
 public class Table {
 
