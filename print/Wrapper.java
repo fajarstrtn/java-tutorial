@@ -22,10 +22,8 @@ public class Wrapper {
         int int1 = ls2.get(0);
         System.out.println(int1);
 
-/*      Since user is working with objects now, user can use certain methods
-        to get information about the specific object.
-        For example, the following methods are used to get the value associated
-        with the corresponding wrapper object:
+        /* Since user is working with objects now, user can use certain methods to get information about the specific object.
+        For example, the following methods are used to get the value associated with the corresponding wrapper object:
         
         1. intValue()
         2. byteValue()
@@ -41,6 +39,6 @@ public class Wrapper {
         String age = "26";
         int realAge = Integer.parseInt(age);
         System.out.println(realAge);
-        
+
     }
 }

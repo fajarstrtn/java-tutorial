@@ -9,6 +9,6 @@ public class Numbers {
         int d, e, f;
         d = e = f = 10;
         System.out.println(d + " " + e + " " + f);
-        
+
     }
 }

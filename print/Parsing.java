@@ -7,7 +7,7 @@ public class Parsing {
         int yearOfBirth = 1998;
 
         System.out.println("current age: " + (Integer.parseInt(currentYear) - yearOfBirth));
-        System.out.println("concated string: " + currentYear + String.valueOf(yearOfBirth));
+        System.out.println("concated string: " + currentYear + (String.valueOf(yearOfBirth)));
 
     }
 }

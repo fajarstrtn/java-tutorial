@@ -8,6 +8,6 @@ public class Greetings {
 
         System.out.print("This is ");
         System.out.print("how print() works!");
-        
+
     }
 }

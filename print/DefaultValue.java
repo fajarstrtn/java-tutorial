@@ -2,21 +2,13 @@
 public class DefaultValue {
 
     public static byte age;
-
     public static short employeeNumber;
-
     public static int outcomePerMonth;
-
     public static long salaryPerMonth;
-
     public static float moneyOnPayPal;
-
     public static double savings;
-
     public static char driverLicense;
-
     public static boolean isMale;
-
     public static String address;
 
     public static void main(String[] args) {
@@ -30,6 +22,6 @@ public class DefaultValue {
         System.out.println("My driver license is " + driverLicense);
         System.out.println("My gender is " + isMale);
         System.out.println("My address is " + address);
-        
+
     }
 }

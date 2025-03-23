@@ -3,8 +3,7 @@ public class AmITrue {
 
     public static void main(String[] args) {
 
-        boolean amIHuman = true;
-        boolean areYouMyFriend = false;
+        boolean amIHuman = true, areYouMyFriend = false;
 
         if (amIHuman) {
             System.out.println("Hello, I am human!");

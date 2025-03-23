@@ -5,12 +5,11 @@ public class IdenticalVariables {
 
     public static void main(String[] args) {
 
+        IdenticalVariables obj = new IdenticalVariables();
         int age = 10;
 
-        IdenticalVariables obj = new IdenticalVariables();
-
-        System.out.println(age);
         System.out.println(obj.age);
-        
+        System.out.println(age);
+
     }
 }
