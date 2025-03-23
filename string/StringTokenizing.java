@@ -6,7 +6,6 @@ public class StringTokenizing {
     public static void main(String[] args) {
 
         String text = "Hello World! This is me.";
-
         StringTokenizer stringTokenizer = new StringTokenizer(text, " ");
 
         while (stringTokenizer.hasMoreTokens()) {
@@ -14,4 +13,5 @@ public class StringTokenizing {
         }
 
     }
+
 }

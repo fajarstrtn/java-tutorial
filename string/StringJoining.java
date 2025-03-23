@@ -20,6 +20,7 @@ public class StringJoining {
         stringJoiner.merge(anotherStringJoiner);
         System.out.println(stringJoiner.toString());
         System.out.println(stringJoiner.length());
-        
+
     }
+
 }

@@ -20,4 +20,5 @@ public class Currency {
         System.out.println(india);
 
     }
+
 }

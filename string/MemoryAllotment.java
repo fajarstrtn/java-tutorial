@@ -3,10 +3,10 @@ public class MemoryAllotment {
 
     public static void main(String[] args) {
 
-        String name = "Fajar Satriatna";
+        String name = "Jack Doe";
         String aliasName = new String(name);
 
-/*      Get the informational hashcode of each variable. */
+        /* Get the informational hashcode of each variable. */
         int nameAddress = System.identityHashCode(name);
         int aliasNameAddress = System.identityHashCode(aliasName);
         System.out.println("Identical? " + (nameAddress == aliasNameAddress));
@@ -19,4 +19,5 @@ public class MemoryAllotment {
         System.out.println("Identical? " + (catNameAddress == aliasCatNameAddress));
 
     }
+
 }
