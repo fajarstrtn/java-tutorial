@@ -11,19 +11,14 @@ public class FinallyTwo {
     private static int divide(int first, int second) {
 
         try {
-
             int result = first / second;
             return result;
-
         } catch (Exception e) {
-
             System.err.println(e.getMessage());
-
         } finally {
-
             return 10;
-
         }
-        
+
     }
+
 }

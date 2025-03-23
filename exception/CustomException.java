@@ -6,14 +6,10 @@ public class CustomException {
         String input = "10";
 
         try {
-
             boolean isInputValid = validateUserInput(input);
             System.out.println("Is input valid? " + isInputValid);
-
         } catch (NoIntegerValueAllowedException e) {
-
             System.err.println(e.getMessage());
-
         }
 
     }
@@ -27,6 +23,7 @@ public class CustomException {
         return true;
         
     }
+
 }
 
 class NoIntegerValueAllowedException extends IllegalArgumentException {
