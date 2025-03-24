@@ -7,8 +7,7 @@ public class Circle {
     public static void main(String[] args) {
 
         Circle circle = new Circle();
-
-        System.out.println("pi value is " + circle.PI);
+        System.out.println("PI value is " + circle.PI);
 
     }
 
