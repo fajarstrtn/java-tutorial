@@ -1,3 +1,4 @@
+
 public class Instrument {
 
     protected String name;
@@ -10,7 +11,7 @@ public class Instrument {
     public Instrument() {
         // no-args constructor
     }
-    
+
     public Instrument(String brand, String material, String name, double price, String type) {
         this.brand = brand;
         this.isTuned = false;
@@ -21,12 +22,12 @@ public class Instrument {
     }
 
     public void play() {
-        System.out.println("someone is playing a " + name);
+        System.out.println("Someone is playing a " + name);
     }
 
     public void tune() {
         isTuned = true;
         System.out.println(name + " is successfuly tuned");
     }
-    
+
 }

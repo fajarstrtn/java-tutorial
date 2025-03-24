@@ -49,8 +49,8 @@ public class Monitor {
     }
 
     public void greetCustomer(String name) {
-        System.out.println("hello, " + name + "! you just bought a " + model + " monitor from " + brand);
-        System.out.println("it is " + inches + " inches and it cost " + price + " USD");
+        System.out.println("Hi, " + name + "! You just bought a " + model + " monitor from " + brand);
+        System.out.println("It is " + inches + " inches and it cost " + price + " USD");
     }
 
 }
@@ -78,8 +78,8 @@ class LEDMonitor extends Monitor {
 
     @Override
     public void greetCustomer(String name) {
-        System.out.println("hello, " + name + "! you just bought a " + getModel() + " led monitor from " + getBrand());
-        System.out.println("it is " + getInches() + " inches and it cost " + getPrice() + " USD. " + (Boolean.TRUE.equals(isLED) ? "it is an led monitor" : "it is not an led monitor"));
+        System.out.println("Hi, " + name + "! You just bought a " + getModel() + " led monitor from " + getBrand());
+        System.out.println("It is " + getInches() + " inches and it cost " + getPrice() + " USD. " + (Boolean.TRUE.equals(isLED) ? "it is an led monitor" : "it is not an led monitor"));
     }
 
 }

@@ -29,13 +29,13 @@ public class Keyboard {
     }
 
     public void displayInfo(String classType) {
-        System.out.println("this is " + classType + " class");
-        System.out.println("brand: " + brand);
-        System.out.println("model: " + model);
+        System.out.println("This is " + classType + " class");
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
     }
 
     public void typeText(String text) {
-        System.out.println("your text on keyboard is \"" + text + "\"");
+        System.out.println("Your text on keyboard is \"" + text + "\"");
     }
 
 }
@@ -68,12 +68,12 @@ class MechanicalKeyboard extends Keyboard {
     @Override
     public void displayInfo(String classType) {
         super.displayInfo(classType);
-        System.out.println("switch type: " + switchType);
+        System.out.println("Switch Type: " + switchType);
     }
 
     @Override
     public void typeText(String text) {
-        System.out.println("your text on mechanical keyboard is \"" + text + "\"");
+        System.out.println("Your text on mechanical keyboard is \"" + text + "\"");
     }
 
 }
@@ -106,12 +106,12 @@ class RegularKeyboard extends Keyboard {
     @Override
     public void displayInfo(String classType) {
         super.displayInfo(classType);
-        System.out.println("numeric pad: " + hasNumericPad);
+        System.out.println("Numeric Pad: " + hasNumericPad);
     }
 
     @Override
     public void typeText(String text) {
-        System.out.println("your text on regular keyboard is \"" + text + "\"");
+        System.out.println("Your text on regular keyboard is \"" + text + "\"");
     }
 
 }

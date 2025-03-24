@@ -18,7 +18,7 @@ public class Guitar extends Instrument {
     public void changeString(int stringTotal) {
         int oldStringTotal = this.stringTotal;
         this.stringTotal = stringTotal;
-        System.out.println("strings have been changed from " + oldStringTotal + " to " + this.stringTotal);
+        System.out.println("Strings have been changed from " + oldStringTotal + " to " + this.stringTotal);
     }
 
 }

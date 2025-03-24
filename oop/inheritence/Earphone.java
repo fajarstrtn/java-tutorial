@@ -83,7 +83,7 @@ class Earbuds extends Earphone {
 
     private Boolean isNoiceCancelling;
 
-    /*  Child class should declare a constructor if parent class doesn't. */
+    /* Child class should declare a constructor if parent class doesn't. */
     public Earbuds(String brand, String color, String ipxRating, Boolean isWired, String model, Double price, Boolean isNoiceCancelling) {
         super(brand, color, ipxRating, isWired, model, price);
         this.isNoiceCancelling = isNoiceCancelling;
