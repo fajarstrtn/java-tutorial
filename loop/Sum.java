@@ -9,9 +9,7 @@ public class Sum {
 
             System.out.print("Insert a number of loop: ");
             int loop = sc.nextInt();
-
-            int i = 1;
-            int sum = 0;
+            int i = 1, sum = 0;
 
             while (i <= loop) {
                 sum += i;
@@ -20,6 +18,7 @@ public class Sum {
 
             System.out.println("Sum of iteration: " + sum);
         }
-        
+
     }
+
 }

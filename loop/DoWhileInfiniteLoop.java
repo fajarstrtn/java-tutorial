@@ -6,6 +6,7 @@ public class DoWhileInfiniteLoop {
         do {
             System.out.println("Hello world");
         } while (true);
-        
+
     }
+
 }

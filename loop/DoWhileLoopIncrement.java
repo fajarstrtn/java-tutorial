@@ -15,7 +15,12 @@ public class DoWhileLoopIncrement {
             } while (iteration < loop);
 
             System.out.println("Iteration value is " + iteration);
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
-        
+
     }
+
 }

@@ -9,15 +9,13 @@ public class WhileLoopIncrement {
 
             System.out.print("Insert number of loops: ");
             int loop = sc.nextInt();
-
             int iteration = 0;
 
             while (iteration < loop) {
-
                 System.out.println(iteration);
                 ++iteration;
             }
         }
-        
+
     }
 }

@@ -8,6 +8,7 @@ public class ForEachLoop {
         for (String fruit : fruits) {
             System.out.println(fruit);
         }
-        
+
     }
+
 }

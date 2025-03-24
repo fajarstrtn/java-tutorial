@@ -6,6 +6,7 @@ public class WhileInfiniteLoop {
         while (true) {
             System.out.println("Hello world");
         }
-        
+
     }
+
 }

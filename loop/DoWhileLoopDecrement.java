@@ -14,7 +14,12 @@ public class DoWhileLoopDecrement {
             do {
                 System.out.println(iteration--);
             } while (iteration > 0);
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
-        
+
     }
+
 }

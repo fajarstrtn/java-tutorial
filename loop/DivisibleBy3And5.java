@@ -3,27 +3,18 @@ public class DivisibleBy3And5 {
 
     public static void main(String[] args) {
 
-        int number = 15;
+        int number = 15, sum = 0;
 
         if (isOutOfRange(number)) {
-
             System.out.println("Invalid Value");
             return;
-
         }
 
-        int sum = 0;
-
         for (int i = 1; i <= number; ++i) {
-
             if (i % 3 == 0) {
-
                 sum = sumAndPrintNumber(sum, i, 3);
-
             } else if (i % 5 == 0) {
-
                 sum = sumAndPrintNumber(sum, i, 5);
-
             }
         }
 
@@ -35,7 +26,6 @@ public class DivisibleBy3And5 {
 
         sum += i;
         System.out.println(i + " is divisible by " + divNum);
-
         return sum;
 
     }
@@ -45,4 +35,5 @@ public class DivisibleBy3And5 {
         return number < 1 || number > 1000;
 
     }
+
 }

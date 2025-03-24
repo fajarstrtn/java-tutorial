@@ -6,7 +6,6 @@ public class CellPhoneOperator {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
         int option = 0, balance = 1;
         boolean iteration = true;
 
@@ -47,7 +46,6 @@ public class CellPhoneOperator {
         System.out.println("4. Exit");
         System.out.print("Insert choice: ");
         int option = sc.nextInt();
-
         return option;
 
     }
@@ -247,6 +245,7 @@ public class CellPhoneOperator {
     private static void getErrorMessage() {
 
         System.out.println("Wrong option! Go back to home page.");
-        
+
     }
+
 }

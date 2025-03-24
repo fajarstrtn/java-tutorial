@@ -6,6 +6,7 @@ public class ForInfiniteLoop {
         for (;;) {
             System.out.println("Hello world");
         }
-        
+
     }
+
 }
