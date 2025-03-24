@@ -6,7 +6,7 @@ public class Hello {
         sayHello();
         sayHello();
         sayHello();
-        
+
     }
 
     private static void sayHello() {
@@ -14,4 +14,5 @@ public class Hello {
         System.out.println("Hello world");
 
     }
+
 }

@@ -12,10 +12,11 @@ public class ContinueStep {
                 continue;
             }
 
-/*          This code below will not be executed after continue. */
+            /* This code below will not be executed after continue. */
             System.out.println(iteration);
             ++iteration;
         }
-    
+
     }
+
 }

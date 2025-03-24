@@ -3,11 +3,9 @@ public class SkipThreeNumbers {
 
     public static void main(String[] args) {
 
-        int iteration = 0;
-        int loop = 20;
+        int iteration = 0, loop = 20;
 
         do {
-
             if (iteration == 4 || iteration == 32 || iteration == 50) {
                 iteration += 2;
                 continue;
@@ -16,6 +14,7 @@ public class SkipThreeNumbers {
             System.out.println(iteration);
             iteration += 2;
         } while (iteration <= loop);
-        
+
     }
+
 }

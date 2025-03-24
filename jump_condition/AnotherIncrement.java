@@ -13,6 +13,7 @@ public class AnotherIncrement {
         if (number < 10) {
             System.out.println(++number);
         }
-        
+
     }
+
 }

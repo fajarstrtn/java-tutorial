@@ -17,7 +17,7 @@ public class Labels {
                 {
                     System.out.println("Start of third block");
 
-/*                  To jump out of a label easily (in this case, it will jump out of second label). */
+                    /* To jump out of a label easily (in this case, it will jump out of second label). */
                     if (t) {
                         break second;
                     }
@@ -29,6 +29,7 @@ public class Labels {
 
             System.out.println("End of first block");
         }
-        
+
     }
+
 }

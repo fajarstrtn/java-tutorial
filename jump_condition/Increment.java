@@ -5,7 +5,7 @@ public class Increment {
 
         doIncrement(11);
         System.out.println("Program successfully executed");
-        
+
     }
 
     private static void doIncrement(int value) {
@@ -15,4 +15,5 @@ public class Increment {
         }
 
     }
+
 }

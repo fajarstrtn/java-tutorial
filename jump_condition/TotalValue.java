@@ -17,4 +17,5 @@ public class TotalValue {
         return sum;
 
     }
+
 }
