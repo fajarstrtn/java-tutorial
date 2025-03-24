@@ -4,35 +4,33 @@ public class TrainStation {
     public static void main(String[] args) {
 
         Train monorail = new Monorail();
-
-        monorail.setType("straddle monorail");
-        monorail.setColor("blue");
+        monorail.setType("Straddle Monorail");
+        monorail.setColor("Blue");
         monorail.setCapacity(300);
-
         monorail.run();
         monorail.stop();
-        monorail.dropOff("sentosa monorail");
+        monorail.dropOff("Sentosa Monorail");
         monorail.info();
         monorail.maintain();
-
         Train.wheelTrainTotal(monorail.getType());
 
         Train tram = new Tram();
-
-        tram.setType("low-floor tram");
-        tram.setColor("red");
+        tram.setType("Low-floor Tram");
+        tram.setColor("Red");
         tram.setCapacity(250);
 
-        if (tram instanceof Tram tramParam)
+        if (tram instanceof Tram tramParam) {
             tramParam.hasFlexibleTrack(true);
+        }
 
         tram.run();
         tram.stop();
-        tram.dropOff("alexanderplatz");
+        tram.dropOff("Alexanderplatz");
         tram.info();
         tram.maintain();
 
         Train.wheelTrainTotal(tram.getType());
 
     }
+
 }

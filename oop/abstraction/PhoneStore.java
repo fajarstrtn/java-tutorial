@@ -4,7 +4,6 @@ public class PhoneStore {
     public static void main(String[] args) {
 
         CellPhone phone;
-
         phone = new Nokia();
         phone.ring();
         phone.call();
@@ -26,13 +25,13 @@ public class PhoneStore {
 
         var greetings = switch (phone) {
             case Nokia nokia ->
-                nokia.greet("lucas");
+                nokia.greet("Lucas");
             case Motorola motorola ->
-                motorola.greet("pearl");
+                motorola.greet("Peggy");
             case Samsung samsung ->
-                samsung.greet("yvone");
+                samsung.greet("Yvone");
             default ->
-                "i cannot find any phones";
+                "I cannot find any phones";
         };
 
         System.out.println(greetings);
