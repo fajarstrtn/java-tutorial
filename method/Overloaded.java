@@ -13,7 +13,7 @@ public class Overloaded {
         printMessage(10);
         printMessage(9.185f);
         printMessage(10, 9.185f);
-        printMessage(10, "hello", 100_000_000_000l);
+        printMessage(10, "Hello", 100_000_000_000l);
         printMessage();
 
     }
@@ -87,7 +87,7 @@ public class Overloaded {
 
     private static void printMessage() {
 
-        System.out.println("no method passed by");
+        System.out.println("No method passed by");
 
     }
 

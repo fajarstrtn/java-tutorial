@@ -6,19 +6,13 @@ public class Greetings {
         sayHi();
 
         try {
-
             int number = divideTwoNumbers(1, 2);
-
             System.out.println("Result: " + number);
 
-            long superNumber = calculateMultiplication (100, 400);
-
+            long superNumber = calculateMultiplication(100, 400);
             System.out.println("Result: " + superNumber);
-            
         } catch (ArithmeticException e) {
-
             System.err.println(e.toString());
-
         }
     }
 
@@ -39,5 +33,5 @@ public class Greetings {
         return firstNumber * secondNumber;
 
     }
-    
+
 }

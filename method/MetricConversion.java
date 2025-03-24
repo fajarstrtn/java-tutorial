@@ -6,18 +6,17 @@ public class MetricConversion {
         double inchesToCentiMeters = convertToCentiMeters(5);
         double feetAndinchesToCentiMeters = convertToCentiMeters(7, 9);
 
-        System.out.println("inch(es) to centimeter(s): " + inchesToCentiMeters);
-        System.out.println("feet and inch(es) to centimeter(s): " + feetAndinchesToCentiMeters);
+        System.out.println("Inch(es) to Centimeter(s): " + inchesToCentiMeters);
+        System.out.println("Feet and Inch(es) to Centimeter(s): " + feetAndinchesToCentiMeters);
 
     }
 
     private static double convertToCentiMeters(int inches) {
 
         if (inches < 0) {
-            System.err.println("negative inches value is not allowed");
+            System.err.println("Negative inches value is not allowed");
             return 0;
         }
-
         return inches * 2.54;
 
     }
@@ -29,16 +28,14 @@ public class MetricConversion {
             return 0;
         }
 
-/*      this code below is simpler but has low-readability
-
+        /* This code below is simpler but has low-readability:
         return ((feet * 12) + inches) * 2.54;
-        
         try change this with: */
-        
         int feetToInches = feet * 12;
         int totalInches = feetToInches + inches;
         double result = convertToCentiMeters(totalInches);
         return result;
 
     }
+
 }

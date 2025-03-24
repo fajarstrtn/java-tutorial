@@ -2,13 +2,12 @@
 public class Dog {
 
     public String name;
-
     public byte age;
 
     public void printInformation() {
 
-        System.out.println("hi, its name is " + this.name);
-        System.out.println("it is " + this.age + " years-old");
+        System.out.println("Hi, its name is " + this.name);
+        System.out.println("It is " + this.age + " years-old");
 
     }
 
@@ -21,10 +20,8 @@ public class Dog {
     public static void main(String[] args) {
 
         Dog krypto = new Dog();
-
-        krypto.name = "krypto";
+        krypto.name = "Krypto";
         krypto.age = 15;
-
         krypto.printInformation();
         printInformation(krypto.name);
 

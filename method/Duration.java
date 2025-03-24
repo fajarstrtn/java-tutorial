@@ -27,31 +27,26 @@ public class Duration {
     private static void getDurationString(int seconds) {
 
         if (isValid(seconds)) {
-
             int toHours = seconds / 3600;
             int toMinutes = (seconds % 3600) / 60;
             int toSeconds = (seconds % 3600) % 60;
-
             System.out.println(toHours + "h " + toMinutes + "m " + toSeconds + "s");
 
         } else {
-
             System.err.println("Input is out of range");
-
         }
+
     }
 
     private static void getDurationString(int minutes, int seconds) {
 
         if (isValid(minutes, seconds)) {
-
             int toSeconds = (minutes * 60) + seconds;
             getDurationString(toSeconds);
-
         } else {
-
             System.err.println("Input is out of range");
-
         }
+
     }
+
 }

@@ -23,12 +23,11 @@ public class Score {
     private static int calculatePoints(String teamA, String teamB, boolean isFailedToTheNextRound) {
 
         System.out.println(teamA + " bows out of " + teamB);
-
-        if (isFailedToTheNextRound)
-            System.out.println(teamA + " is failed to the next round"); 
-        else
+        if (isFailedToTheNextRound) {
+            System.out.println(teamA + " is failed to the next round");
+        } else {
             System.out.println(teamA + " still make it to the next round");
-
+        }
         return 0;
 
     }
