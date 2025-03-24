@@ -9,13 +9,13 @@ public class Fruit {
     public static void main(String[] args) {
 
         Fruit blueberry = new Fruit();
-
-        blueberry.name = "blueberry";
-        blueberry.color = "blue";
+        blueberry.name = "Blueberry";
+        blueberry.color = "Blue";
         blueberry.price = 0.5;
 
         System.out.println(blueberry.toString());
         System.out.println(blueberry.hashCode());
 
-     }
+    }
+
 }

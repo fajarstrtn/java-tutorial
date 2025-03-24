@@ -5,7 +5,6 @@ import java.lang.System.Logger.Level;
 public class Animal {
 
     private static final Logger logger = System.getLogger(Animal.class.getName());
-
     private String name;
     private String species;
     private Boolean isMammals;
@@ -55,24 +54,24 @@ public class Animal {
 
     public static void main(String[] args) {
 
-        Animal cat = new Animal("mio", "felis_catus", true);
+        Animal cat = new Animal("Mio", "Felis Catus", true);
         logger.log(Level.INFO, cat);
 
         Animal dog = new Animal();
-        dog.setName("loki");
-        dog.setSpecies("family_canidae");
+        dog.setName("Loki");
+        dog.setSpecies("Family Canidae");
         dog.isMammals(true);
         logger.log(Level.INFO, dog);
 
         Animal frog = new Animal();
-        frog.setName("leiya");
-        frog.setSpecies("anora");
+        frog.setName("Leiya");
+        frog.setSpecies("Anora");
         frog.isMammals(false);
         logger.log(Level.INFO, frog);
 
         Animal butterfly = new Animal();
-        butterfly.setName("nora");
-        butterfly.setSpecies("lepidoptera");
+        butterfly.setName("Nora");
+        butterfly.setSpecies("Lepidoptera");
         butterfly.isMammals(false);
         logger.log(Level.INFO, String.format("""
         {

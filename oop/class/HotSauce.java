@@ -52,11 +52,11 @@ public class HotSauce {
     }
 
     public String print() {
-        return "it is a " + name + " hot sauce. it is " + size + " ml and it costs $" + price + ".";
+        return "It is a " + name + " hot sauce. It is " + size + " ml and it costs $" + price + ".";
     }
 
     public String print(String customerName) {
-        return "hey, " + customerName + "!"
+        return "Hi, " + customerName + "!"
                 + " this is my new product, " + name + ". it's " + size + " ml"
                 + " and it's cheap, only $" + price + ".";
     }
@@ -64,18 +64,18 @@ public class HotSauce {
     public static void main(String[] args) {
 
         var sriracha = new HotSauce();
-        sriracha.setName("sriracha");
+        sriracha.setName("Sriracha");
         sriracha.setSize(250D);
         sriracha.setPrice(1.5D);
         logger.log(Level.INFO, sriracha.print());
 
-        var tabasco = new HotSauce("tabasco", 500D, 1.1D);
-        logger.log(Level.INFO, tabasco.print("jamie"));
+        var tabasco = new HotSauce("Tabasco", 500D, 1.1D);
+        logger.log(Level.INFO, tabasco.print("Oliver"));
 
-        var redhot = new HotSauce("frank's redhot", 750D);
+        var redhot = new HotSauce("Frank's Redhot", 750D);
         logger.log(Level.INFO, redhot.print());
 
-        var heinz = new HotSauce("cholula");
+        var heinz = new HotSauce("Cholula");
         logger.log(Level.INFO, heinz.print());
 
     }

@@ -46,24 +46,21 @@ public class FootBallClub {
     public static void main(String[] args) {
 
         FootBallClub striker = new FootBallClub();
-        striker.name = "lionel messi";
+        striker.name = "Lionel Messi";
         striker.age = 37;
         striker.isOnLoad = false;
         striker.price = 220_000_000D;
-
         logger.log(Level.INFO, striker);
 
-        FootBallClub winger = new FootBallClub("bukayo saka");
-
+        FootBallClub winger = new FootBallClub("Bukayo Saka");
         logger.log(Level.INFO, winger);
 
-        FootBallClub midfielder = new FootBallClub("leroy sane", 29);
-
+        FootBallClub midfielder = new FootBallClub("Leroy Sane", 29);
         logger.log(Level.INFO, midfielder);
 
-        FootBallClub defender = new FootBallClub("ruben diaz", 27, 71D);
-
+        FootBallClub defender = new FootBallClub("Ruben Diaz", 27, 71D);
         logger.log(Level.INFO, defender);
 
     }
+
 }

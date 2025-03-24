@@ -6,7 +6,6 @@ public class Car {
     double cc;
 
     /* This constructor declaration leads to an error which the variables are set to default values.
-        
     public Car(String name, double tankCapacity, double cc) {
         name = name;
         tankCapacity = tankCapacity;
@@ -38,13 +37,12 @@ public class Car {
 
     public static void main(String[] args) {
 
-        Car ferrari = new Car("ferrari spyder", 86, 3855);
+        Car ferrari = new Car("Ferrari Spyder", 86, 3855);
 
         /* It returns "becky" instead of ferrari spyder. */
-        ferrari.inform("becky");
+        ferrari.inform("Harold");
 
         /* Since class constructor has its declaration:
-
         public Car(String name, double tankCapacity, double cc) {
             name = name;
             tankCapacity = tankCapacity;
@@ -53,7 +51,7 @@ public class Car {
 
         It only reinitialize param variables instead of class attributes.
         To overcome this problem, set variables with "this" keyword. */
-        ferrari.inform("f8 tributo", 78, 3902);
+        ferrari.inform("F8 Tributo", 78, 3902);
 
     }
 

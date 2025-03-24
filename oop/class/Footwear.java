@@ -1,7 +1,7 @@
 
 public class Footwear {
 
-    private static final String FOOTWEAR_MANUFACTURER = "edward kennedy international";
+    private static final String FOOTWEAR_MANUFACTURER = "Edward Kennedy International";
     private String name;
     private Double price;
     private String type;
@@ -62,7 +62,7 @@ public class Footwear {
     public void inform(String name) {
         /* Variable shadowing can be fix with using "this" keyword. it refers to instance's attribute or method
         rather than parameter. */
-        System.out.println("hello, " + name + "! you just bought a " + this.name + " " + type + " shoes");
+        System.out.println("Hello, " + name + "! You just bought a " + this.name + " " + type + " shoes");
     }
 
     /* Since static attributes or methods belong to the class, then non-static variable name cannot be referenced from a static context. */
@@ -73,12 +73,12 @@ public class Footwear {
     public static void main(String[] args) {
 
         var nike = new Footwear();
-        nike.setName("nike air jordan");
+        nike.setName("Nike Air Dordan");
         nike.setPrice(320D);
-        nike.setType("sneaker");
-        nike.setColor("off-white");
+        nike.setType("Sneaker");
+        nike.setColor("Off-White");
         nike.isBrandNew(true);
-        nike.inform("yvone");
+        nike.inform("Yvone");
 
         Footwear.getManufacturerInformation();
 

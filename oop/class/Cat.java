@@ -9,15 +9,15 @@ public class Cat {
     public static void main(String[] args) {
 
         Cat mio = new Cat();
-        mio.name = "mio";
-        mio.breed = "persian";
-        mio.color = "white";
+        mio.name = "Mio";
+        mio.breed = "Persian";
+        mio.color = "White";
         mio.age = 12;
 
-        System.out.println("cat's name: " + mio.name);
-        System.out.println("cat's breed: " + mio.breed);
-        System.out.println("cat's color: " + mio.color);
-        System.out.println("cat's age: " + mio.age);
+        System.out.println("Cat's name: " + mio.name);
+        System.out.println("Cat's breed: " + mio.breed);
+        System.out.println("Cat's color: " + mio.color);
+        System.out.println("Cat's age: " + mio.age);
 
     }
 

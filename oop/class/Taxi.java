@@ -44,13 +44,13 @@ public class Taxi {
 
     public static void main(String[] args) {
 
-        var grabcar = new Taxi();
-        grabcar.setName("grab car");
-        grabcar.setType("sedan");
-        grabcar.isOperated(true);
-        grabcar.setIssuedIn(2019);
+        var taxi = new Taxi();
+        taxi.setName("Conventional Taxi");
+        taxi.setType("City Car");
+        taxi.isOperated(true);
+        taxi.setIssuedIn(2019);
 
-        System.out.println("is " + grabcar.getName() + " is outdated? " + grabcar.isCarOutdated());
+        System.out.println("Is " + taxi.getName() + " is outdated? " + taxi.isCarOutdated());
 
     }
 
