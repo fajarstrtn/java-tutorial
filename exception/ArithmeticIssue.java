@@ -26,8 +26,7 @@ public class ArithmeticIssue {
             Since the 'finally' returns a value, this won't happen. */
             throw e;
         } finally {
-            /* This 'return' statement will discard the result of execution,
-            regardless of it succeeds or fails. */
+            /* This 'return' statement will discard the result of execution, regardless of it succeeds or fails. */
             return 10_000;
         }
 

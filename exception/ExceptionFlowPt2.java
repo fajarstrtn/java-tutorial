@@ -13,7 +13,7 @@ public class ExceptionFlowPt2 {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println(e.toString());
         } finally {
-            /* finally keyword will be executed regardless of exception happens in try block or not. */
+            /* This 'finally' keyword will be executed regardless of exception happens in try block or not. */
             System.out.println("Finally block is executed");
         }
 
