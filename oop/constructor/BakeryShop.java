@@ -7,7 +7,6 @@ public class BakeryShop {
         Then, it will be filled with default value. Unlike concrete method, constructor might at least be called once.
         Once user defines any constructor (with or without parameters), the compiler no longer provides the default constructor.*/
         Bakery bread = new Bakery();
-
         bread.setName("bread");
         bread.setType("wheat");
         bread.setHomeMade(true);
@@ -18,4 +17,5 @@ public class BakeryShop {
         System.out.println(bread.isHomeMade());
 
     }
+
 }

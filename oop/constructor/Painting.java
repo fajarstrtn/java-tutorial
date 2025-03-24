@@ -5,7 +5,6 @@ public class Painting {
     private String technique;
 
     public Painting() {
-
     }
 
     public Painting(String name, String technique) {

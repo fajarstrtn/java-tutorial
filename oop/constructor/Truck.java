@@ -11,7 +11,7 @@ public class Truck {
     /* The initializer block contains the code that is always executed
     whenever an instance is created and it runs each time when an object of the class is created. */
     {
-        name = "kamaz";
+        name = "Kamaz Truck";
         tankCapacity = 350;
         cc = 11760;
     }
@@ -30,11 +30,10 @@ public class Truck {
 
     public static void main(String[] args) {
 
-        Truck rally = new Truck();
-
-        System.out.println(rally.getName());
-        System.out.println(rally.getTankCapacity());
-        System.out.println(rally.getCc());
+        Truck truck = new Truck();
+        System.out.println(truck.getName());
+        System.out.println(truck.getTankCapacity());
+        System.out.println(truck.getCc());
 
     }
 }
