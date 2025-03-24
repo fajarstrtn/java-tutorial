@@ -6,7 +6,7 @@ public class Airport {
         Plane plane = new Plane();
         plane.takeOff();
         plane.land();
-        plane.land("changi");
+        plane.land("Changi Airport");
 
         Cargo cargo = new Cargo();
         cargo.takeOff();
@@ -15,6 +15,7 @@ public class Airport {
         Bomber bomber = new Bomber();
         bomber.takeOff();
         bomber.land();
- 
+
     }
+
 }
