@@ -4,7 +4,7 @@ public class SpaceMan {
     public static void main(String[] args) {
 
         var space = new Space();
-        space.print("i am already in mars");
+        space.print("I am already in Mars.");
 
     }
 

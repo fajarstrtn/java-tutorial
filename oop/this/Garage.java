@@ -4,7 +4,7 @@ public class Garage {
     public static void main(String[] args) {
 
         var car = new Vehicle();
-        car.setName("nissan gt-r");
+        car.setName("Nissan GT-R");
         car.setSeat(2);
         car.setTankCapacity(74D);
         car.setCc(3800D);
@@ -15,6 +15,7 @@ public class Garage {
         System.out.println(car.getCc());
 
     }
+
 }
 
 class Vehicle {

@@ -7,15 +7,16 @@ public class Field {
         inner.inform();
 
     }
+
 }
 
 class OuterField {
 
-    private String name = "outer field";
+    private String name = "Outer Field";
 
     class InnerField {
 
-        private String name = "inner field";
+        private String name = "Inner Field";
 
         public void inform() {
             System.out.println(OuterField.this.name);

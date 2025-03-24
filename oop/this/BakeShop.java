@@ -5,8 +5,7 @@ public class BakeShop {
 
     public static void main(String[] args) {
 
-        var croissant = new Pastry("croissant", List.of("flour", "butter", "yeast", "sugar", "salt", "liquid"));
-
+        var croissant = new Pastry("Croissant", List.of("Flour", "Butter", "Yeast", "Sugar", "Salt", "Liquid"));
         System.out.println(croissant.getName());
         System.out.println(croissant.getIngredients());
         System.out.println(croissant.getDuration());
@@ -14,8 +13,7 @@ public class BakeShop {
         System.out.println(croissant.inform());
         System.out.println(croissant.order().checkout());
 
-        var choux = new Pastry("choux", List.of("water", "butter", "flour", "eggs", "salt", "vanilla"), 60, 25D);
-
+        var choux = new Pastry("Choux", List.of("Water", "Butter", "Flour", "Eggs", "Salt", "Vanilla"), 60, 25D);
         System.out.println(choux.getName());
         System.out.println(choux.getIngredients());
         System.out.println(choux.getDuration());
