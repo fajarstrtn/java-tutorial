@@ -13,6 +13,7 @@ public class WatchShop {
         watch = new DressWatch();
         drawLineAt(14);
         watch.makeSound();
+
         /* watch.inform(); not allowed since method inform is specific to DressWatch class.*/
         if (watch instanceof DressWatch dw) {
             drawLineAt(18);
@@ -53,7 +54,7 @@ public class WatchShop {
 class Watch {
 
     public void makeSound() {
-        System.out.println("tick... tick... tick...");
+        System.out.println("Tick... Tick... Tick...");
     }
 
 }
@@ -62,11 +63,11 @@ class DressWatch extends Watch {
 
     @Override
     public void makeSound() {
-        System.out.println("click... clack... click...");
+        System.out.println("Click... Clack... Click...");
     }
 
     public void inform() {
-        System.out.println("this is a dress watch");
+        System.out.println("This is a dress watch");
     }
 
 }
@@ -74,7 +75,7 @@ class DressWatch extends Watch {
 class QuartzWatch extends Watch {
 
     public void inform() {
-        System.out.println("this is a quartz watch");
+        System.out.println("This is a quartz watch");
     }
 
 }

@@ -19,7 +19,7 @@ public class Fruit {
     }
 
     public void inform() {
-        System.out.println("this is " + name);
+        System.out.println("This is " + name);
     }
 
 }

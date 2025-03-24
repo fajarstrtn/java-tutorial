@@ -28,7 +28,7 @@ public class Mango extends Fruit {
     @Override
     public void inform() {
         super.inform();
-        System.out.println("the shape is " + shape);
+        System.out.println("Its shape is " + shape);
     }
 
 }

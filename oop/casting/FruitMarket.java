@@ -12,22 +12,22 @@ public class FruitMarket {
         if (fruit != null) {
             /* Risky downcasting, possibly throws an exception. */
             Mango mango1 = (Mango) fruit;
-            mango1.setName("mango");
-            mango1.setShape("oval");
+            mango1.setName("Mango");
+            mango1.setShape("Oval");
             mango1.inform();
         }
 
         /* Use instanceof for safe upcasting/downcasting. */
         if (fruit instanceof Mango mango2) {
-            mango2.setName("tommy atkins mango");
-            mango2.setShape("rounded");
+            mango2.setName("Tommy-Atkins Mango");
+            mango2.setShape("Rounded");
             mango2.inform();
         } else if (fruit instanceof BlueBerry bb1) {
-            bb1.setName("blueberry");
+            bb1.setName("Blueberry");
             bb1.setSour(true);
             bb1.inform();
         } else {
-            System.out.println("instance is not found");
+            System.out.println("Instance is not found");
         }
 
     }

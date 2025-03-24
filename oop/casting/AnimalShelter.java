@@ -34,7 +34,7 @@ public class AnimalShelter {
 class Animal {
 
     public void makeSound() {
-        System.out.println("an animal is making its sound");
+        System.out.println("An animal is making its sound");
     }
 
 }
@@ -42,7 +42,7 @@ class Animal {
 class Dog extends Animal {
 
     public void bark() {
-        System.out.println("woof... woof...");
+        System.out.println("Woof... Woof...");
     }
 
 }
@@ -50,7 +50,7 @@ class Dog extends Animal {
 class Cat extends Animal {
 
     public void meow() {
-        System.out.println("meow... meow...");
+        System.out.println("Meow... Meow...");
     }
 
 }
@@ -58,7 +58,7 @@ class Cat extends Animal {
 class Crocodile extends Animal {
 
     public void sneak() {
-        System.out.println("blups... blups...");
+        System.out.println("Blups... Blups...");
     }
 
 }
