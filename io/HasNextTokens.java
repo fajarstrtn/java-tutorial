@@ -13,22 +13,23 @@ public class HasNextTokens {
                 .toString();
 
         try (Scanner sc = new Scanner(str)) {
-
             int line = 0;
-
             while (sc.hasNext()) {
-
                 String val = sc.next();
 
-                /*              The ':|\\s+' is a regular expression matching a single colon
-                or more whitespace characters. */
-                if ("inter:".equals(val)) {
+                /* The ':|\\s+' is a regular expression matching a single colon or more whitespace characters. */
+                if ("Inter:".equals(val)) {
                     sc.useDelimiter(":|\\s+");
                 }
 
                 System.out.println(String.format("%d | %s", ++line, val));
             }
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated.");
         }
 
     }
+
 }
