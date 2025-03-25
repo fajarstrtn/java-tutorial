@@ -88,7 +88,7 @@ class Car implements Vehicle {
             return;
         }
 
-        this.speed = tempSpeed;
+        this.setSpeed(tempSpeed);
     }
 
     @Override
@@ -104,7 +104,7 @@ class Car implements Vehicle {
             return;
         }
 
-        this.speed = tempSpeed;
+        this.setSpeed(tempSpeed);
     }
 
     public void checkSpeedometer() {
@@ -147,7 +147,7 @@ class Truck implements Vehicle {
             return;
         }
 
-        this.speed = tempSpeed;
+        this.setSpeed(tempSpeed);
     }
 
     @Override
@@ -163,7 +163,7 @@ class Truck implements Vehicle {
             return;
         }
 
-        this.speed = tempSpeed;
+        this.setSpeed(tempSpeed);
     }
 
     public void checkSpeedometer() {
