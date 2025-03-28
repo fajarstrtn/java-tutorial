@@ -47,7 +47,7 @@ interface MusicPlayer {
 
     void stop();
 
-    /* Default method helps to add new implementation without breaking existing feature. */
+    /* Default method helps to add new implementation without breaking existing implementations. */
     default void inform(String name) {
         System.out.println("User is listening to the music through " + name + ".");
     }
