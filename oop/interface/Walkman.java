@@ -36,6 +36,7 @@ public class Walkman implements MusicPlayer {
         walkman.play();
         walkman.stop();
         walkman.inform(walkman.getType());
+        MusicPlayer.displayOwner("Scott Atkins");
 
     }
 
@@ -50,6 +51,10 @@ interface MusicPlayer {
     /* Default method helps to add new implementation without breaking existing implementations. */
     default void inform(String name) {
         System.out.println("User is listening to the music through " + name + ".");
+    }
+
+    static void displayOwner(String name) {
+        System.out.println("This device is owned by " + name + ".");
     }
 
 }
