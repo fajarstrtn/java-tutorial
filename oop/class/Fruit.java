@@ -1,5 +1,5 @@
 
-/* Every class in Java is part of object class. it is the root of inheritence in Java. */
+/* Every class in Java is part of object class. it is the root of inheritance in Java. */
 public class Fruit {
 
     String name;
