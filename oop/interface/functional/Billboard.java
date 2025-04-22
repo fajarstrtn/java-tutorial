@@ -7,10 +7,10 @@ public class Billboard {
 
     public static void main(String[] args) {
 
-        Consumer<String> ad = message -> System.out.println(message);
-        ad.accept("iPhone 16 here now!");
+        Consumer<String> printAds = message -> System.out.println(message);
+        printAds.accept("iPhone 16 here now!");
 
-        Consumer<List<Integer>> pricetag = list -> {
+        Consumer<List<Integer>> printPriceTag = list -> {
             list.forEach(System.out::println);
         };
 
@@ -20,14 +20,30 @@ public class Billboard {
         price.add(150);
         price.add(350);
         price.add(500);
-        pricetag.accept(price);
+        printPriceTag.accept(price);
 
-        Consumer<List<String>> customer = list -> list.stream().forEach(System.out::println);
+        Consumer<List<String>> printProducts = list -> list.stream().forEach(System.out::println);
         List<String> products = new ArrayList<String>();
         products.add("iPhone 16");
         products.add("Corkcicle");
         products.add("Steve Madden");
-        customer.accept(products);
+        printProducts.accept(products);
+
+        Consumer<String> printLocations = location -> System.out.println("Normal :" + location);
+        Consumer<String> printLocationsInUpperCase = location -> System.out.println("Upper Case: " + location.toUpperCase());
+        Consumer<String> combination = printLocations.andThen(printLocationsInUpperCase);
+        products.forEach(combination);
+
+        List<String> customers = List.of("Jack Napalm", "Pandora", "Judy Nails");
+        iterate(customers, customer -> System.out.println("Customer: " + customer));
+
+    }
+
+    public static void iterate(List<String> customers, Consumer<String> printCustomer) {
+
+        for (String customer : customers) {
+            printCustomer.accept(customer);
+        }
 
     }
 
