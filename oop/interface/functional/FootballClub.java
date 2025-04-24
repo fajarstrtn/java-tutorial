@@ -1,7 +1,9 @@
 
-import java.util.function.Consumer;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class FootballClub {
 
@@ -42,5 +44,39 @@ public class FootballClub {
             System.out.println(npe.toString());
         }
 
+        // BiConsumer takes two arguments.
+        BiConsumer<String, Integer> displayPlayer = (name, squadNumber) -> System.out.println(name + ": " + squadNumber);
+        displayPlayer.accept("Christiano Ronaldo", 7);
+
+        List<Integer> newPlayersSpeed = new ArrayList<>();
+        newPlayersSpeed.add(10);
+        newPlayersSpeed.add(13);
+        newPlayersSpeed.add(24);
+        newPlayersSpeed.add(27);
+
+        List<Integer> oldPlayersSpeed = new ArrayList<>();
+        oldPlayersSpeed.add(10);
+        oldPlayersSpeed.add(13);
+        oldPlayersSpeed.add(25);
+        oldPlayersSpeed.add(27);
+
+        BiConsumer<List<Integer>, List<Integer>> equality = (lista, listb) -> {
+            if (lista.size() != listb.size()) {
+                System.out.println("Two lists are not equals");
+            } else {
+                for (int i = 0; i < lista.size(); i++) {
+                    if (!Objects.equals(lista.get(i), listb.get(i))) {
+                        System.out.println(lista.get(i) + " is different than " + listb.get(i));
+                        return;
+                    }
+                }
+
+                System.out.println("Two lists are equals");
+            }
+        };
+
+        equality.accept(newPlayersSpeed, oldPlayersSpeed);
+
     }
+
 }
