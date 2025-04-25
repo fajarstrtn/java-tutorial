@@ -70,12 +70,19 @@ public class FootballClub {
                         return;
                     }
                 }
-
                 System.out.println("Two lists are equals");
             }
         };
 
         equality.accept(newPlayersSpeed, oldPlayersSpeed);
+
+        BiConsumer<List<Integer>, List<Integer>> display = (lista, listb) -> {
+            lista.stream().forEach(System.out::print);
+            System.out.println();
+            listb.stream().forEach(System.out::print);
+        };
+
+        equality.andThen(display).accept(newPlayersSpeed, oldPlayersSpeed);
 
     }
 
