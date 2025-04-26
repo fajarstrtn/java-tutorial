@@ -1,9 +1,9 @@
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
-import java.util.Optional;
 
 public class Validation {
 
@@ -64,6 +64,8 @@ public class Validation {
 
             return fullName.toString() + ": " + user.getRole();
         }).forEach(System.out::println);
+
+        System.out.println(users.stream().filter(user -> user.getRole().equals("Admin")).toList());
 
     }
 
