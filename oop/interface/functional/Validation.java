@@ -43,6 +43,9 @@ public class Validation {
         IntPredicate isPositiveNumber = x -> x > 0;
         IntStream.of(intArray1).sorted().filter(isPositiveNumber).forEach(System.out::println); // A list of array printed in new lines
 
+        IntPredicate even = x -> x % 2 == 0;
+        IntStream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).filter(even).forEach(System.out::println);
+
         List<User> users = List.of(
                 new User("Elara", null, "Quinn", (byte) 20D, "Admin"),
                 new User("Jaxon", null, "Rivera", (byte) 19D, "User"),
