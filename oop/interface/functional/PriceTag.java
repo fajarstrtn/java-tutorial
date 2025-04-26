@@ -36,8 +36,8 @@ public class PriceTag {
             System.out.println("Catch null value with compose method");
         }
 
-        Function<Integer, Integer> value = Function.identity();
-        System.out.println(value.apply(100));
+        Function<Integer, Integer> identity = Function.identity();
+        System.out.println(identity.apply(100));
 
         List<Employee> employees = List.of(
                 new Employee("James Dean", "Cashier", 5_000D),
@@ -47,8 +47,12 @@ public class PriceTag {
                 new Employee("Sidney Simpson", "Senior Manager", 25_000D)
         );
         Function<Employee, String> findEmployee = employee -> employee.getName();
-        employees.stream().map(findEmployee).forEach(System.out::println)
-        ;
+        employees.stream().map(findEmployee).forEach(System.out::println);
+
+        Function<Integer, Integer> multiply = p -> p * 4;
+        Function<Integer, Double> divide = p -> p / 2.0;
+        Function<Integer, Double> count = multiply.andThen(divide);
+        System.out.println(count.apply(10));
 
     }
 
