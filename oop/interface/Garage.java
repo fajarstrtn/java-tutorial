@@ -6,11 +6,17 @@ public class Garage {
         Car.Move car1 = new SportCar();
         car1.drive();
 
-        Car.Break car2 = new SportCar();
+        Car.Break car2 = (Car.Break) car1;
         car2.stop();
 
-        Mode.Safe car3 = new SportCar();
+        Mode.Safe car3 = (Mode.Safe) car2;
         car3.changeToNormal();
+        car3.changeToEco();
+        car3.changeToComfort();
+
+        Mode.Speed car4 = (Mode.Speed) car3;
+        car4.changeToSport();
+        car4.changeToDrift();
 
     }
 
@@ -54,7 +60,7 @@ class Car {
 
 }
 
-class SportCar implements Car.Move, Car.Break, Mode.Safe {
+class SportCar implements Car.Move, Car.Break, Mode.Safe, Mode.Speed {
 
     @Override
     public void drive() {
@@ -79,6 +85,16 @@ class SportCar implements Car.Move, Car.Break, Mode.Safe {
     @Override
     public void changeToComfort() {
         System.out.println("Driver is changing his driving style to comfort mode.");
+    }
+
+    @Override
+    public void changeToSport() {
+        System.out.println("Driver is changing his driving style to sport mode.");
+    }
+
+    @Override
+    public void changeToDrift() {
+        System.out.println("Driver is changing his driving style to drift mode.");
     }
 
 }
