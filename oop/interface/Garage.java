@@ -3,10 +3,11 @@ public class Garage {
 
     public static void main(String[] args) {
 
-        Car.Move car1 = new SportCar();
+        Car.Engine car1 = new SportCar();
+        car1.start();
         car1.drive();
 
-        Car.Break car2 = (Car.Break) car1;
+        Car.Brake car2 = (Car.Brake) car1;
         car2.stop();
 
         Mode.Safe car3 = (Mode.Safe) car2;
@@ -46,13 +47,15 @@ interface Mode {
 
 class Car {
 
-    public interface Move {
+    public interface Engine {
+
+        public void start();
 
         public void drive();
 
     }
 
-    protected interface Break {
+    protected interface Brake {
 
         public void stop();
 
@@ -60,7 +63,12 @@ class Car {
 
 }
 
-class SportCar implements Car.Move, Car.Break, Mode.Safe, Mode.Speed {
+class SportCar implements Car.Engine, Car.Brake, Mode.Safe, Mode.Speed {
+
+    @Override
+    public void start() {
+        System.out.println("Driver starts the sport car.");
+    }
 
     @Override
     public void drive() {
