@@ -5,38 +5,57 @@ public class CoffeeShop {
 
     public static void main(String[] args) {
 
-        Consumer<CoffeeMachine> coffeeMachine = type -> {
-            type.turnOn();
-            // User cannot combine two pattern matches in one if, this is still illegal.
-            // User must separate pattern matching or cast manually after checking.
-            // For example (This can be wrong and illegal):
-            // if (type instanceof CoffeeMachine.Brewer cmb && type instanceof CoffeeMachine.Cleaner cmc) {
-            //     cmb.brew();
-            //     cmc.clean();
-            // }
-            // 
-            // Each instanceof pattern introduces one variable.
-            // For example (good practice):
-            if (type instanceof CoffeeMachine.Brewer brewer) {
-                brewer.brew();
-            }
-            if (type instanceof CoffeeMachine.Cleaner cleaner) {
-                cleaner.clean();
-            }
-            type.turnOff();
-        };
+        Consumer<CoffeeMachine> on = CoffeeMachine::turnOn;
+        Consumer<CoffeeMachine> off = CoffeeMachine::turnOff;
 
-        CoffeeMachine espresso = new EspressoMachine();
-        coffeeMachine.accept(espresso);
+        Consumer<CoffeeMachine.Brewer> brewer = CoffeeMachine.Brewer::brew;
+        Consumer<CoffeeMachine.Cleaner> cleaner = CoffeeMachine.Cleaner::clean;
 
-        CoffeeMachine latte = new LatteMachine();
-        coffeeMachine.accept(latte);
+        var espresso = new EspressoMachine();
+        var latte = new LatteMachine();
+
+        serve(espresso, on, brewer, cleaner, off);
+        serve(latte, on, brewer, cleaner, off);
+
+    }
+
+    private static void serve(
+            CoffeeMachine type,
+            Consumer<CoffeeMachine> on,
+            Consumer<CoffeeMachine.Brewer> brewer,
+            Consumer<CoffeeMachine.Cleaner> cleaner,
+            Consumer<CoffeeMachine> off
+    ) {
+
+        on.accept(type);
+        // User cannot combine two pattern matches in one if, this is still illegal.
+        // User must separate pattern matching or cast manually after checking.
+        // For example (This can be wrong and illegal):
+        // if (type instanceof CoffeeMachine.Brewer cmb && type instanceof CoffeeMachine.Cleaner cmc) {
+        //     cmb.brew();
+        //     cmc.clean();
+        // }
+        // 
+        // Each instanceof pattern introduces one variable.
+        // For example (good practice):
+        if (type instanceof CoffeeMachine.Brewer val) {
+            brewer.accept(val);
+        }
+        // Check if 'type' object is a Cleaner, then bind it to val. 
+        if (type instanceof CoffeeMachine.Cleaner val) {
+            cleaner.accept(val);
+        }
+        off.accept(type);
 
     }
 
 }
 
 abstract class CoffeeMachine {
+
+    public abstract void turnOn();
+
+    public abstract void turnOff();
 
     public interface Brewer {
 
@@ -49,10 +68,6 @@ abstract class CoffeeMachine {
         public void clean();
 
     }
-
-    public abstract void turnOn();
-
-    public abstract void turnOff();
 
 }
 
