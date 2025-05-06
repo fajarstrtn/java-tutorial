@@ -54,6 +54,8 @@ public class Restaurant {
         Function<String, String> customer = myCoffeeShop::call;
         String info = customer.apply("James Dean");
         System.out.println(info);
+
+        menu.stream().forEach(myCoffeeShop::print);
     }
 
 }
@@ -104,6 +106,10 @@ class CoffeeShop {
 
     public String call(String customerName) {
         return "Hi, " + customerName + "! Please pick up your food here.";
+    }
+
+    public void print(String menu) {
+        System.out.println(menu);
     }
 
 }
