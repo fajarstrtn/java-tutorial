@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
+import java.util.function.Function;
 
 public class Restaurant {
 
@@ -49,6 +50,10 @@ public class Restaurant {
         double discount = price * (15 / 100.0);
         double finalPrice = price - discount;
         System.out.println("Final Price: " + finalPrice);
+
+        Function<String, String> customer = myCoffeeShop::call;
+        String info = customer.apply("James Dean");
+        System.out.println(info);
     }
 
 }
@@ -95,6 +100,10 @@ class CoffeeShop {
 
     public void order(String message) {
         System.out.println(message);
+    }
+
+    public String call(String customerName) {
+        return "Hi, " + customerName + "! Please pick up your food here.";
     }
 
 }
