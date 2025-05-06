@@ -1,7 +1,10 @@
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class Restaurant {
 
@@ -29,6 +32,23 @@ public class Restaurant {
         Supplier<CoffeeShop> coffeeShopSupplier = CoffeeShop::new;
         CoffeeShop myCoffeeShop = coffeeShopSupplier.get();
         myCoffeeShop.order("Calling my own barista to order two shots of espresso...");
+
+        String[] cafes = {"St. ALi", "Boil & Brew", "Tuku", "Little Langkah", "Biju"};
+        Arrays.stream(cafes).forEach(System.out::println);
+
+        List<String> merchandise = Arrays.asList("Cap", "T-Shirt", "Goody Bag", "Scrunchies");
+        merchandise.sort(String::compareToIgnoreCase);
+        System.out.println(merchandise);
+
+        Supplier<List<Integer>> priceList = ArrayList::new;
+        var list = priceList.get();
+        System.out.println(list.size());
+
+        ToIntFunction<String> converted = Integer::parseInt;
+        int price = converted.applyAsInt("10000");
+        double discount = price * (15 / 100.0);
+        double finalPrice = price - discount;
+        System.out.println("Final Price: " + finalPrice);
     }
 
 }
