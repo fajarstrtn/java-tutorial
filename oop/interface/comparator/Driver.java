@@ -80,7 +80,7 @@ public class Driver {
         // });
         // 
         // 2. Sort using lambda or method reference.
-        drivers.sort(Comparator.comparingInt(Driver::getNumber));
+        drivers.sort(Comparator.comparingInt(Driver::getNumber).reversed());
 
         // Print all drivers.
         drivers.forEach(System.out::println);
