@@ -1,9 +1,22 @@
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PlayGround {
+
+    private static void read(List<? extends Number> saldo) {
+        saldo.forEach(System.out::println);
+    }
+
+    private static void write(List<? super Integer> saldo) {
+        saldo.add(11);
+        saldo.add(21);
+        saldo.add(31);
+        saldo.add(41);
+        saldo.add(51);
+    }
 
     public static void main(String[] args) {
         // ? extends Class (Upper Bounded Wildcard)
@@ -37,18 +50,78 @@ public class PlayGround {
         List<? super Integer> debit = new ArrayList<Number>();
         write(debit);
         debit.stream().forEach(System.out::println);
+
+        List<? extends Serializable> entityList;
+
+        entityList = Arrays.asList(
+                new Water("Tap Water"),
+                new Water("Spring Water"),
+                new Water("Mineral Water"),
+                new Water("Distilled Water"),
+                new Water("Sparkling Water")
+        );
+
+        entityList.stream().map(Water::toWater).forEach(entity -> System.out.println(entity.getType()));
+
+        entityList = Arrays.asList(
+                new Fire("Ordinary Combustibles"),
+                new Fire("Flammable Liquids"),
+                new Fire("Flammable Gases"),
+                new Fire("Combustible Metals"),
+                new Fire("Cooking Oils and Fats")
+        );
+
+        entityList.stream().map(Fire::toFire).forEach(entity -> System.out.println(entity.getType()));
     }
 
-    private static void read(List<? extends Number> saldo) {
-        saldo.forEach(System.out::println);
+}
+
+class Water implements Serializable {
+
+    private String type;
+
+    public Water() {
     }
 
-    private static void write(List<? super Integer> saldo) {
-        saldo.add(11);
-        saldo.add(21);
-        saldo.add(31);
-        saldo.add(41);
-        saldo.add(51);
+    public Water(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public static Water toWater(Object object) {
+        return (Water) object;
+    }
+
+}
+
+class Fire implements Serializable {
+
+    private String type;
+
+    public Fire() {
+    }
+
+    public Fire(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public static Fire toFire(Object object) {
+        return (Fire) object;
     }
 
 }
