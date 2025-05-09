@@ -2,7 +2,6 @@
 public class Airport {
 
     public static void main(String[] args) {
-
         Plane plane = new Plane();
         plane.takeOff();
         plane.land();
@@ -15,7 +14,6 @@ public class Airport {
         Bomber bomber = new Bomber();
         bomber.takeOff();
         bomber.land();
-
     }
 
 }

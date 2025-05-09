@@ -6,7 +6,7 @@ public class Card {
     }
 
     public static void shuffle() {
-        System.out.println("card is being shuffled");
+        System.out.println("Cards are being shuffled now.");
     }
 
 }

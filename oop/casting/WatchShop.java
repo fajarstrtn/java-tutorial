@@ -3,50 +3,48 @@ public class WatchShop {
 
     public static final String DELIMETER = "==============================";
 
-    public static void main(String[] args) {
+    private static void drawLineAt(int lineAt) {
+        System.out.println(lineAt + ": " + DELIMETER);
+    }
 
+    public static void main(String[] args) {
         Watch watch = new Watch();
         drawLineAt(9);
         watch.makeSound();
 
-        /* Upcasting object. */
+        // Upcasting object.
         watch = new DressWatch();
         drawLineAt(14);
         watch.makeSound();
 
-        /* watch.inform(); not allowed since method inform is specific to DressWatch class.*/
-        if (watch instanceof DressWatch dw) {
+        // watch.inform(); not allowed since method inform is specific to DressWatch class.
+        if (watch instanceof DressWatch tmp) {
             drawLineAt(18);
-            dw.makeSound();
-            dw.inform();
+            tmp.makeSound();
+            tmp.inform();
         }
 
-        /* Downcasting object. */
+        // Downcasting object.
         DressWatch dressWatch = (DressWatch) watch;
         drawLineAt(25);
         dressWatch.makeSound();
         dressWatch.inform();
 
-        /* Upcasting object. */
+        // Upcasting object.
         watch = new QuartzWatch();
         drawLineAt(31);
         watch.makeSound();
 
-        /* Performing type-checking. */
-        if (watch instanceof QuartzWatch qw) {
+        // Performing type-checking.
+        if (watch instanceof QuartzWatch tmp) {
             drawLineAt(36);
-            qw.makeSound();
-            qw.inform();
+            tmp.makeSound();
+            tmp.inform();
         }
 
         watch = null;
         drawLineAt(42);
         System.out.println(watch);
-
-    }
-
-    private static void drawLineAt(int lineAt) {
-        System.out.println(lineAt + ": " + DELIMETER);
     }
 
 }
@@ -67,7 +65,7 @@ class DressWatch extends Watch {
     }
 
     public void inform() {
-        System.out.println("This is a dress watch");
+        System.out.println("This is a dress watch.");
     }
 
 }
@@ -75,7 +73,7 @@ class DressWatch extends Watch {
 class QuartzWatch extends Watch {
 
     public void inform() {
-        System.out.println("This is a quartz watch");
+        System.out.println("This is a quartz watch.");
     }
 
 }

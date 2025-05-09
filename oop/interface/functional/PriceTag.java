@@ -1,12 +1,10 @@
 
-import java.nio.channels.Pipe;
 import java.util.function.Function;
 import java.util.List;
 
 public class PriceTag {
 
     public static void main(String[] args) {
-
         // Function<ParamType, ReturnType> perform operation for dividing a single value to be half.
         Function<Integer, Double> half = price -> price / 2.0;
         System.out.println(half.apply(10));
@@ -22,7 +20,7 @@ public class PriceTag {
         try {
             half.andThen(null).apply(100);
         } catch (NullPointerException npe) {
-            System.out.println("Catch null value with andThen method");
+            System.out.println("Catching null value with andThen method.");
         }
 
         Function<Integer, Double> calculate = p -> p - (50 / 100.0);
@@ -33,7 +31,7 @@ public class PriceTag {
             calculate = calculate.compose(null);
             System.out.println(calculate.apply(5));
         } catch (NullPointerException npe) {
-            System.out.println("Catch null value with compose method");
+            System.out.println("Catch null value with compose method.");
         }
 
         Function<Integer, Integer> identity = Function.identity();
@@ -46,6 +44,7 @@ public class PriceTag {
                 new Employee("Lou Harbour", "Manager", 10_200D),
                 new Employee("Sidney Simpson", "Senior Manager", 25_000D)
         );
+
         Function<Employee, String> findEmployee = employee -> employee.getName();
         employees.stream().map(findEmployee).forEach(System.out::println);
 
@@ -53,7 +52,6 @@ public class PriceTag {
         Function<Integer, Double> divide = p -> p / 2.0;
         Function<Integer, Double> count = multiply.andThen(divide);
         System.out.println(count.apply(10));
-
     }
 
 }

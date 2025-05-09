@@ -43,15 +43,13 @@ public class Taxi {
     }
 
     public static void main(String[] args) {
-
         var taxi = new Taxi();
         taxi.setName("Conventional Taxi");
         taxi.setType("City Car");
         taxi.isOperated(true);
         taxi.setIssuedIn(2019);
 
-        System.out.println("Is " + taxi.getName() + " is outdated? " + taxi.isCarOutdated());
-
+        System.out.println("Is " + taxi.getName() + " is outdated? " + taxi.isCarOutdated() + ".");
     }
 
 }

@@ -11,17 +11,17 @@ public class Monorail extends Train {
 
     @Override
     public void run() {
-        System.out.println(getType() + " is running fast to the town");
+        System.out.println(getType() + " is running fast to the town.");
     }
 
     @Override
     public void stop() {
-        System.out.println(getType() + " stops exactly to the next station");
+        System.out.println(getType() + " stops exactly to the next station.");
     }
 
     @Override
     public void dropOff(String stationName) {
-        System.out.println(getType() + " is shortly dropping off passengers at " + stationName + " station");
+        System.out.println(getType() + " is shortly dropping off passengers at " + stationName + " station.");
     }
 
     @Override

@@ -1,10 +1,9 @@
 
 import java.util.List;
 
-public class TheVoid {
+public class GothamCity {
 
     public static void main(String[] args) {
-
         var batman = new Superhero();
         batman.name = "The Dark Knight";
         batman.realName = "Bruce Wayne";
@@ -26,6 +25,7 @@ public class TheVoid {
         System.out.println("Superhero's origin story: " + batman.originStory);
         System.out.println("Superhero's universe: " + batman.universe);
         System.out.println("Superhero's abilities, including:");
+
         batman.abilities.forEach(System.out::println);
 
         System.out.println("==============================");
@@ -54,8 +54,8 @@ public class TheVoid {
         System.out.println("Villain's origin story: " + deathstroke.originStory);
         System.out.println("Villain's universe: " + deathstroke.universe);
         System.out.println("Villain's abilities, including:");
-        deathstroke.abilities.forEach(System.out::println);
 
+        deathstroke.abilities.forEach(System.out::println);
     }
 
 }

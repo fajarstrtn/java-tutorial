@@ -4,20 +4,7 @@ import java.util.Scanner;
 
 public class SumOfNumbers {
 
-    public static void main(String[] args) {
-
-        try {
-            double sum = sum();
-            System.out.println(sum);
-        } catch (InputMismatchException e) {
-            System.err.println("Invalid value");
-            System.err.println(e.toString());
-        }
-
-    }
-
     private static double sum() throws InputMismatchException {
-
         Scanner input;
         int iterator = 1;
         int sum = 0;
@@ -30,7 +17,16 @@ public class SumOfNumbers {
         }
 
         return sum;
+    }
 
+    public static void main(String[] args) {
+        try {
+            double sum = sum();
+            System.out.println(sum);
+        } catch (InputMismatchException e) {
+            System.err.println("Invalid value");
+            System.err.println(e.toString());
+        }
     }
 
 }

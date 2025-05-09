@@ -28,7 +28,7 @@ public class BlueBerry extends Fruit {
     @Override
     public void inform() {
         super.inform();
-        System.out.println("This flavour is " + (sour ? "sour" : "not sour"));
+        System.out.println("This flavour is " + (sour ? "sour." : "not sour."));
     }
 
 }

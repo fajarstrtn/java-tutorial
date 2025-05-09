@@ -1,10 +1,10 @@
+
 public class Garden {
 
     public static void main(String[] args) {
-        
         Tree oak = new Oak();
         oak.grow();
-        oak.grow("rotterdam garden");
+        oak.grow("Rotterdam Garden");
         oak.fall();
 
         System.out.println(Tree.LEAF_COLOR);
@@ -14,8 +14,8 @@ public class Garden {
         Tree sequioa = new Sequioa();
         sequioa.grow();
         sequioa.fall();
-        sequioa.harvest("sequioa tree");
-        sequioa.harvest("sequioa tree", "amsterdam garden");
-        
+        sequioa.harvest("Sequioa Tree");
+        sequioa.harvest("Sequioa Tree", "Amsterdam Garden");
     }
+
 }

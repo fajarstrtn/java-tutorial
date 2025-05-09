@@ -2,7 +2,6 @@
 public class NullPointer {
 
     public static void main(String[] args) {
-
         String name = null;
 
         try {
@@ -10,7 +9,6 @@ public class NullPointer {
         } catch (NullPointerException e) {
             System.err.println(e.getMessage());
         }
-
     }
 
 }

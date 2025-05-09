@@ -2,7 +2,6 @@
 public class DivideByZero {
 
     public static void main(String[] args) {
-
         int a = 5, b = 0;
 
         try {
@@ -13,7 +12,6 @@ public class DivideByZero {
             System.err.println(e.toString());
             e.printStackTrace();
         }
-
     }
 
 }

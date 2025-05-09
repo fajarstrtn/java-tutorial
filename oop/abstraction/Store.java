@@ -2,7 +2,6 @@
 public class Store {
 
     public static void main(String[] args) {
-
         Payment payment;
 
         payment = new PayPal();
@@ -12,7 +11,6 @@ public class Store {
         payment = new Stripe();
         payment.send("4429879120", 110.75);
         payment.withdraw("ATM", 50.15);
-
     }
 
 }

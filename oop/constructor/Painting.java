@@ -12,8 +12,8 @@ public class Painting {
         this.technique = technique;
     }
 
-    /* Unlike other constructors, copy constructor is passed with another object which copies the data available from the passed object to the newly created object.
-    User can create our own copy constructor by passing the object of the same class to the other instance(object) of the class. */
+    // Unlike other constructors, copy constructor is passed with another object which copies the data available from the passed object to the newly created object.
+    // You can create our own copy constructor by passing the object of the same class to the other instance(object) of the class.
     public Painting(Painting painting) {
         this.name = painting.name;
         this.technique = painting.technique;

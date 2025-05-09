@@ -4,6 +4,7 @@ public class Circle extends Shape {
     private double radius;
 
     public Circle() {
+        // No-args constructor.
     }
 
     public Circle(String color, double radius) {

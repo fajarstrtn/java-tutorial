@@ -14,7 +14,7 @@ public class Arabica extends Coffee {
 
     @Override
     public void roast() {
-        System.out.println("Arabica coffee bean is being roasted");
+        System.out.println("Arabica coffee bean is being roasted.");
     }
 
 }

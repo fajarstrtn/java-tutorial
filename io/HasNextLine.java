@@ -4,9 +4,9 @@ import java.util.*;
 public class HasNextLine {
 
     public static void main(String[] args) {
-
-        /* Use string builder to create a mutable, or in other words, a modifiable succession of characters.
-        This '\n' character will separate tokens, else it will generate a whole string. */
+        // Use StringBuilder to create a mutable (modifiable) sequence of characters.
+        // The '\n' newline character is used to separate input into lines.
+        // Without it, the Scanner would treat the entire input as a single line.
         String str = new StringBuilder()
                 .append("\tArsenal\n")
                 .append("     Barcelona         \n")
@@ -16,6 +16,7 @@ public class HasNextLine {
 
         try (Scanner sc = new Scanner(str)) {
             int line = 0;
+
             while (sc.hasNextLine()) {
                 System.out.println(String.format("%d | %s", ++line, sc.nextLine()));
             }
@@ -24,7 +25,6 @@ public class HasNextLine {
         } finally {
             System.out.println("Program is successfully terminated.");
         }
-
     }
 
 }

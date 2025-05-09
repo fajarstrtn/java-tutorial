@@ -2,13 +2,12 @@
 public class Studio {
 
     public static void main(String[] args) {
-
         var camera = new Camera();
         camera.capture();
         camera.record();
         camera.useSmartEffect();
-
     }
+
 }
 
 interface CapturePhoto {

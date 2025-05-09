@@ -1,33 +1,28 @@
 
 public class ExceptionFlowPt3 {
 
-    public static void main(String[] args) {
+    // This calculateNumber method declares that it may throw an ArithmeticException.
+    // However, the caller does not catch ArithmeticException — only NullPointerException is handled.
+    // As a result, if an ArithmeticException occurs, it will be thrown to the default exception handler,
+    // and the program will terminate abnormally before completing the remaining statements.
+    //
+    // Note: Declaring unchecked exceptions (like ArithmeticException) in the method signature is unnecessary,
+    // since they are not required to be caught or declared.
+    private static int calculateNumber(int firstNumber, int secondNumber) throws ArithmeticException {
+        return firstNumber / secondNumber;
+    }
 
+    public static void main(String[] args) {
         try {
-            /* Java will terminate the program abnormally when user does not define the suitable exception.
-            All the rest of the program will not be executed. */
+            // If a suitable exception is not caught, Java will terminate the program abnormally.
+            // Consequently, any code after the exception is not executed.
             int value = calculateNumber(10, 0);
             System.out.println(value);
         } catch (NullPointerException e) {
             System.err.println(e.toString());
         }
 
-        System.out.println("Program ends");
-
-    }
-
-    /* This calculateNumber method adds an ArithmeticException method signature,
-    where the caller of this method should handle the same exception as its declared.
-    
-    But as user can see, there is no catch block which handles ArithmeticException.
-    Instead, there is only NullPointerException which exactly does not match with the appropriate exception.
-    Then, Java will throw the exception object to the default exception handler.
-    
-    User's better off not declaring method signature for unchecked exception as it is no use at all. */
-    private static int calculateNumber(int firstNumber, int secondNumber) throws ArithmeticException {
-
-        return firstNumber / secondNumber;
-
+        System.out.println("Program ends.");
     }
 
 }

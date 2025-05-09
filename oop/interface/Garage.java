@@ -2,7 +2,6 @@
 public class Garage {
 
     public static void main(String[] args) {
-
         Car.Engine car1 = new SportCar();
         car1.start();
         car1.drive();
@@ -18,7 +17,6 @@ public class Garage {
         Mode.Speed car4 = (Mode.Speed) car3;
         car4.changeToSport();
         car4.changeToDrift();
-
     }
 
 }

@@ -5,8 +5,13 @@ import java.util.ArrayList;
 
 public class Billboard {
 
-    public static void main(String[] args) {
+    public static void iterate(List<String> customers, Consumer<String> printCustomer) {
+        for (String customer : customers) {
+            printCustomer.accept(customer);
+        }
+    }
 
+    public static void main(String[] args) {
         Consumer<String> printAds = message -> System.out.println(message);
         printAds.accept("iPhone 16 here now!");
 
@@ -36,15 +41,6 @@ public class Billboard {
 
         List<String> customers = List.of("Jack Napalm", "Pandora", "Judy Nails");
         iterate(customers, customer -> System.out.println("Customer: " + customer));
-
-    }
-
-    public static void iterate(List<String> customers, Consumer<String> printCustomer) {
-
-        for (String customer : customers) {
-            printCustomer.accept(customer);
-        }
-
     }
 
 }

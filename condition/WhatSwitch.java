@@ -4,14 +4,11 @@ import java.util.Scanner;
 public class WhatSwitch {
 
     public static void main(String[] args) {
-
         try (Scanner sc = new Scanner(System.in)) {
-
             System.out.print("Insert a number: ");
             int number = sc.nextInt();
 
             String day;
-
             day = switch (number) {
                 case 1 ->
                     "Monday";
@@ -37,7 +34,6 @@ public class WhatSwitch {
         } finally {
             System.out.println("Program is successfully terminated.");
         }
-
     }
 
 }

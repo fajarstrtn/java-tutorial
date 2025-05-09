@@ -1,19 +1,18 @@
-/* Here is the demonstration of Multi-Level Inheritance. */
+// Here is the demonstration of Multi-Level Inheritance.
+
 public class Branch {
 
     public static void main(String[] args) {
-
         var bank = new ConcreteBank();
         bank.account();
         bank.deposit();
         bank.withdraw();
         bank.loan();
-
     }
 
 }
 
-/* Level 1 - Interface defining bank operations. */
+// Level 1 - Interface defining bank operations.
 interface Bank {
 
     void deposit();
@@ -26,7 +25,7 @@ interface Bank {
 
 }
 
-/* Level 2 - Abstract class implementing deposit method. */
+// Level 2 - Abstract class implementing deposit method.
 abstract class BaseBank implements Bank {
 
     @Override
@@ -36,7 +35,7 @@ abstract class BaseBank implements Bank {
 
 }
 
-/* Level 3 - Extending BaseBank and implementing withdraw method. */
+// Level 3 - Extending BaseBank and implementing withdraw method.
 abstract class AdvanceBank extends BaseBank {
 
     @Override
@@ -46,7 +45,7 @@ abstract class AdvanceBank extends BaseBank {
 
 }
 
-/* Level 4 - Concrete class implementing remaining methods. */
+// Level 4 - Concrete class implementing remaining methods.
 class ConcreteBank extends AdvanceBank {
 
     @Override

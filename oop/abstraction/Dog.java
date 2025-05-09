@@ -3,14 +3,12 @@ public class Dog extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println("woof...woof...woof");
+        System.out.println("Woof... Woof... Woof...");
     }
 
     public static void main(String... args) {
-
         var dog = new Dog();
         dog.makeSound();
-
     }
 
 }
@@ -19,12 +17,11 @@ abstract class Animal {
 
     private String name;
 
-    public Animal() {
-        // no-args constructor
+    protected Animal() {
         name = null;
     }
 
-    public Animal(String name) {
+    protected Animal(String name) {
         this.name = name;
     }
 

@@ -2,7 +2,6 @@
 public class Food {
 
     public static void main(String[] args) {
-
         int option = 4;
 
         switch (option) {
@@ -11,11 +10,10 @@ public class Food {
             case 2 ->
                 System.out.println("Churros");
             case 3 ->
-                System.out.println("Chicken wings");
+                System.out.println("Chicken Wings");
             default ->
-                System.out.println("No option");
+                System.out.println("No option chosen.");
         }
-
     }
 
 }

@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 public class LevelUp {
 
     public static void main(String[] args) throws IOException {
-
         int num = 0;
         String fruit;
 
@@ -15,16 +14,15 @@ public class LevelUp {
             fruit = br.readLine();
 
             if (fruit.equals("Mango")) {
-                System.out.println("We give you " + fruit);
-                System.out.println("You got " + ++num + " fruit");
+                System.out.println("We give you " + fruit + ".");
+                System.out.println("You got " + ++num + " fruit.");
             } else {
-                System.out.println("Sorry, we don\'t have it");
-                System.out.println("You got " + num + " fruit");
+                System.out.println("Sorry, we don\'t have it.");
+                System.out.println("You got " + num + " fruit.");
             }
         } catch (IOException ioe) {
             System.err.println(ioe.getMessage());
         }
-
     }
 
 }

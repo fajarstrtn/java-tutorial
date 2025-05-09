@@ -1,18 +1,7 @@
 
 public class SwitchCase {
 
-    public static void main(String[] args) {
-
-        printNumberInWord(0);
-        printNumberInWord(1);
-        printNumberInWord(9);
-        printNumberInWord(-100);
-        printNumberInWord(100);
-
-    }
-
     private static void printNumberInWord(int number) {
-
         String word = switch (number) {
             case 0 ->
                 "Zero";
@@ -39,7 +28,14 @@ public class SwitchCase {
         };
 
         System.out.println(word);
+    }
 
+    public static void main(String[] args) {
+        printNumberInWord(0);
+        printNumberInWord(1);
+        printNumberInWord(9);
+        printNumberInWord(-100);
+        printNumberInWord(100);
     }
 
 }

@@ -4,7 +4,6 @@ import java.lang.Math;
 public class Shape {
 
     public static void main(String... args) {
-
         var square = new Square();
         square.setSide(5);
         square.print();
@@ -12,7 +11,6 @@ public class Shape {
         var cube = new Cube();
         cube.setSide(5);
         cube.print();
-
     }
 
 }
@@ -63,8 +61,8 @@ class Square implements TwoDimensionShape {
 
     @Override
     public void print() {
-        System.out.println("Area of square is " + calculateArea());
-        System.out.println("Perimeter of square is " + calculatePerimeter());
+        System.out.println("Area of square is " + calculateArea() + ".");
+        System.out.println("Perimeter of square is " + calculatePerimeter() + ".");
     }
 
     public void setSide(double side) {
@@ -97,8 +95,8 @@ class Cube implements ThreeDimensionShape {
 
     @Override
     public void print() {
-        System.out.println("Surface Area of cube is " + calculateSurfaceArea());
-        System.out.println("Volume of cube is " + calculateVolume());
+        System.out.println("Surface Area of cube is " + calculateSurfaceArea() + ".");
+        System.out.println("Volume of cube is " + calculateVolume() + ".");
     }
 
     public void setSide(double side) {

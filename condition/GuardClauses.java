@@ -2,12 +2,11 @@
 public class GuardClauses {
 
     public static void main(String[] args) {
-
         String name = "John Doe";
         byte age = 26;
 
-        /* Guard clause help to filter the condition before reaching the happy flow.
-        This strategy will put the bad condition on the top of the happy flow. */
+        // Guard clauses are used to exit early from a method when invalid or undesirable conditions are met.
+        // This keeps the "happy path" (expected flow) clean and avoids deep nesting.
         if (!name.equalsIgnoreCase("John Doe")) {
             System.out.println("This is not " + name);
             return;
@@ -18,8 +17,8 @@ public class GuardClauses {
             return;
         }
 
+        // Happy path: All conditions are satisfied
         System.out.println("This is " + name);
-
     }
 
 }

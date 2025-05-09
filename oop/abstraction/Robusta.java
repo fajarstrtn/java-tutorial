@@ -14,7 +14,7 @@ public class Robusta extends Coffee {
 
     @Override
     public void roast() {
-        System.out.println("Robusta is being roasted");
+        System.out.println("Robusta is being roasted.");
     }
 
 }

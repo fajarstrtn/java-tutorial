@@ -1,12 +1,22 @@
 
 public class DivisibleBy3And5 {
 
-    public static void main(String[] args) {
+    private static int sumAndPrintNumber(int sum, int i, int divNum) {
+        sum += i;
+        System.out.println(i + " is divisible by " + divNum + ".");
+        return sum;
+    }
 
-        int number = 15, sum = 0;
+    private static boolean isOutOfRange(int number) {
+        return number < 1 || number > 1000;
+    }
+
+    public static void main(String[] args) {
+        int number = 15;
+        int sum = 0;
 
         if (isOutOfRange(number)) {
-            System.out.println("Invalid Value");
+            System.out.println("Invalid Value.");
             return;
         }
 
@@ -18,22 +28,7 @@ public class DivisibleBy3And5 {
             }
         }
 
-        System.out.println("Total sum: " + sum);
-
-    }
-
-    private static int sumAndPrintNumber(int sum, int i, int divNum) {
-
-        sum += i;
-        System.out.println(i + " is divisible by " + divNum);
-        return sum;
-
-    }
-
-    private static boolean isOutOfRange(int number) {
-
-        return number < 1 || number > 1000;
-
+        System.out.println("Total Sum: " + sum);
     }
 
 }

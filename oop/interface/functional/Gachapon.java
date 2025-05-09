@@ -7,7 +7,6 @@ import java.util.stream.Stream;
 public class Gachapon {
 
     public static void main(String[] args) {
-
         Random random = new Random();
 
         List<String> items = List.of("Evangelion", "Gundam", "One-Piece", "Naruto");
@@ -16,9 +15,8 @@ public class Gachapon {
         Supplier<String> item = () -> items.get(random.nextInt(items.size()));
         System.out.println(item.get());
 
-        // User can also create an infinite stream with Supplier interface.
+        // You can also create an infinite stream with Supplier interface.
         Stream.generate(item).limit(5).forEach(System.out::println);
-
     }
 
 }

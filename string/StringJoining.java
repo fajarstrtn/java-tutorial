@@ -6,7 +6,6 @@ import java.util.StringJoiner;
 public class StringJoining {
 
     public static void main(String[] args) {
-
         List<String> listOfString = Arrays.asList("Jakarta", "Bali", "Lombok", "Surabaya");
 
         StringJoiner stringJoiner = new StringJoiner(",");
@@ -20,7 +19,6 @@ public class StringJoining {
         stringJoiner.merge(anotherStringJoiner);
         System.out.println(stringJoiner.toString());
         System.out.println(stringJoiner.length());
-
     }
 
 }

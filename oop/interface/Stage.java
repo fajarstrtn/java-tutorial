@@ -2,7 +2,6 @@
 public class Stage {
 
     public static void main(String[] args) {
-
         var rallyCar = new Car();
         rallyCar.turnOnTheCar();
         rallyCar.moveForward();
@@ -19,7 +18,6 @@ public class Stage {
         superCar.stopAutomatically();
         superCar.drift();
         superCar.turnOffTheCar();
-
     }
 
 }
@@ -48,7 +46,7 @@ interface StopActivity extends Power {
 
 }
 
-/* interface is able to extend multiple interfaces. */
+// Interface is able to extend multiple interfaces.
 interface Slalom extends MoveActivity, StopActivity {
 
     void drift();

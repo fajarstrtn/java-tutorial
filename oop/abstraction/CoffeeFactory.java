@@ -2,7 +2,6 @@
 public class CoffeeFactory {
 
     public static void main(String[] args) {
-
         Coffee arabica = new Arabica();
         arabica.name = "Coffea Arabica";
         arabica.price = 100D;
@@ -24,7 +23,6 @@ public class CoffeeFactory {
         robusta.plantGrowth = "Thrives at lower altitudes (200-800m), withstands higher temperatures (24-30°C), and is more resistant to pests and diseases";
         robusta.inform();
         robusta.roast();
-
     }
 
 }

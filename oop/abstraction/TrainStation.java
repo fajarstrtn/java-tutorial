@@ -2,7 +2,6 @@
 public class TrainStation {
 
     public static void main(String[] args) {
-
         Train monorail = new Monorail();
         monorail.setType("Straddle Monorail");
         monorail.setColor("Blue");
@@ -12,6 +11,7 @@ public class TrainStation {
         monorail.dropOff("Sentosa Monorail");
         monorail.info();
         monorail.maintain();
+
         Train.wheelTrainTotal(monorail.getType());
 
         Train tram = new Tram();
@@ -19,8 +19,8 @@ public class TrainStation {
         tram.setColor("Red");
         tram.setCapacity(250);
 
-        if (tram instanceof Tram tramParam) {
-            tramParam.hasFlexibleTrack(true);
+        if (tram instanceof Tram tmp) {
+            tmp.hasFlexibleTrack(true);
         }
 
         tram.run();
@@ -30,7 +30,6 @@ public class TrainStation {
         tram.maintain();
 
         Train.wheelTrainTotal(tram.getType());
-
     }
 
 }

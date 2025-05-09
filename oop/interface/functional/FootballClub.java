@@ -8,8 +8,7 @@ import java.util.function.Consumer;
 public class FootballClub {
 
     public static void main(String[] args) {
-
-        List<Integer> squadNumbers = new ArrayList<Integer>();
+        List<Integer> squadNumbers = new ArrayList<>();
         squadNumbers.add(1);
         squadNumbers.add(10);
         squadNumbers.add(15);
@@ -25,7 +24,6 @@ public class FootballClub {
         Consumer<List<Integer>> printedSquadNumbers = numbers -> numbers.stream().forEach(System.out::println);
 
         try {
-
             // Demonstrate when NullPointerException is returned.
             // modifiedSquadNumbers.andThen(null).accept(squadNumbers);
             // 
@@ -39,7 +37,6 @@ public class FootballClub {
             // 
             // Implement andThen functional interface. 
             modifiedSquadNumbers.andThen(printedSquadNumbers).accept(squadNumbers);
-
         } catch (NullPointerException npe) {
             System.out.println(npe.toString());
         }
@@ -62,15 +59,15 @@ public class FootballClub {
 
         BiConsumer<List<Integer>, List<Integer>> equality = (lista, listb) -> {
             if (lista.size() != listb.size()) {
-                System.out.println("Two lists are not equals");
+                System.out.println("Two lists are not equals.");
             } else {
                 for (int i = 0; i < lista.size(); i++) {
                     if (!Objects.equals(lista.get(i), listb.get(i))) {
-                        System.out.println(lista.get(i) + " is different than " + listb.get(i));
+                        System.out.println(lista.get(i) + " is different than " + listb.get(i) + ".");
                         return;
                     }
                 }
-                System.out.println("Two lists are equals");
+                System.out.println("Two lists are equals.");
             }
         };
 
@@ -83,7 +80,6 @@ public class FootballClub {
         };
 
         equality.andThen(display).accept(newPlayersSpeed, oldPlayersSpeed);
-
     }
 
 }

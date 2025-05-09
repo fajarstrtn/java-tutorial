@@ -47,23 +47,23 @@ public abstract class Train {
         return WHEEL;
     }
 
-    /*  An abstract class can also have concrete method. */
+    // An abstract class can also have concrete method.
     public void dropOff(String stationName) {
-        System.out.println(type + " is dropping off passengers at " + stationName + " station");
+        System.out.println(type + " is dropping off passengers at " + stationName + " station.");
     }
 
     public void info() {
-        System.out.println(type + " has " + color + " color and " + capacity + " capacity");
+        System.out.println(type + " has " + color + " color and " + capacity + " capacity.");
     }
 
-    /* Static method can only access static attributes and methods, because static attributes or methods belong to the class, not instance. */
+    // Static method can only access static attributes and methods, because static attributes or methods belong to the class, not instance.
     public static void wheelTrainTotal(String trainType) {
-        System.out.println(trainType + " has " + WHEEL + " wheels");
+        System.out.println(trainType + " has " + WHEEL + " wheels.");
     }
 
-    /*  A final method cannot be overrided. */
+    // A final method cannot be overrided.
     public final void maintain() {
-        System.out.println(type + " is under maintainance");
+        System.out.println(type + " is under maintainance.");
     }
 
 }

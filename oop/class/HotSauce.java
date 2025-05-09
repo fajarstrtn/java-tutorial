@@ -62,7 +62,6 @@ public class HotSauce {
     }
 
     public static void main(String[] args) {
-
         var sriracha = new HotSauce();
         sriracha.setName("Sriracha");
         sriracha.setSize(250D);
@@ -77,7 +76,6 @@ public class HotSauce {
 
         var heinz = new HotSauce("Cholula");
         logger.log(Level.INFO, heinz.print());
-
     }
 
 }

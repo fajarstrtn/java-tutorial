@@ -2,7 +2,6 @@
 public class Company {
 
     public static void main(String[] args) {
-
         Asset employee = new Employee();
         Guest guest = new Guest();
 
@@ -17,7 +16,6 @@ public class Company {
         } else {
             System.out.println("Guest is not an asset.");
         }
-
     }
 
 }

@@ -2,14 +2,12 @@
 public class Class {
 
     public static void main(String[] args) {
-
         var teacher = new Teacher();
         teacher.plan();
         teacher.teach();
         teacher.assess();
         teacher.monitor();
         teacher.collaborate();
-
     }
 
 }

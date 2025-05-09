@@ -28,4 +28,5 @@ public class Piece {
         System.out.println("Another rectangle's area: " + anotherRectangle.area());
 
     }
+
 }

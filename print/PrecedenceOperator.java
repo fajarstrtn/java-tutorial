@@ -2,7 +2,6 @@
 public class PrecedenceOperator {
 
     public static void main(String[] args) {
-
         double firstNumber = 20;
         double secondNumber = 80;
         double result = ((firstNumber + secondNumber) * 100) % 40;
@@ -12,8 +11,8 @@ public class PrecedenceOperator {
         System.out.println(isResultContainingZero);
 
         if (!isResultContainingZero) {
-            System.out.println("Got some remainder");
+            System.out.println("Got some remainder.");
         }
-
     }
+
 }

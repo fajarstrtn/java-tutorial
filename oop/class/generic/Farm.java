@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Farm {
 
     public static void main(String[] args) {
-
         Groom<Cat> cat = new Groom<>(new Cat());
         cat.call();
 
@@ -29,7 +28,6 @@ public class Farm {
         dogs.add(new Dog());
         dogs.add(new Dog());
         dogs.stream().forEach(System.out::println);
-
     }
 
 }
@@ -60,15 +58,10 @@ class Groom<T extends Animal & Serializable> {
 class Animal implements Serializable {
 
     private String name;
-
     private Double age;
-
     private Double weight;
-
     private String species;
-
     private String breed;
-
     private String gender;
 
     public Animal() {

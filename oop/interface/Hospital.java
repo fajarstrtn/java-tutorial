@@ -2,11 +2,9 @@
 public class Hospital {
 
     public static void main(String[] args) {
-
         var doctor = new Doctor();
         doctor.check();
         doctor.operate();
-
     }
 
 }

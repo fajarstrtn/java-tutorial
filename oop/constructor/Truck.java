@@ -8,8 +8,8 @@ public class Truck {
     public Truck() {
     }
 
-    /* The initializer block contains the code that is always executed
-    whenever an instance is created and it runs each time when an object of the class is created. */
+    // The initializer block contains the code that is always executed
+    // whenever an instance is created and it runs each time when an object of the class is created.
     {
         name = "Kamaz Truck";
         tankCapacity = 350;
@@ -29,11 +29,10 @@ public class Truck {
     }
 
     public static void main(String[] args) {
-
         Truck truck = new Truck();
         System.out.println(truck.getName());
         System.out.println(truck.getTankCapacity());
         System.out.println(truck.getCc());
-
     }
+
 }

@@ -11,7 +11,6 @@ public class Person {
     public Boolean isMarried;
 
     public static void main(String[] args) {
-
         var phill = new Person();
         phill.name = "Phill James";
         phill.address = "99 Amsterdam Blvd";
@@ -24,8 +23,7 @@ public class Person {
         System.out.println(phill.age);
         System.out.println(phill.occupation);
         System.out.println(COUNTRY);
-        System.out.println(Boolean.TRUE.equals(phill.isMarried) ? "He is married to someone" : "He is still single");
-
+        System.out.println(Boolean.TRUE.equals(phill.isMarried) ? "He is married to someone." : "He is still single.");
     }
 
 }

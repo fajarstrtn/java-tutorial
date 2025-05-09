@@ -1,10 +1,9 @@
 
 public class Peripheral {
 
-    private static final String TEXT = "Lorem ipsum dolor sit amet";
+    private static final String TEXT = "Lorem ipsum dolor sit amet.";
 
     public static void main(String[] args) {
-
         var keyboard = new Keyboard();
         keyboard.setBrand("Logitech");
         keyboard.setModel("Wired");
@@ -44,7 +43,6 @@ public class Peripheral {
 
         var samsung = new Earbuds("Samsung Earbuds Pro 4", "Black", "4", false, "Earbuds Pro 4", 5_000_000D, true);
         System.out.println(samsung.getInformation());
-
     }
 
 }

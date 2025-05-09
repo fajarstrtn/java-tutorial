@@ -7,8 +7,19 @@ import java.util.stream.IntStream;
 
 public class Validation {
 
-    public static void main(String[] args) {
+    private static boolean isLessThan0(int number, IntPredicate lessThan0) {
+        return lessThan0.test(number);
+    }
 
+    private static boolean startsWith(String str, Predicate<String> startsWith) {
+        return startsWith.test(str);
+    }
+
+    private static List<User> filterRole(List<User> users, Predicate<User> filterRole) {
+        return users.stream().filter(filterRole).toList();
+    }
+
+    public static void main(String[] args) {
         Predicate<Integer> lessThan20 = x -> x < 20;
         System.out.println(lessThan20.test(50)); // false
 
@@ -30,11 +41,11 @@ public class Validation {
 
         int number = -100;
         boolean validatedNumber = isLessThan0(number, x -> x < 0);
-        System.out.println("Is " + number + " less than 0? " + validatedNumber);
+        System.out.println("Is " + number + " less than 0? " + validatedNumber + ".");
 
         String str = "Hello World";
         boolean validatedString = startsWith(str, x -> x.startsWith("Hello"));
-        System.out.println("Does \"" + str + "\" start with \"Hello\"? " + validatedString);
+        System.out.println("Does \"" + str + "\" start with \"Hello\"? " + validatedString + ".");
 
         IntPredicate lessThanOrEquals20 = x -> x <= 20;
         System.out.println(lessThanOrEquals20.test(20)); // true
@@ -69,23 +80,6 @@ public class Validation {
         }).forEach(System.out::println);
 
         System.out.println(users.stream().filter(user -> user.getRole().equals("Admin")).toList());
-
-    }
-
-    private static boolean isLessThan0(int number, IntPredicate lessThan0) {
-
-        return lessThan0.test(number);
-
-    }
-
-    private static boolean startsWith(String str, Predicate<String> startsWith) {
-
-        return startsWith.test(str);
-
-    }
-
-    private static List<User> filterRole(List<User> users, Predicate<User> filterRole) {
-        return users.stream().filter(filterRole).toList();
     }
 
 }

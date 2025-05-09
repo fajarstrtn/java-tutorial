@@ -44,7 +44,6 @@ public class FootBallClub {
     }
 
     public static void main(String[] args) {
-
         FootBallClub striker = new FootBallClub();
         striker.name = "Lionel Messi";
         striker.age = 37;
@@ -60,7 +59,6 @@ public class FootBallClub {
 
         FootBallClub defender = new FootBallClub("Ruben Diaz", 27, 71D);
         logger.log(Level.INFO, defender);
-
     }
 
 }

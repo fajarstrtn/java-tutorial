@@ -2,7 +2,6 @@
 public class MainRoad {
 
     public static void main(String[] args) {
-
         var nissan = new Car();
         nissan.checkSpeedometer();
         nissan.speedUp((short) 150);
@@ -32,8 +31,8 @@ public class MainRoad {
         kamaz.checkSpeedometer();
         kamaz.applyBrake((short) 15);
         kamaz.checkSpeedometer();
-
     }
+
 }
 
 interface Vehicle {

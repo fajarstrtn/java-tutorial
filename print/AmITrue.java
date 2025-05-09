@@ -2,8 +2,8 @@
 public class AmITrue {
 
     public static void main(String[] args) {
-
-        boolean amIHuman = true, areYouMyFriend = false;
+        boolean amIHuman = true;
+        boolean areYouMyFriend = false;
 
         if (amIHuman) {
             System.out.println("Hello, I am human!");
@@ -12,6 +12,6 @@ public class AmITrue {
         if (!areYouMyFriend) {
             System.out.println("You are not my friend!");
         }
-
     }
+
 }

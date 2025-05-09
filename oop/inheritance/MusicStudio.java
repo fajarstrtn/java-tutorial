@@ -2,7 +2,6 @@
 public class MusicStudio {
 
     public static void main(String[] args) {
-
         Instrument bass = new Guitar();
         bass.name = "Acoustic Guitar";
         bass.brand = "Yamaha";
@@ -10,14 +9,12 @@ public class MusicStudio {
         bass.material = "Wood";
         bass.price = 120;
         bass.isTuned = false;
-
-        /* it triggers an error since stringTotal is attribute of Guitar class.
-        bass.stringTotal = 6; */
+        // It triggers an error since stringTotal is attribute of Guitar class.
+        // bass.stringTotal = 6;
         bass.tune();
-
-        /* also, these methods are part of Guitar class.
-        bass.strum();
-        bass.changeString(4); */
+        // Also, these methods are part of Guitar class.
+        // bass.strum();
+        // bass.changeString(4);
         bass.play();
 
         Guitar guitar = new Guitar();
@@ -32,7 +29,6 @@ public class MusicStudio {
         guitar.play();
         guitar.strum();
         guitar.changeString(4);
-
     }
 
 }

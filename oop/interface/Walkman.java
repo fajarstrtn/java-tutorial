@@ -30,14 +30,13 @@ public class Walkman implements MusicPlayer {
     }
 
     public static void main(String[] args) {
-
         Walkman walkman = new Walkman();
         walkman.setType("Walkman NW-ZX300");
         walkman.play();
         walkman.stop();
         walkman.inform(walkman.getType());
-        MusicPlayer.displayOwner("Scott Atkins");
 
+        MusicPlayer.displayOwner("Scott Atkins");
     }
 
 }
@@ -48,9 +47,9 @@ interface MusicPlayer {
 
     void stop();
 
-    /* Default method helps to add new implementation without breaking existing implementations. */
+    // Default method helps to add new implementation without breaking existing implementations.
     default void inform(String name) {
-        System.out.println("User is listening to the music through " + name + ".");
+        System.out.println("You are listening to the music through " + name + ".");
     }
 
     static void displayOwner(String name) {

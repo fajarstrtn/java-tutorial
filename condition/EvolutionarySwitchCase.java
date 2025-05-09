@@ -2,7 +2,6 @@
 public class EvolutionarySwitchCase {
 
     public static void main(String[] args) {
-
         Days selectedDay = Days.TUESDAY;
         String day = null;
 
@@ -30,10 +29,9 @@ public class EvolutionarySwitchCase {
                 "Weekend";
         };
 
-        System.out.println("Today is " + day + " and " + dayStatus);
+        System.out.println("Today is " + day + " and " + dayStatus + ".");
 
         Integer number = 5;
-
         String printedValue = switch (number) {
             case 1 ->
                 "One";
@@ -62,7 +60,6 @@ public class EvolutionarySwitchCase {
         System.out.println(printedValue);
 
         Object object = 11.5;
-
         String typeCheckedString = switch (object) {
             case Integer i ->
                 "Integer: " + i;
@@ -83,13 +80,10 @@ public class EvolutionarySwitchCase {
         };
 
         System.out.println(typeCheckedString);
-
     }
 
 }
 
 enum Days {
-
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
-
 }

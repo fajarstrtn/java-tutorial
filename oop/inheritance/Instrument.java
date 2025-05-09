@@ -22,12 +22,12 @@ public class Instrument {
     }
 
     public void play() {
-        System.out.println("Someone is playing a " + name);
+        System.out.println("Someone is playing a " + name + ".");
     }
 
     public void tune() {
         isTuned = true;
-        System.out.println(name + " is successfuly tuned");
+        System.out.println(name + " is successfuly tuned.");
     }
 
 }

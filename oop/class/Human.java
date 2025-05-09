@@ -19,21 +19,19 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Hi, my name is " + name + " and i am " + age + " years-old";
+        return "Hi, my name is " + name + " and i am " + age + " years-old.";
     }
 
     public static void main(String[] args) {
-
         Human jack = new Human();
-        jack.name = "Christine Perry";
+        jack.name = "Jack Perry";
         jack.age = 28;
 
-        /* Java will automatically call toString method once its instance be printed. */
+        // Java will automatically call toString method once its instance be printed.
         logger.log(Level.INFO, jack);
 
-        Human gerard = new Human("Timmy Jenner", 25);
+        Human gerard = new Human("Gerard Jenner", 25);
         logger.log(Level.INFO, gerard);
-
     }
 
 }

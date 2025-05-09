@@ -29,13 +29,13 @@ public class Keyboard {
     }
 
     public void displayInfo(String classType) {
-        System.out.println("This is " + classType + " class");
+        System.out.println("This is " + classType + " class.");
         System.out.println("Brand: " + brand);
         System.out.println("Model: " + model);
     }
 
     public void typeText(String text) {
-        System.out.println("Your text on keyboard is \"" + text + "\"");
+        System.out.println("Your text on keyboard is \"" + text + "\".");
     }
 
 }
@@ -73,7 +73,7 @@ class MechanicalKeyboard extends Keyboard {
 
     @Override
     public void typeText(String text) {
-        System.out.println("Your text on mechanical keyboard is \"" + text + "\"");
+        System.out.println("Your text on mechanical keyboard is \"" + text + "\".");
     }
 
 }
@@ -111,7 +111,7 @@ class RegularKeyboard extends Keyboard {
 
     @Override
     public void typeText(String text) {
-        System.out.println("Your text on regular keyboard is \"" + text + "\"");
+        System.out.println("Your text on regular keyboard is \"" + text + "\".");
     }
 
 }

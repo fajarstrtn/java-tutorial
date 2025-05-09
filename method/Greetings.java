@@ -1,8 +1,19 @@
 
 public class Greetings {
 
-    public static void main(String[] args) {
+    private static void sayHi() {
+        System.out.println("Hi! This is a prompt.");
+    }
 
+    private static int divideTwoNumbers(int firstNumber, int secondNumber) {
+        return firstNumber / secondNumber;
+    }
+
+    private static long calculateMultiplication(long firstNumber, long secondNumber) {
+        return firstNumber * secondNumber;
+    }
+
+    public static void main(String[] args) {
         sayHi();
 
         try {
@@ -14,24 +25,6 @@ public class Greetings {
         } catch (ArithmeticException e) {
             System.err.println(e.toString());
         }
-    }
-
-    private static void sayHi() {
-
-        System.out.println("Hello, this is a prompt!");
-
-    }
-
-    private static int divideTwoNumbers(int firstNumber, int secondNumber) {
-
-        return firstNumber / secondNumber;
-
-    }
-
-    private static long calculateMultiplication(long firstNumber, long secondNumber) {
-
-        return firstNumber * secondNumber;
-
     }
 
 }

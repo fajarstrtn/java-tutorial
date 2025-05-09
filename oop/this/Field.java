@@ -2,10 +2,8 @@
 public class Field {
 
     public static void main(String[] args) {
-
         OuterField.InnerField inner = new OuterField().new InnerField();
         inner.inform();
-
     }
 
 }

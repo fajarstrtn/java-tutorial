@@ -4,7 +4,6 @@ import java.util.List;
 public class BakeShop {
 
     public static void main(String[] args) {
-
         var croissant = new Pastry("Croissant", List.of("Flour", "Butter", "Yeast", "Sugar", "Salt", "Liquid"));
         System.out.println(croissant.getName());
         System.out.println(croissant.getIngredients());
@@ -20,7 +19,6 @@ public class BakeShop {
         System.out.println(choux.getPrice());
         System.out.println(choux.inform());
         System.out.println(choux.order().checkout());
-
     }
 
 }
@@ -76,7 +74,7 @@ class Pastry {
     }
 
     public String inform() {
-        return name + (isCheap() ? " is a cheap pastry" : " is an expensive pastry");
+        return name + (isCheap() ? " is a cheap pastry." : " is an expensive pastry.");
     }
 
     public Pastry order() {
@@ -85,7 +83,7 @@ class Pastry {
     }
 
     public String checkout() {
-        return name + (Boolean.TRUE.equals(orderStatus) ? " is successfully ordered" : " is not ordered yet");
+        return name + (Boolean.TRUE.equals(orderStatus) ? " is successfully ordered." : " is not ordered yet.");
     }
 
 }

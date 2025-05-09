@@ -8,7 +8,7 @@ public class Samsung implements CellPhone {
 
     @Override
     public void call() {
-        System.out.println("I am trying to call someone using Samsung phone");
+        System.out.println("I am trying to call someone using Samsung phone.");
     }
 
     @Override

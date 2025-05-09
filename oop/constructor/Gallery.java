@@ -2,7 +2,6 @@
 public class Gallery {
 
     public static void main(String[] args) {
-
         Painting watercolor = new Painting();
         watercolor.setName("Watercolor");
         watercolor.setTechnique("Watercolor Painting is a technique that uses water-soluble pigments to create a transparent, luminous effect.");
@@ -16,7 +15,6 @@ public class Gallery {
         Painting modernOilPainting = new Painting(oilPainting);
         System.out.println(modernOilPainting.getName());
         System.out.println(modernOilPainting.getTechnique());
-
     }
 
 }

@@ -7,7 +7,6 @@ public class Cat {
     int age;
 
     public static void main(String[] args) {
-
         Cat mio = new Cat();
         mio.name = "Mio";
         mio.breed = "Persian";
@@ -18,7 +17,6 @@ public class Cat {
         System.out.println("Cat's breed: " + mio.breed);
         System.out.println("Cat's color: " + mio.color);
         System.out.println("Cat's age: " + mio.age);
-
     }
 
 }

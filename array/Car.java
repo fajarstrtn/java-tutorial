@@ -2,7 +2,6 @@
 public class Car {
 
     public static void main(String[] args) {
-
         String[] cars = new String[5];
 
         cars[0] = "Mazda";
@@ -16,7 +15,6 @@ public class Car {
         }
 
         System.out.println();
-
     }
 
 }
