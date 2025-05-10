@@ -8,22 +8,19 @@ import java.util.ListIterator;
 public class Iterate {
 
     public static void main(String[] args) {
-        // You are using Arrays.asList(...), which returns a fixed-size list.
+        // You are using Arrays.asList(...) or List.of(...), which returns a fixed-size list.
         // Calling iterator.remove() on it will throw a java.lang.UnsupportedOperationException.
         // List<String> list = Arrays.asList("Americano", "Spanish Latte", "Mocha", "Macchiato", "Cold Brew");
         // 
         // Try this:
         List<String> list;
 
-        list = new ArrayList<>(
-                Arrays.asList(
-                        "Americano",
-                        "Spanish Latte",
-                        "Mocha",
-                        "Macchiato",
-                        "Cold Brew"
-                )
-        );
+        list = new ArrayList<>(Arrays.asList(
+                "Americano",
+                "Spanish Latte",
+                "Mocha",
+                "Macchiato",
+                "Cold Brew"));
 
         for (var coffee : list) {
             System.out.println(coffee);
@@ -111,9 +108,7 @@ public class Iterate {
                 "Galaxy S25",
                 "Xiaomi X15 Ultra",
                 "OPPO Reno13 5G",
-                "RealMe 14 Series 5G"
-        )
-        );
+                "RealMe 14 Series 5G"));
 
         System.out.println(list);
 
@@ -124,11 +119,7 @@ public class Iterate {
             iterator.next();
         }
 
-        iterator.forEachRemaining(phone -> {
-            if (phone.endsWith("5G")) {
-                System.out.println(phone + " (coming soon)");
-            }
-        });
+        iterator.forEachRemaining(Iterate::endsWith5G);
 
         separate();
 
@@ -137,9 +128,7 @@ public class Iterate {
                 "Durian",
                 "Apple",
                 "Orange",
-                "Grape"
-        )
-        );
+                "Grape"));
 
         System.out.println(list);
 
@@ -180,6 +169,12 @@ public class Iterate {
             System.out.println("Previous Index: " + listIterator.previousIndex());
             System.out.println("Element: " + listIterator.next());
             System.out.println("Next Index: " + listIterator.nextIndex());
+        }
+    }
+
+    private static void endsWith5G(String phone) {
+        if (phone.endsWith("5G")) {
+            System.out.println(phone + " (coming soon).");
         }
     }
 
