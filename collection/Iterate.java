@@ -97,6 +97,32 @@ public class Iterate {
         }
 
         System.out.println(menu);
+
+        separate();
+
+        List<String> phones = new ArrayList<>(Arrays.asList(
+                "iPhone 16e",
+                "Galaxy S25",
+                "Xiaomi X15 Ultra",
+                "OPPO Reno13 5G",
+                "RealMe 14 Series 5G"
+        )
+        );
+
+        System.out.println(phones);
+
+        Iterator<String> phonesIterator = phones.iterator();
+
+        // Skipping 2 elements: iPhone 16e and Galaxy S25.
+        for (var i = 0; i < 2 && phonesIterator.hasNext(); i++) {
+            phonesIterator.next();
+        }
+
+        phonesIterator.forEachRemaining(phone -> {
+            if (phone.endsWith("5G")) {
+                System.out.println(phone + " (coming soon)");
+            }
+        });
     }
 
     private static void separate() {
