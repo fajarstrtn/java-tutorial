@@ -13,7 +13,9 @@ public class Iterate {
         // List<String> list = Arrays.asList("Americano", "Spanish Latte", "Mocha", "Macchiato", "Cold Brew");
         // 
         // Try this:
-        List<String> menu = new ArrayList<>(
+        List<String> list;
+
+        list = new ArrayList<>(
                 Arrays.asList(
                         "Americano",
                         "Spanish Latte",
@@ -23,7 +25,7 @@ public class Iterate {
                 )
         );
 
-        for (var coffee : menu) {
+        for (var coffee : list) {
             System.out.println(coffee);
         }
 
@@ -35,7 +37,7 @@ public class Iterate {
         // | Remove elements safely   | ❌ No          | ✅ Yes (using `iterator.remove()`) |
         // | Simple syntax            | ✅ Yes         | ❌ No (more verbose)               |
         // | Thread-safe modification | ❌ No          | ✅ Safer (to some extent)          |
-        menu.forEach(System.out::println);
+        list.forEach(System.out::println);
 
         separate();
 
@@ -43,7 +45,9 @@ public class Iterate {
         // It's part of the java.util package and provides a safe way to loop through a collection while optionally allowing modification during iteration (e.g., removing elements).
         // It avoids ConcurrentModificationException when removing elements during iteration.
         // Works uniformly across various types of collections.
-        Iterator<String> iterator = menu.iterator();
+        Iterator<String> iterator;
+
+        iterator = list.iterator();
 
         while (iterator.hasNext()) {
             String element = iterator.next();
@@ -52,13 +56,15 @@ public class Iterate {
             }
         }
 
-        System.out.println(menu);
+        System.out.println(list);
 
         separate();
 
         // ListIterator is only available for List implementations (like ArrayList, LinkedList).
         // It supports Bidirectional traversal (hasPrevious(), previous()) and Element modification (set(), add(), remove()).
-        ListIterator<String> listIterator = menu.listIterator();
+        ListIterator<String> listIterator;
+
+        listIterator = list.listIterator();
 
         // | Feature                  | Iterator   | ListIterator      | Stream                       |
         // | ------------------------ | ---------- | ----------------- | ---------------------------- |
@@ -80,7 +86,7 @@ public class Iterate {
             }
         }
 
-        System.out.println(menu);
+        System.out.println(list);
 
         separate();
 
@@ -96,11 +102,11 @@ public class Iterate {
             }
         }
 
-        System.out.println(menu);
+        System.out.println(list);
 
         separate();
 
-        List<String> phones = new ArrayList<>(Arrays.asList(
+        list = new ArrayList<>(Arrays.asList(
                 "iPhone 16e",
                 "Galaxy S25",
                 "Xiaomi X15 Ultra",
@@ -109,20 +115,72 @@ public class Iterate {
         )
         );
 
-        System.out.println(phones);
+        System.out.println(list);
 
-        Iterator<String> phonesIterator = phones.iterator();
+        iterator = list.iterator();
 
         // Skipping 2 elements: iPhone 16e and Galaxy S25.
-        for (var i = 0; i < 2 && phonesIterator.hasNext(); i++) {
-            phonesIterator.next();
+        for (var i = 0; i < 2 && iterator.hasNext(); i++) {
+            iterator.next();
         }
 
-        phonesIterator.forEachRemaining(phone -> {
+        iterator.forEachRemaining(phone -> {
             if (phone.endsWith("5G")) {
                 System.out.println(phone + " (coming soon)");
             }
         });
+
+        separate();
+
+        list = new ArrayList<>(Arrays.asList(
+                "Blueberry",
+                "Durian",
+                "Apple",
+                "Orange",
+                "Grape"
+        )
+        );
+
+        System.out.println(list);
+
+        listIterator = list.listIterator();
+
+        // Previous Index: -1, where it returns the index of the element before the cursor and starts at -1 before any elements are accessed.
+        // Element: Blueberry (at index 0)
+        // Next Index: 1 (Durian)
+        // 
+        // Previous Index: 0 (Blueberry)
+        // Element: Durian (at index 1)
+        // Next Index: 2 (Apple)
+        // 
+        // Previous Index: 1 (Durian)
+        // Element: Apple (at index 2)
+        // Next Index: 3 (Orange)
+        // 
+        // Previous Index: 2 (Apple)
+        // Element: Orange (at index 3)
+        // Next Index: 4 (Grape)
+        // 
+        // Previous Index: 3 (Orange)
+        // Element: Grape (at index 4)
+        // Next Index: 5, the index equals the list size.
+        // 
+        // Index:     0        1       2       3       4
+        //          [Blueberry, Durian, Apple, Orange, Grape]
+        // 
+        // As you iterate using next(), the cursor moves like this:
+        // 
+        // 1. Before iteration starts → Cursor is at position 0
+        // 2. After next() returns "Blueberry" → Cursor is now at 1
+        // 3. After next() returns "Durian" → Cursor is now at 2
+        // 4. After next() returns "Apple" → Cursor is now at 3
+        // 5. After next() returns "Orange" → Cursor is now at 4
+        // 6. After next() returns "Grape" → Cursor is now at 5
+        while (listIterator.hasNext()) {
+            System.out.println("Previous Index: " + listIterator.previousIndex());
+            System.out.println("Element: " + listIterator.next());
+            System.out.println("Next Index: " + listIterator.nextIndex());
+        }
     }
 
     private static void separate() {
