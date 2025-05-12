@@ -99,24 +99,23 @@ public class Beverage {
 
         // Accessing elements using get() method.
         String beverage = menu.get(1);
+        System.out.println("I want to order " + beverage + ".");
 
         // This method takes a single parameter, the object to be checked if it is present in the list.
         // This method returns true if the specified element is present in the list, otherwise, it returns false.
         boolean hasCappuccino = menu.contains("Cappuccino");
-
         System.out.println("Is Cappuccino is on the menu? " + hasCappuccino + ".");
-
-        System.out.println("I want to order " + beverage + ".");
 
         List<String> myOrder = new ArrayList<>(Arrays.asList("Iced Long Black", "Tropical Drift", "Affogato"));
 
+        // The containsAll() method of List interface in Java is used to check if this List contains all of the elements in the specified Collection.
+        // So basically it is used to check if a List contains a set of elements or not.
+        // The method returns true if all elements in the collection col are present in the List otherwise it returns false.
         boolean isMyOrder = menu.containsAll(myOrder);
-
         System.out.println("Excuse me, is " + myOrder + " on the menu? " + isMyOrder + ".");
 
         myOrder.add(null);
         isMyOrder = menu.containsAll(myOrder);
-
         System.out.println("Please, is " + myOrder + " on the menu? " + isMyOrder + ".");
 
         try {
@@ -127,7 +126,25 @@ public class Beverage {
             System.err.println("Error! List is null.");
         }
 
-        System.out.println("Final result: " + menu);
+        // Sorting list in alphabetical order.
+        List<String> sortedMenu = menu.stream().sorted().toList();
+        System.out.println("Sorted menu: " + sortedMenu);
+
+        // Counting size of list.
+        int size = menu.size();
+        System.out.println("Size before cleaning up list: " + size + ".");
+        System.out.println("Final result before cleaning up list: " + menu);
+
+        // Cleaning up the list.
+        menu.clear();
+
+        size = menu.size();
+        System.out.println("Size after cleaning up list: " + size + ".");
+        System.out.println("Final result after cleaning up list: " + menu);
+
+        // It returns true if list is empty.
+        boolean isEmpty = menu.isEmpty();
+        System.out.println("Is menu empty? " + isEmpty + ".");
     }
 
 }
