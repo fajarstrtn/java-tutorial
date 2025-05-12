@@ -18,28 +18,28 @@ public class Bus {
 
         separate(counter++, buses);
 
-        // Set BYD K9 at index 2 to become Mercedes-Benz Conecto.
+        // Setting BYD K9 at index 2 to become Mercedes-Benz Conecto.
         buses.set(2, "Mercedes-Benz Conecto");
         buses.stream().filter(Bus::isEqualsIgnoreCase).forEach(Bus::onboard);
 
         separate(counter++, buses);
 
-        // Add new element at the end of the list.
+        // Adding new element at the end of the list.
         buses.add("Neoplan Skyliner");
 
         separate(counter++, buses);
 
-        //  Get index 1 of the list.
+        // Getting index 1 of the list.
         System.out.println("Index 1 of the list is \"" + buses.get(1) + "\".");
 
         separate(counter++, buses);
 
-        // Remove element at index 2.
+        // Removing element at index 2.
         System.out.println("Removing element at index 2 is \"" + buses.remove(2) + "\".");
 
         separate(counter++, buses);
 
-        // Remove element bt its object.
+        // Removing element bt its object.
         System.out.println("Removing \"Scania Citywide\" is " + buses.remove("Scania Citywide") + ".");
 
         separate(counter++, buses);
