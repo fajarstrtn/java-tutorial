@@ -1,7 +1,7 @@
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.ListIterator;
 
 public class Beverage {
@@ -15,7 +15,7 @@ public class Beverage {
         // It allows duplicate value.
         menu.add("Tropical Drift");
 
-        // It can add Null values that depend on the implementation.
+        // It can add null values that depend on the implementation.
         menu.add(null);
 
         // If you don't specify the length of the array in the ArrayList constructor while creating the List object,
@@ -111,17 +111,17 @@ public class Beverage {
         // The containsAll() method of List interface in Java is used to check if this List contains all of the elements in the specified Collection.
         // So basically it is used to check if a List contains a set of elements or not.
         // The method returns true if all elements in the collection col are present in the List otherwise it returns false.
-        boolean isMyOrder = menu.containsAll(myOrder);
-        System.out.println("Excuse me, is " + myOrder + " on the menu? " + isMyOrder + ".");
+        boolean containsAllMyOrder = menu.containsAll(myOrder);
+        System.out.println("Excuse me, is " + myOrder + " on the menu? " + containsAllMyOrder + ".");
 
         myOrder.add(null);
-        isMyOrder = menu.containsAll(myOrder);
-        System.out.println("Please, is " + myOrder + " on the menu? " + isMyOrder + ".");
+        containsAllMyOrder = menu.containsAll(myOrder);
+        System.out.println("Please, is " + myOrder + " on the menu? " + containsAllMyOrder + ".");
 
         try {
             myOrder = null;
-            isMyOrder = menu.containsAll(myOrder);
-            System.out.println("Once again, is " + myOrder + " on the menu? " + isMyOrder + ".");
+            containsAllMyOrder = menu.containsAll(myOrder);
+            System.out.println("Once again, is " + myOrder + " on the menu? " + containsAllMyOrder + ".");
         } catch (NullPointerException npe) {
             System.err.println("Error! List is null.");
         }
