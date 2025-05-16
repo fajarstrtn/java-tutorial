@@ -6,31 +6,18 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class Alphanumeric {
+public class Music {
 
     public static void main(String[] args) {
         // The Set Interface is present in java.util package and extends the Collection interface.
+        // Set does not maintain any specific order of elements (Exceptions: LinkedHashSet and TreeSet).
         // The order of elements in HashSet is not guaranteed, so the elements will be displayed in a random order if any are added.
         // Since Set is an interface, objects cannot be created of the typeset. you always need a class that extends this list in order to create an object.
-        Set<Character> alphabet = new HashSet<>();
+        Set<String> genre = new HashSet<>();
 
         // Adding a specific element to the set.
         // The function adds the element only if the specified element is not already present in the set else the function returns false if the element is already present in the Set.
-        alphabet.add('E');
-        alphabet.add('H');
-        alphabet.add('D');
-        alphabet.add('G');
-        alphabet.add('F');
-
-        // Adding duplicate value to the set.
         // It is an unordered collection of objects in which duplicate values cannot be stored.
-        alphabet.add('H');
-
-        System.out.println("Alphabet: " + alphabet);
-
-        // Set does not maintain any specific order of elements (Exceptions: LinkedHashSet and TreeSet).
-        Set<String> genre = new HashSet<>();
-
         genre.add("Pop");
         genre.add("Rock");
         genre.add("Hip Hop");
@@ -162,8 +149,6 @@ public class Alphanumeric {
         // Checking whether the set is empty or not.
         boolean isEmpty = genre.isEmpty();
         System.out.println("Is genre empty? " + isEmpty + ".");
-
-        System.out.println("... occurence of the set: " + genre);
     }
 
 }
