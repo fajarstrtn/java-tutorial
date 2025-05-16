@@ -17,6 +17,9 @@ public class Monster {
       monsters.add("Rodan");
       monsters.add("Anguirus");
 
+      // LinkedList allows null value.
+      monsters.add(null);
+
       System.out.println("First occurence of list: " + monsters);
 
       // Counting size of the list.
