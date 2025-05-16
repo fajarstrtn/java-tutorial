@@ -24,6 +24,9 @@ public class Book {
         stack.push("The Great Gatsby");
         stack.push("Moby-Dick");
 
+        // Stack allows null value.
+        stack.push(null);
+
         System.out.println("First occurence of the stack: " + stack);
 
         // With the help of pop() method you can delete and return the top element from the stack.
