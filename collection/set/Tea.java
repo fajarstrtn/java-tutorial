@@ -85,6 +85,20 @@ public class Tea {
 
         boolean containsLipton = teaBrands.contains(TeaBrands.LIPTON);
         System.out.println("Is Lipton available? " + containsLipton + ".");
+
+        Set<TeaBrands> anotherTeaBrands;
+
+        // Creating an EnumSet that will be used to contain all of the elements in the specified element type.
+        anotherTeaBrands = EnumSet.allOf(TeaBrands.class);
+        System.out.println("Initializing enum with allOf method: " + anotherTeaBrands);
+
+        try {
+            // The method throws NullPointerException if the element type is null.
+            anotherTeaBrands = EnumSet.allOf(null);
+            System.out.println("Initializing Set with allOf method: " + anotherTeaBrands);
+        } catch (NullPointerException npe) {
+            System.err.println("Error! " + npe.toString());
+        }
     }
 
 }
