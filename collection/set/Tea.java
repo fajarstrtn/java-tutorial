@@ -99,6 +99,10 @@ public class Tea {
         } catch (NullPointerException npe) {
             System.err.println("Error! " + npe.toString());
         }
+
+        Set<TeaBrands> yourFavTeaBrands = EnumSet.of(TeaBrands.TWININGS, TeaBrands.LIPTON, TeaBrands.TAZO);
+        Set<TeaBrands> myFavTeaBrands = EnumSet.complementOf((EnumSet<TeaBrands>) yourFavTeaBrands);
+        System.out.println("Value of myFavTeaBrands Set is " + myFavTeaBrands);
     }
 
 }
