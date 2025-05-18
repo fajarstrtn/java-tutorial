@@ -1,4 +1,7 @@
 
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.LinkedHashSet;
 
@@ -35,7 +38,65 @@ public class ShowRoom {
         cars.add("Citroen");
         cars.add(null);
 
-        System.out.println(cars); // [Audi, VW, Mercedes, BMW, Honda, Toyota, McLaren, Hyundai, BYD, Lotus, Citroen, null]
+        System.out.println("First occurence of the LinkedHashSet: " + cars); // [Audi, VW, Mercedes, BMW, Honda, Toyota, McLaren, Hyundai, BYD, Lotus, Citroen, null]
+
+        List<String> anotherCars = new ArrayList<>(Arrays.asList("Chevrolet", "Ford", "Bentley", "Cadillac"));
+
+        cars.addAll(anotherCars);
+
+        System.out.println("Second occurence of the LinkedHashSet: " + cars);
+
+        boolean isEqual = cars.equals(new ArrayList<>(Arrays.asList("Lotus")));
+        System.out.println("Are both LinkedHashSet equal? " + isEqual + ".");
+
+        boolean containsAll = cars.containsAll(new ArrayList<>(Arrays.asList("Toyota", "Honda", "Ford", "BMW")));
+        System.out.println("Are Toyota, Honda, Ford, and BMW in the LinkedHashSet? " + containsAll + ".");
+
+        // Retaining only the elements that are present in a specified collection.
+        // It removes all other elements that do not match.
+        // It removes elements that are not present in the second collection.
+        // This method is useful when performing set intersection operations in Java collections.
+        cars.retainAll(new ArrayList<>(Arrays.asList("Audi", "VW", "Toyota", "Honda", "Ford", "BYD", "Hyundai", "Lotus")));
+        System.out.println("Value of cars after retaining elements is " + cars);
+
+        try {
+            // In the below example, the retainAll(null) is not a valid operation, so a NullPointerException is thrown.
+            // The exception is caught in the catch block, preventing the program from crashing.
+            cars.retainAll(null);
+        } catch (NullPointerException npe) {
+            System.err.println("Error! " + npe.toString());
+        }
+
+        boolean isAudiRemoved = cars.removeIf(ShowRoom::hasAudi);
+        System.out.println("Is Audi successfully removed? " + isAudiRemoved + ".");
+        System.out.println("Value of cars after Audi deletion is " + cars);
+
+        cars.forEach(System.out::println);
+
+        int size = cars.size();
+        System.out.println("Size of cars is " + size);
+
+        boolean isToyotaRemoved = cars.remove("Toyota");
+        System.out.println("Is Toyota successfully removed? " + isToyotaRemoved + ".");
+        System.out.println("Value of cars after Toyota deletion is " + cars);
+
+        boolean isCarsRemoved = cars.removeAll(new LinkedHashSet<>(Arrays.asList("Ford", "Honda")));
+        System.out.println("Are Ford and Honda removed? " + isCarsRemoved + ".");
+        System.out.println("Value of cars after Ford and Honda deletion is " + cars);
+
+        // Advantages of LinkedHashSet:
+        // 1. It maintains insertion order.
+        // 2. It allows quick insertion, deletion, and lookup of elements.
+        // 3. It is useful for caching applications where insertion order is important.
+        // 
+        // Disadvantages of LinkedHashSet:
+        // 1. It takes higher memory as compared to HashSet due to the linked list for maintaining insertion order.
+        // 2. This is slightly slower operations compared to HashSet because of the linked structure.
+        System.out.println("Third occurence of the LinkedHashSet: " + cars);
+    }
+
+    private static boolean hasAudi(String car) {
+        return car.equalsIgnoreCase("audi");
     }
 
 }
