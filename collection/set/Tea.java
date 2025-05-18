@@ -1,8 +1,8 @@
 
-import java.util.Set;
-import java.util.HashSet;
 import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 public class Tea {
 
@@ -103,6 +103,14 @@ public class Tea {
         Set<TeaBrands> yourFavTeaBrands = EnumSet.of(TeaBrands.TWININGS, TeaBrands.LIPTON, TeaBrands.TAZO);
         Set<TeaBrands> myFavTeaBrands = EnumSet.complementOf((EnumSet<TeaBrands>) yourFavTeaBrands);
         System.out.println("Value of myFavTeaBrands Set is " + myFavTeaBrands);
+
+        // Creating an enum set with the elements defined by the specified range in the parameters.
+        // Enum_set = EnumSet.range(E start_point, E end_point)
+        // Where:
+        // 1. start_point: This refers to the starting element that is needed to be added to the enum set.
+        // 2. end_point: This refers to the last element which is needed to be added to the enum set.
+        Set<TeaBrands> herFavTeaBrands = EnumSet.range(TeaBrands.LIPTON, TeaBrands.TAZO);
+        System.out.println("Value of herFavTeaBrands Set is " + herFavTeaBrands);
     }
 
 }
