@@ -111,6 +111,10 @@ public class Tea {
         // 2. end_point: This refers to the last element which is needed to be added to the enum set.
         Set<TeaBrands> herFavTeaBrands = EnumSet.range(TeaBrands.LIPTON, TeaBrands.TAZO);
         System.out.println("Value of herFavTeaBrands Set is " + herFavTeaBrands);
+
+        // Creating a null set of the type element type.
+        Set<TeaBrands> hisFavTeaBrands = EnumSet.noneOf(TeaBrands.class);
+        System.out.println("Value of hisFavTeaBrands Set is " + hisFavTeaBrands);
     }
 
 }
