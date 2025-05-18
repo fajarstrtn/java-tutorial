@@ -64,11 +64,20 @@ public class Match {
         int size = game1.size();
         System.out.println("Size of game1 is " + size);
 
+        // EnumSet in Java does maintain the natural order (i.e., the order in which enum constants are declared in the enum type).
+        // EnumSet is ordered by the enum's declaration order, not insertion order.
+        // It is highly efficient and uses a bit vector internally.
+        // Only works with enums, and all elements must be from the same enum type.
+        // If you need insertion order, use a LinkedHashSet<Game> instead. But for performance and natural enum logic, EnumSet is generally better.
         Set<Game> myGame = EnumSet.allOf(Game.class);
         Set<Game> yourGame = EnumSet.noneOf(Game.class);
 
-        yourGame.add(Game.POLO);
         yourGame.add(Game.CRICKET);
+        yourGame.add(Game.POLO);
+        yourGame.add(Game.SOCCER);
+
+        System.out.println("Value of myGame is " + myGame); // [HOCKEY, POLO, SOCCER, BASKET_BALL, BASEBALL, CRICKET]
+        System.out.println("Value of yourGame is " + yourGame); // [POLO, SOCCER, CRICKET]
 
         // Retaining only the elements in a collection that are also present in another collection.
         // It modifies the current collection by removing elements that are not in the specified collection.
