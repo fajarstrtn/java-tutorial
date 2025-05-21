@@ -1,6 +1,9 @@
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.SortedSet;
+import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class State {
@@ -21,6 +24,27 @@ public class State {
 
         // This ensures that no duplicate elements are present, consistent with the Set interface.
         states.add("Hawaii");
+
+        // Inserting all the elements of the specified collection to the set.
+        states.addAll(new ArrayList<>(
+                Arrays.asList(
+                        "Alaska",
+                        "Ohio",
+                        "Virginia",
+                        "Massachusetts",
+                        "Utah",
+                        "Pennsylvania",
+                        "North Carolina",
+                        "Utah",
+                        "Colorado",
+                        "New York",
+                        "Indiana",
+                        "Illinois",
+                        "Washington",
+                        "Maryland",
+                        "Missouri")
+        )
+        );
 
         System.out.println("First occurence of the SortedSet: " + states);
 
@@ -57,6 +81,45 @@ public class State {
 
         boolean isFloridaRemoved = states.remove("Florida");
         System.out.println("Is Florida successfully removed? " + isFloridaRemoved + ".");
+
+        // Removing all the elements from the set.
+        states.removeAll(new ArrayList<>(Arrays.asList("Kentucky", "California")));
+
+        System.out.println("Third occurence of the SortedSet: " + states);
+
+        SortedSet<String> reversedStates = states.reversed();
+
+        System.out.println("SortedSet is being reversed to " + reversedStates);
+
+        NavigableSet<String> navigableStates = new TreeSet<>(states);
+
+        System.out.println("NavigableSet is " + navigableStates);
+
+        // It returns the lowest element among those elements that are greater than the specified element.
+        // If the element passed exists in a tree set, it returns the element passed as an argument.
+        String ceiling = navigableStates.ceiling("Arizona");
+        System.out.println("Ceiling of Arizona is " + ceiling + ".");
+
+        // It returns the greatest element among those elements that are less than the specified element.
+        // If the element passed exists in a tree set, it returns the element passed as an argument.
+        String floor = navigableStates.floor("Georgia");
+        System.out.println("Floor of Georgia is " + floor + ".");
+
+        // It returns the lowest element among those elements that are greater than the specified element.
+        String higher = navigableStates.higher("Lousiana");
+        System.out.println("Higher of Lousiana is " + higher + ".");
+
+        // It returns the greatest element among those elements that are less than the specified element.
+        String lower = navigableStates.lower("Connecticut");
+        System.out.println("Lower of Connecticut is " + lower + ".");
+
+        String pollFirst = navigableStates.pollFirst();
+        System.out.println("Polling first of the NavigableSet: " + pollFirst + ".");
+
+        String pollLast = navigableStates.pollLast();
+        System.out.println("Polling last of the NavigableSet: " + pollLast);
+
+        System.out.println("NavigableSet after polling first and last elements is " + navigableStates);
     }
 
 }
