@@ -28,7 +28,6 @@ public class TrainStation {
         tram.dropOff("Alexanderplatz");
         tram.info();
         tram.maintain();
-
         Train.wheelTrainTotal(tram.getType());
     }
 

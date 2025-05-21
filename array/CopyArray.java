@@ -6,7 +6,6 @@ public class CopyArray {
     public static void main(String[] args) {
         int[] arrayOne = {1, 2, 3, 4, 5};
         int[] arrayTwo = {6, 7, 8, 9, 10};
-
         // This "public static void arraycopy(Object source_arr, int sourcePos, Object dest_arr, int destPos, int len)" has:
         // 
         // Parameters:
@@ -28,7 +27,6 @@ public class CopyArray {
         // index: 2
         // final result: {6,7,1,2,3}
         System.arraycopy(arrayOne, 0, arrayTwo, 2, 3);
-
         for (int value : arrayTwo) {
             System.out.print(value + " ");
         }
@@ -39,7 +37,6 @@ public class CopyArray {
         // arrayThree: {11,12,13,14,15}
         // arrayFour: {11,12,13,14,15}
         int[] arrayThree = {11, 12, 13, 14, 15}, arrayFour = Arrays.copyOf(arrayThree, arrayThree.length);
-
         for (int value : arrayFour) {
             System.out.print(value + " ");
         }
@@ -50,7 +47,6 @@ public class CopyArray {
         // arrayThree: {11,12,13,14,15}
         // final result: {12,13,14}
         int[] arrayFive = Arrays.copyOfRange(arrayThree, 1, 4);
-
         for (int value : arrayFive) {
             System.out.print(value + " ");
         }

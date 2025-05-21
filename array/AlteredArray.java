@@ -3,11 +3,9 @@ public class AlteredArray {
 
     private static int[] passByReference(int[] array) {
         int size = array.length;
-
         for (int member = 0; member < size; ++member) {
             array[member] = (array[member] * 10) + 1;
         }
-
         return array;
     }
 

@@ -80,7 +80,6 @@ public class Footwear {
         nike.setColor("Off-White");
         nike.isBrandNew(true);
         nike.inform("Yvone");
-
         Footwear.getManufacturerInformation();
     }
 

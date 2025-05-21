@@ -11,9 +11,9 @@ public class WhileLoopDecrement {
             int loop = Integer.parseInt(br.readLine());
 
             int iteration = loop;
-
             while (iteration > 0) {
                 System.out.println(iteration);
+
                 --iteration;
             }
 

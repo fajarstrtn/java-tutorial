@@ -6,7 +6,6 @@ public class ShallowCopy {
             {1, 2, 3},
             {4, 5, 6}
         };
-
         int[][] mdArrayReplica = mdArray.clone();
         mdArrayReplica[0][1] = 100;
 

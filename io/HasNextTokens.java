@@ -16,12 +16,10 @@ public class HasNextTokens {
 
             while (sc.hasNext()) {
                 String val = sc.next();
-
                 // The ':|\\s+' is a regular expression matching a single colon or more whitespace characters.
                 if ("Inter:".equals(val)) {
                     sc.useDelimiter(":|\\s+");
                 }
-
                 System.out.println(String.format("%d | %s", ++line, val));
             }
         } catch (Exception e) {

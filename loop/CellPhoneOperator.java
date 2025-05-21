@@ -10,7 +10,6 @@ public class CellPhoneOperator {
         System.out.println("4. Exit");
         System.out.print("Insert choice: ");
         int option = sc.nextInt();
-
         return option;
     }
 

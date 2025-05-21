@@ -8,7 +8,6 @@ public class HasNext {
 
         try (Scanner sc = new Scanner(str)) {
             int line = 0;
-
             // It checks every token inside of sc object, separates with white space.
             while (sc.hasNext()) {
                 System.out.print(String.format("%d | %b\t", ++line, sc.hasNextInt()));

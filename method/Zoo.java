@@ -35,12 +35,10 @@ public class Zoo {
         tiger.age = 10;
         tiger.isMammal = true;
         tiger.printInformation();
-
         Zoo.printInformation("Henry");
 
         Zoo python = new Zoo("Phoebe", 5, false);
         python.printInformation();
-
         Zoo.printInformation("Victoria");
     }
 

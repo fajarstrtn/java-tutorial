@@ -5,7 +5,7 @@ public class ArrayLiteral {
         int[] intValues = {1, 2, 3, 4, 5};
 
         int size = intValues.length;
-
+        
         for (int member = 0; member < size; ++member) {
             System.out.println(intValues[member]);
         }

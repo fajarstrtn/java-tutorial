@@ -9,7 +9,6 @@ public class WhileLoopIncrement {
             int loop = sc.nextInt();
 
             int iteration = 0;
-
             while (iteration < loop) {
                 System.out.println(iteration);
                 ++iteration;
