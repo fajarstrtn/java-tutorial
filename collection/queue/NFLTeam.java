@@ -136,7 +136,7 @@ public class NFLTeam {
             // It returns the head (highest-priority) element of the queue and returns null if the queue is empty.
             // It does not remove the element.
             String team = teams.peek();
-            System.out.println("Value of peeking element is " + team + ".");
+            System.out.println("Value of peeked element is " + team + ".");
         } catch (Exception e) {
             System.err.println("Error! " + e.toString());
         }
@@ -145,7 +145,7 @@ public class NFLTeam {
             // It returns the head (highest-priority) element of the queue and returns null if the queue is empty.
             // It removes the element.
             String team = teams.poll();
-            System.out.println("Value of polling element is " + team + ".");
+            System.out.println("Value of polled element is " + team + ".");
         } catch (Exception e) {
             System.err.println("Error! " + e.toString());
         }
@@ -155,7 +155,7 @@ public class NFLTeam {
             // It returns head (highest-priority) element and throws NoSuchElementException if the queue is empty.
             // It does not remove the element.
             String team = teams.element();
-            System.out.println("Value of selecting element is " + team + ".");
+            System.out.println("Value of selected element is " + team + ".");
         } catch (Exception e) {
             System.err.println("Error! " + e.toString());
         }
@@ -164,7 +164,7 @@ public class NFLTeam {
             // It returns head (highest-priority) element and throws NoSuchElementException if the queue is empty.
             // It removes the element.
             String team = teams.remove();
-            System.out.println("Value of removing element is " + team + ".");
+            System.out.println("Value of removed element is " + team + ".");
         } catch (Exception e) {
             System.err.println("Error! " + e.toString());
         }
