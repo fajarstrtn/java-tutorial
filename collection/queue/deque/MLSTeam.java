@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
+import java.util.Iterator;
 
 public class MLSTeam {
 
@@ -201,6 +202,13 @@ public class MLSTeam {
         teams.push("New York Red Bulls");
 
         System.out.println("Fourteenth occurence of ArrayDeque: " + teams); // [New York Red Bulls, Nashville SC, Inter Miami CF, LA Galaxy, Atlanta United, Charlotte FC, Chicago Fire FC, Colorado Rapids, Columbus Crew]
+
+        Iterator<String> iterator = teams.iterator();
+
+        while (iterator.hasNext()) {
+            String team = iterator.next();
+            System.out.println("Iterating over iterator: " + team);
+        }
 
         teams.clear();
 
