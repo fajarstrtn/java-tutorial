@@ -19,7 +19,7 @@ public class Arithmetic {
 
         double e = c / (double) d;
 
-        System.out.println("c / d = " + e); // Output: c / d = 1.75
+        System.out.println(e); // Output: 1.75
 
         String firstName = "John";
         String lastName = "Doe";
