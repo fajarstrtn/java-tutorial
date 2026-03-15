@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+
+public class BatchChecker {
+
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Insert the number: ");
+            int number = sc.nextInt();
+
+            switch (number) {
+                case 1:
+                case 2:
+                case 3:
+                    System.out.println("First batch");
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    System.out.println("Second batch");
+                    break;
+                case 7:
+                    System.out.println("Third batch");
+                case 8:
+                    System.out.println("Still third batch");
+                case 9:
+                    System.out.println("Yet it\'s still third batch");
+                    break;
+                case 10:
+                    System.out.println("Fourth batch");
+                    break;
+                default:
+                    System.out.println("Invalid value");
+            }
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        } finally {
+            System.out.println("Program is successfully terminated");
+        }
+    }
+
+}
