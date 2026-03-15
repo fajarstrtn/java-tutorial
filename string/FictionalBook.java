@@ -13,6 +13,7 @@ public class FictionalBook {
         /*
          * When you create a string using double quotes (""),
          * the JVM checks if the literal already exists in the SCP.
+         * 
          * If it does, the JVM reuses it; otherwise, it creates a new string in the SCP. */
         String book3 = "Kafka On The Shore";
 
