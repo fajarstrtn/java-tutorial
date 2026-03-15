@@ -10,6 +10,7 @@ public class Inferred {
          * Inferred Data Type refers to a type of variable that the compiler
          * automatically deduces at compile time, rather than
          * requiring explicit declaration by the programmer.
+         * 
          * This feature, known as type inference, aims to reduce verbosity
          * and improve code readability while maintaining Java's strong static typing.
          * 
