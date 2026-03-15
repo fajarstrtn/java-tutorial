@@ -6,10 +6,10 @@ public class Unary {
         int b = 7;
 
         /*
-         * Pre-Increment: Increments first, then uses value.
+         * Pre-Increment : Increments first, then uses value.
          * Post-Increment: Uses value first, then increments.
          * 
-         * Pre-Decrement: Decrements first, then uses value.
+         * Pre-Decrement : Decrements first, then uses value.
          * Post-Increment: Uses value first, then decrements.
          *
          * If (a++) -> a = 5 -> printed: 5 then computed: 6
