@@ -7,11 +7,11 @@ public class ReadByBufferedReader {
 
     public static void main(String[] args) throws IOException {
         /*
-* BufferedReader simplifies reading text from a character input stream
-* by buffering characters, making input more efficient.
-* 
-* InputStreamReader bridges from byte streams (like System.in)
-* to character streams, which BufferedReader requires. */
+         * BufferedReader simplifies reading text from a character input stream
+         * by buffering characters, making input more efficient.
+         * 
+         * InputStreamReader bridges from byte streams (like System.in)
+         * to character streams, which BufferedReader requires. */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
 
