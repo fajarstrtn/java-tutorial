@@ -1,5 +1,5 @@
 
-public class NoNumber5th {
+public class Exclude5thNumber {
 
     public static void main(String[] args) {
         int i;
