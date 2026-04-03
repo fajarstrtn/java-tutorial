@@ -20,7 +20,6 @@ public class Duplication {
          * where index: 2, then final result: {6,7,1,2,3}. */
         var originalArray = new int[]{1, 2, 3, 4, 5};
         var copiedArray = new int[]{6, 7, 8, 9, 10};
-
         System.arraycopy(originalArray, 0, copiedArray, 2, 3);
         print(copiedArray);
     }

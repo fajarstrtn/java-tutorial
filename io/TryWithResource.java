@@ -5,10 +5,10 @@ public class TryWithResource {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("What is your name: ");
+            System.out.print("Input your name: ");
             String name = sc.nextLine();
 
-            System.out.print("How old are you: ");
+            System.out.print("Input your age: ");
             int age = sc.nextInt();
 
             System.out.println(name);

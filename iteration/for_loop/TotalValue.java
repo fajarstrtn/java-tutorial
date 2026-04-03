@@ -12,8 +12,8 @@ public class TotalValue {
     }
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5};
-        System.out.println("Total value of an array is " + getTotalValue(array));
+        int[] array = new int[]{1, 2, 3, 4, 5};
+        System.out.println(getTotalValue(array));
     }
 
 }

@@ -12,7 +12,7 @@ public class CarChecker {
             System.out.println("I\'m really inside this car right now");
         }
 
-        System.out.println("Outside of if-block scope");
+        System.out.println("Outside the if-block scope");
     }
 
 }

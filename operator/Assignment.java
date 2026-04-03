@@ -4,7 +4,7 @@ public class Assignment {
     public static void main(String[] args) {
         String carName = "VW Golf GTI";
 
-        System.out.println("This is my " + carName); // Output: This is my VW Golf GTI
+        System.out.println("This is " + carName); // Output: This is VW Golf GTI
 
         double price;
         int horsePower;

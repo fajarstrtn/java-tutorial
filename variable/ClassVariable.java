@@ -6,7 +6,7 @@ public class ClassVariable {
     public byte age;
 
     public void changeFullName() {
-        fullName = "Jack Hollister";
+        fullName = "Jane Doe";
     }
 
     public void changeFullName(String fullName) {
@@ -24,18 +24,14 @@ public class ClassVariable {
     }
 
     public static void main(String[] args) {
-        System.out.println(ClassVariable.fullName); //Output: John Doe
+        ClassVariable.display(); // Output: John Doe
 
         var person = new ClassVariable();
         person.changeFullName();
+        System.out.println(ClassVariable.fullName); //Output: Jane Doe
 
-        System.out.println(ClassVariable.fullName); //Output: Jack Hollister
-
-        person.changeFullName("Greyson Finn");
-
-        System.out.println(ClassVariable.fullName); //Output: Greyson Finn
-
-        ClassVariable.display(); // Output: Greyson Finn
+        person.changeFullName("John Doe");
+        System.out.println(ClassVariable.fullName); //Output: John Doe
     }
 
 }

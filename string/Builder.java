@@ -1,6 +1,7 @@
 
 public class Builder {
 
+    // append() method concatenates the given argument with this string.
     private static void create() {
         /*
          * StringBuilder class is a part of the java.lang package
@@ -11,139 +12,113 @@ public class Builder {
          * 
          * StringBuilder is not thread-safe. */
         StringBuilder sb = new StringBuilder();
-
-        // The append method concatenates the given argument with this string.
         sb.append("Hello");
         sb.append(" ");
         sb.append("World");
-        sb.append("!");
         String text = sb.toString();
-
-        System.out.println(text); // Output: Hello World!
+        System.out.println(text);
     }
 
     private static void create(int capacity) {
         StringBuilder sb = new StringBuilder(capacity);
-        sb.append("Hello World!");
+        sb.append("Hello World");
         String text = sb.toString();
-
-        System.out.println(text); // Output: Hello World!
+        System.out.println(text);
     }
 
     private static void create(String message) {
         StringBuilder sb = new StringBuilder(message);
         String text = sb.toString();
-
-        System.out.println(text); // Output: Hello World!
+        System.out.println(text);
     }
 
     private static void create(CharSequence charSequence) {
         StringBuilder sb = new StringBuilder(charSequence);
         String text = sb.toString();
-
-        System.out.println(text); // Output: Hello World!
+        System.out.println(text);
     }
 
+    // insert() method inserts the given string with this string at the given position.
     private static void insert(int index, String message) {
-        StringBuilder sb = new StringBuilder("Hello World!");
-
-        // The insert method inserts the given string with this string at the given position.
+        StringBuilder sb = new StringBuilder("Hello World");
         sb.insert(index, message);
         String text = sb.toString();
-
-        System.out.println(text); // Output: HAmsterdamello World!
+        System.out.println(text);
     }
 
+    // The replace method replaces the given string from the specified beginIndex and endIndex-1.
     private static void replace(int index, int length, String message) {
-        StringBuilder sb = new StringBuilder("Hello World!");
-
-        // The replace method replaces the given string from the specified beginIndex and endIndex-1.
+        StringBuilder sb = new StringBuilder("Hello World");
         sb.replace(index, length, message);
         String text = sb.toString();
-
-        System.out.println(text); // Output: Amsterdam World!
+        System.out.println(text);
     }
 
+    // delete() method deletes the string from the specified beginIndex to endIndex-1.
     private static void delete(int index, int length) {
-        StringBuilder sb = new StringBuilder("Hello World!");
-
-        // The delete method is used to delete the string from the specified beginIndex to endIndex-1.
+        StringBuilder sb = new StringBuilder("Hello World");
         sb.delete(index, length);
         String text = sb.toString();
-
-        System.out.println(text); // Output: Hello
+        System.out.println(text);
     }
 
+    // reverse() method reverses the current string.
     private static void reverse() {
         StringBuilder sb = new StringBuilder("Hello World!");
-
-        // The reverse method of the StringBuffer class reverses the current string.
         sb.reverse();
         String text = sb.toString();
-
-        System.out.println(text); // Output: !dlroW olleH
+        System.out.println(text);
     }
 
+    /*
+     * capacity() method returns the current capacity of the builder.
+     * default capacity of the builder is 16.
+     * 
+     * If number of characters increases from its current capacity,
+     * it increases the capacity by (old capacity * 2) + 2. */
     private static void capacity() {
-        /*
-         * The capacity method of the StringBuilder class returns
-         * the current capacity of the builder.
-         * The default capacity of the builder is 16.
-         * If the number of characters increases from
-         * its current capacity, it increases the capacity by (old capacity * 2) + 2. */
         StringBuilder sb = new StringBuilder();
         int capacity = sb.capacity();
-
-        System.out.println("Old Capacity: " + capacity); // Output: Old Capacity: 16
+        System.out.println("Old Capacity: " + capacity);
 
         sb.append("Hello World");
-        sb.append("Java is my favourite language");
+        sb.append("Java is my favorite language");
         capacity = sb.capacity();
-
-        System.out.println("New Capacity: " + capacity); // Output: New Capacity: 40
+        System.out.println("New Capacity: " + capacity);
     }
 
+    // length() method returns the number of character in given string.
     private static void length() {
-        StringBuilder sb = new StringBuilder("Hello World!");
-
-        // The length method returns the number of character in given string.
+        StringBuilder sb = new StringBuilder("Hello World");
         int length = sb.length();
-
-        System.out.println("Length: " + length); // Output: Length: 12
+        System.out.println("Length: " + length);
     }
 
+    /*
+     * trimToSize() method is an in-built method used to trim
+     * the capacity used for the character sequence of StringBuffer object. */
     private static void trimToSize() {
         StringBuilder sb = new StringBuilder();
-
         sb.append("Hello");
         sb.append(" ");
-        sb.append("World!");
+        sb.append("World");
         sb.append(" ");
         sb.append("This is John Doe");
         int capacity = sb.capacity();
+        System.out.println("Old capacity: " + capacity);
 
-        System.out.println("Old capacity: " + capacity); // Output: Old capacity: 34
-
-        /*
-         * The trimToSize method is the inbuilt method
-         * used to trims the capacity used for the character sequence
-         * of StringBuffer object. */
         sb.trimToSize();
         capacity = sb.capacity();
-
-        System.out.println("New capacity: " + capacity); // Output: New capacity: 29
+        System.out.println("New capacity: " + capacity);
     }
 
+    /*
+     * indexOf() method returns the index of the String for first occurrence
+     * of passed substring as parameter from the sequence contained by this object. */
     private static void indexOf(String chunk) {
         StringBuilder sb = new StringBuilder("Hello World");
-
-        /*
-         * The indexOf method is used to return the index of
-         * the String for first occurrence of passed substring
-         * as parameter from the sequence contained by this object. */
         int index = sb.indexOf(chunk);
-
-        System.out.println(index); // Output: 2
+        System.out.println(index);
     }
 
     public static void main(String[] args) {

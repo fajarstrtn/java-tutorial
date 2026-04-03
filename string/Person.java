@@ -9,7 +9,8 @@ public class Person {
          * The String Constant Pool is present in the heap.
          * 
          * String is immutable, once a String object is created, it cannot be changed.
-         * If you try to change a String, Java does not modify the original one,
+         * If you try to change a String,
+         * Java does not modify the original one,
          * it creates a new String object instead.
          * 
          * String class and all wrapper classes in Java that include
@@ -24,12 +25,10 @@ public class Person {
 
         // If you explicitly assign it to the reference variable, it will refer to the new object.
         fullName = "Jane Doe";
-
         System.out.println(fullName); // Output: Jane Doe
 
         char[] spelling = new char[]{'J', 'o', 'h', 'n'};
         String nickName = new String(spelling);
-
         System.out.println(nickName); // Output: John
     }
 

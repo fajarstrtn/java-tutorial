@@ -34,15 +34,17 @@ public class Manipulation {
         System.out.println(whiteSpaces.isBlank()); // Output: true
         System.out.println(spacyWord.trim());      // Output: Hello...
 
-        String message = "Amsterdam is the capital and largest city of the Netherlands, known for its elaborate canal system, rich cultural heritage, and vibrant, liberal atmosphere.";
-        var words = message.split(" ");
+        String text
+                = "Amsterdam is the capital and largest city of the Netherlands,"
+                + " known for its elaborate canal system,"
+                + " rich cultural heritage, and vibrant, liberal atmosphere.";
+        var words = text.split(" ");
         for (String word : words) {
             System.out.println(word);
         }
 
         byte[] byteArray = {71, 101, 101, 107, 115};
         String decodedString = new String(byteArray);
-
         System.out.println(decodedString); // Output: Geeks
     }
 

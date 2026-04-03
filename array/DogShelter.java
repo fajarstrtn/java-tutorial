@@ -52,6 +52,7 @@ public class DogShelter {
 
         // Clone the existing array since the elements are objects, it performs shallow copy.
         Dog[] clonedDogs = dogs.clone();
+
         System.out.println(dogs == clonedDogs);
         System.out.println(dogs[0] == clonedDogs[0]);
     }

@@ -13,13 +13,13 @@ public class NumberInsertion {
 
         switch (num) {
             case 1 ->
-                System.out.println("I\'m the one");
+                System.out.println("One");
             case 2 ->
-                System.out.println("I\'m the second");
+                System.out.println("Two");
             case 3 ->
-                System.out.println("I\'m the third");
+                System.out.println("Three");
             default ->
-                System.out.println("I\'m the other");
+                System.out.println("Invalid value");
         }
     }
 

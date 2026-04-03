@@ -6,26 +6,20 @@ public class WrapperClass {
     public static void main(String[] args) {
         char ch1 = 'A';
         Character ch2 = ch1;
-
         System.out.println(ch2);
 
         ArrayList<Integer> ls = new ArrayList<>();
         ls.add(20);
-
         System.out.println(ls.get(0));
 
         Long l1 = 10000000L;
         long l2 = l1;
-
         System.out.println(l2);
 
         ArrayList<Integer> ls2 = new ArrayList<>();
         ls2.add(50);
         int int1 = ls2.get(0);
-
         System.out.println(int1);
-
-        Long balance = 100000000000L;
 
         /*
          * Since you are working with objects now, you can use certain methods
@@ -41,11 +35,11 @@ public class WrapperClass {
          * 6. doubleValue()
          * 7. charValue()
          * 8. booleanValue() */
+        Long balance = 100000000000L;
         System.out.println(balance.longValue());
 
         String age = "26";
         int realAge = Integer.parseInt(age);
-
         System.out.println(realAge);
     }
 

@@ -6,21 +6,22 @@ import java.util.StringJoiner;
 public class Joiner {
 
     public static void main(String[] args) {
-        List<String> listOfString = Arrays.asList("Jakarta", "Bali", "Lombok", "Bandung");
-        StringJoiner stringJoiner = new StringJoiner(",");
-        stringJoiner.add(listOfString.get(0)).add(listOfString.get(1));
+        List<String> list = Arrays.asList("Jakarta", "Bali", "Lombok", "Bandung");
+        StringJoiner joiner1 = new StringJoiner(",");
+        joiner1.add(
+                list.get(0))
+                .add(list.get(1));
+        System.out.println(joiner1); // Output: Jakarta,Bali
 
-        System.out.println(stringJoiner); // Output: Jakarta,Bali
+        StringJoiner joiner2 = new StringJoiner("/");
+        joiner2.add(
+                list.get(2))
+                .add(list.get(3));
+        System.out.println(joiner2); // Output: Lombok/Bandung
 
-        StringJoiner anotherStringJoiner = new StringJoiner("/");
-        anotherStringJoiner.add(listOfString.get(2)).add(listOfString.get(3));
-
-        System.out.println(anotherStringJoiner); // Output: Lombok/Bandung
-
-        stringJoiner.merge(anotherStringJoiner);
-
-        System.out.println(stringJoiner.toString()); // Output: Jakarta,Bali,Lombok/Bandung
-        System.out.println(stringJoiner.length());   // Output: 27
+        joiner1.merge(joiner2);
+        System.out.println(joiner1.toString()); // Output: Jakarta,Bali,Lombok/Bandung
+        System.out.println(joiner1.length());   // Output: 27
     }
 
 }

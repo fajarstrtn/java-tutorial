@@ -2,22 +2,14 @@
 public class MemoryAllotment {
 
     public static void main(String[] args) {
-        // Get the informational HashCode of each variable.
-        String name = "John Doe";
-        int nameAddress = System.identityHashCode(name);
+        // System.identityHashCode() gets the informational HashCode of each variable.
+        int name1 = System.identityHashCode("John Doe");
+        int alias1 = System.identityHashCode(new String("John Doe"));
+        System.out.println(name1 == alias1); // Output: false
 
-        String aliasName = new String(name);
-        int aliasNameAddress = System.identityHashCode(aliasName);
-
-        System.out.println("Identical? " + (nameAddress == aliasNameAddress)); // Output: Identical? false
-
-        String catName = "Kiwi";
-        int catNameAddress = System.identityHashCode(catName);
-
-        String aliasCatName = new String(catName).intern();
-        int aliasCatNameAddress = System.identityHashCode(aliasCatName);
-
-        System.out.println("Identical? " + (catNameAddress == aliasCatNameAddress)); // Output: Identical? true
+        int name2 = System.identityHashCode("Kiwi");
+        int alias2 = System.identityHashCode(new String("Kiwi").intern());
+        System.out.println(name2 == alias2); // Output: true
     }
 
 }

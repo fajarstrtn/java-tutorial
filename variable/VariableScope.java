@@ -9,7 +9,6 @@ public class VariableScope {
              * The number variable can be recognized as it is declared
              * outside of for-loop block and be used inside its inner loops. */
             number += i;
-
             System.out.println("Loop number: " + i);
 
         }
@@ -21,7 +20,6 @@ public class VariableScope {
          * as it is declared inside of for-loop block. */
         if (number > 0) {
             boolean isGreaterThanZero = true;
-
             System.out.println(number + " is greater than 0? " + isGreaterThanZero);
         }
 
@@ -31,7 +29,7 @@ public class VariableScope {
          * 
          * Syntax:
          * System.out.println(number + " is greater than 0? " + isGreaterThanZero); */
-        System.out.println("Program is successfully executed!");
+        System.out.println("Program is successfully executed");
     }
 
 }

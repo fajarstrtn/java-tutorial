@@ -5,7 +5,7 @@ public class AlphabetChecker {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("Insert an alphabet: ");
+            System.out.print("Insert the alphabet: ");
             char alphabet = sc.next().charAt(0);
 
             switch (alphabet) {

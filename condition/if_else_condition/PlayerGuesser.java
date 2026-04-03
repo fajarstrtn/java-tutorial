@@ -9,7 +9,7 @@ public class PlayerGuesser {
             int number = sc.nextInt();
 
             if (number < 0) {
-                System.out.println("Negative number");
+                System.out.println("Invalid value");
             }
 
             if (number == 7) {

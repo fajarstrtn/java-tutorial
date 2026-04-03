@@ -26,7 +26,7 @@ public class Precedence {
         System.out.println(containsZero); // Output: true
 
         if (!containsZero) {
-            System.out.println("Got some remainder");
+            System.out.println("Get some remainder");
         }
     }
 

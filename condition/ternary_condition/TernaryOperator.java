@@ -2,16 +2,13 @@
 public class TernaryOperator {
 
     public static void main(String[] args) {
-        boolean isGood = true;
-        String answer = isGood ? "This is a good car" : "No, this is a bad car";
+        String myCar = "Honda Civic Hatchback";
+        System.out.println(myCar.equals("Honda Civic Hatchback")
+                ? "Yes, this is mine" : "No, this isn\'t mine"); // Output: Yes, this is mine
 
-        System.out.println(answer); // Output: This is a good car
-
-        String myCar = "Honda Jazz";
-        String yourCar = "Tesla Model S";
-
-        System.out.println(myCar.equals(yourCar));  // Output: false
-        System.out.println(!myCar.equals(yourCar)); // Output: true
+        String yourCar = "FIAT 600 SUV";
+        System.out.println(yourCar.equals("KIA Sorento SUV")
+                ? "Yes, this is yours" : "No, this isn\'t yours"); // Output: No, this isn't yours
     }
 
 }

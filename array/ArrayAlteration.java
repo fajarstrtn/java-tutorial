@@ -17,8 +17,8 @@ public class ArrayAlteration {
          * changes in that method will affect to its object. */
         passByReference(array);
 
-        for (int newValue : array) {
-            System.out.println(newValue);
+        for (int value : array) {
+            System.out.println(value);
         }
     }
 

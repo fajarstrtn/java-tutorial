@@ -14,7 +14,7 @@ public class Termination {
         if (isTerminated) {
             return; // The return statement will stop the program.
         } else {
-            System.out.println("Hello!");
+            System.out.println("Hello World");
         }
     }
 

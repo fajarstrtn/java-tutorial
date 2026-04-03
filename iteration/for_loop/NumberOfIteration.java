@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class NumberIteration {
+public class NumberOfIteration {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {

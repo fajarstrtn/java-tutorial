@@ -10,10 +10,10 @@ public class KidChecker {
         int number = sc.nextInt();
 
         if (number <= 17) {
-            System.out.println("You are a kid");
+            System.out.println("Underage");
         }
 
-        System.out.println("Outside of if-block scope");
+        System.out.println("Outside the if-block scope");
 
         sc.close();
     }
